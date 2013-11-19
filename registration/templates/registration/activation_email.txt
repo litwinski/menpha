@@ -1,0 +1,10 @@
+{% load i18n %}
+{% trans "Please activate your account at" %} {{ site.name }}:
+
+{% blocktrans %} You have received this email because you created an account on {{ site.name }}. To start using your account though, you're required to activate by following the link below".
+{% endblocktrans %}.
+
+{% trans "Follow link below" %}
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+{% blocktrans %}Please note that the link above is valid for {{ expiration_days }} days.{% endblocktrans %}

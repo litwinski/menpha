@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} Search {% endblock %}
+
+{% block notify %}
+	Enter IMEI number below and press search to be informed
+{% endblock %}
+
+	{% block content %}
+		<div class="searchbox">
+			<div class="decobox">
+				<form class="search" action="/app/search/">
+					<input type="text" name="q" required placeholder="Enter IMEI Number" maxlength="15" />
+					<input type="submit" value="Search" class="bbtn blue large" />
+				</form>
+			</div>
+		</div>
+	{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Intro Page {% endblock %}
+
+{% block notify %}
+	Menpha is in Beta. Unexpected changes to user data is likely. Best viewed in Google Chrome
+{% endblock %}
+
+{% block content %}
+	<div class="intro">
+		<header>
+			<h2>Trade stolen smartphones, No more!</h2>
+			<span>
+				Menpha is designed to inform you the state of the device you intend to purchase - be it a stolen one, or of genuine origin. Don't buy stolen items. 
+			<p>
+				Help prevent the trade of stolen devices. 
+			</p>
+				<a href="{% url 'help' %}" class="bbtn">Learn more</a>
+			</span>
+		</header>
+
+		<article>
+
+			<section>
+				<h2> Getting started</h2>
+				<span>
+					Create an account which is free and instant. Add in a few of your IMEI numbers of your devices. 
+					<p>
+						Be informed before you make a purchase from an acquaintance or friend.
+					</p>
+					<p>
+						Until you mark your added IMEI as stolen, it will not show up in search results of others. 
+					</p>
+					<br/>
+					<a href="{% url 'help' %}" class="bbtn">Learn more</a>
+				</span>
+			</section>		
+			<section>
+				<h2> Why Menpha</h2>
+				<span>
+					Find the IMEI on the device you want to purchase. Search our database to learn if the item is stolen. If the IMEI is marked stolen by the initial owner, you will find in your search result.
+					<br/>
+					<a href="{% url 'help' %}" class="bbtn">Get help</a>				
+				</span>
+			</section>		
+		</article>
+		<section id="getstarted">
+			{% if user.is_authenticated %}
+				<a href="{% url 'add' %}" class="bbtn large" role="button">Add</a>
+			{% else %}
+				<a href="{% url 'registration_register' %}" class="bbtn large" role="button">Sign up</a>
+			{% endif %}
+			<span>
+				{% if user.is_authenticated %}
+					Add IMEs. Search IMEIs and Share.
+				{% else %}
+					Sign up is free and instant!
+				{% endif %}
+			</span>
+		</section>	
+	</div>
+{% endblock %}

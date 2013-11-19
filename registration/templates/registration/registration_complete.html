@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Registration Complete {% endblock %}
+
+{% block notify %}
+	Registration Successful
+{% endblock %}
+
+{% block content %}
+<div class="confirmbox">
+	<p>{% trans "An activation email is waiting for you in your Email's inbox (or spam folder). Please follow the 'Activation Instructions' therein to activate your account." %}</p>
+</div>
+{% endblock %}

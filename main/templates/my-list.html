@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} My List - {{ request.user }} {% endblock %}
+
+{% block notify %}
+	Under contruction. Will display your personal IMEI list.
+{% endblock %}
+
+{% block content %}
+	<div class="resultbox not-stolen">
+		<span class="datebox">Last modified: <br/>{{ created_by.pub_date|timesince }} <br> Posted by: <br> [[ User ]]</span>
+		<h3>IMEI match found</h3> 
+		<p>
+			{{ created_by.imei }}
+		</p>
+		<h3>Device</h3> 
+		<p>
+			{{ created_by.device }}
+		</p>
+		<h3>Description</h3> 
+		<p>
+			{{ created_by.description }}
+		</p>
+				<div class="resultoption"> 
+					<span> 
+						<a href="/app/delete/{{ s.imei }}" class="bbtn red" role="button">Delete</a>
+					</span> 
+					<span> 
+						<a href="" class="bbtn blue" role="button">Share</a>
+					</span> 
+				</div>
+	</div>
+{% endblock %}

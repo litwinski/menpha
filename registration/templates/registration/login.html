@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Login {% endblock %}
+
+{% block notify %}
+	Provide your details below to login
+{% endblock %}
+
+{% block content %}
+<form method="post" action="." class="login">
+    {% csrf_token %}
+    {{ form.as_p }}
+		<input type="submit" class="bbtn large blue" role="button" value="{% trans 'Login' %}" />
+		<div id="reset">
+			<p>
+				<a href="{% url 'auth_password_reset' %}" class="simptip-position-top simptip-movable simptip-info simptip-multiline" data-tooltip="Also for resetting your password">{% trans "Forgot Password?" %}</a>
+			</p>
+			<p> 
+				<a href="{% url 'registration_register' %}">{% trans "Create New Account" %}</a>
+			</p>
+		</div>
+	</form>
+
+{% endblock %}

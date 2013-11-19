@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Confirm box {% endblock %}
+
+{% block notify %}
+	<strong style="color:red;">NOT REVERSIBLE!</strong> Confirm delete of {{ item_imei }}. 
+{% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+		<p> Do you wanna delete {{item_imei}} </p>
+		<a href="/app/detail/{{ item_imei}}" class="bbtn blue large2x">No </a>
+		<a href="/app/deleted/{{ item_imei }}" class="bbtn red">Yes</a>
+	</div>
+{% endblock %}

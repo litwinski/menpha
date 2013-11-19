@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Detail page {% endblock %}
+
+{% block notify %}
+	Detail page of your requested IMEI
+{% endblock %}
+
+{% block content %}
+	<div class="resultbox not-stolen">
+		<span class="datebox">Last modified: <br/>{{ s.pub_date }} <br> Posted by: <br> {{ user }}</span>
+		<h3>IMEI match found</h3> 
+		<p>
+			{{ s.imei }}
+		</p>
+		<h3>Device</h3> 
+		<p>
+			{{ s.device }}
+		</p>
+		<h3>Description</h3> 
+		<p>
+			{{ s.description }}
+		</p>
+				<div class="resultoption"> 
+					<span> 
+						<a href="/app/delete/{{ s.imei }}" class="bbtn red" role="button">Delete</a>
+					</span> 
+					<span> 
+						<a href="" class="bbtn blue" role="button">Share</a>
+					</span> 
+				</div>
+	</div>
+{% endblock %}

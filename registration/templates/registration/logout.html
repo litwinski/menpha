@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Logged Out {% endblock %}
+
+{% block notify %}
+	You can re-login to your account by clicking the 'Re-login' button
+{% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+		<p> {% trans "You are logged out" %} </p>
+		<span>
+			<a href="{% url 'auth_login' %}" class="bbtn blue large">Re-login</a>
+		</span>
+	</div>
+{% endblock %}

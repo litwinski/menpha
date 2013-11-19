@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Item {% endblock %}
+
+{% block notify %}
+	The form below adds one IMEI to your personal list.
+{% endblock %}
+
+{% block content %}
+	<div class="addbox">
+		<!--<form class="addbox">
+			<input type="text" name="imei" placeholder="IMEI Number" />
+			<input type="text" name="q" placeholder="Device Name" />
+			<input type="text" name="q" placeholder="IMEI Number" />
+			<textarea name="message" id="message" cols="45" rows="5" autocomplete="off" placeholder="enter description here"></textarea>
+			<input type="submit" value="Add" />
+		</form>-->
+		<form action='.' method='post'>{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" class="bbtn large blue" role="button" value="Add">
+		</form>
+	</div>
+{% endblock %}

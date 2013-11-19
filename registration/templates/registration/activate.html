@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Account Activation {% endblock %}
+
+{% block notify %}
+	Provide your details below to login
+{% endblock %}
+
+{% block content %}
+
+	<div class="confirmbox">
+		{% if account %}
+			<p> {% trans "Account successfully activated" %} </p>
+
+			<a href="{% url auth_login %}" class="bbtn large blue">Login</a>
+		{% else %}
+			<p>
+				{% trans "Account Activation Failed. Learn more about why activation failed" %}
+				<a href="{% url 'help' %}">Learn more.</a>
+			</p>
+		{% endif %}
+	</div>
+
+
+{% endblock %}

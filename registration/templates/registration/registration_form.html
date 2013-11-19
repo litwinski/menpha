@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %} Registeration Form {% endblock %}
+
+{% block notify %}
+	Complete form below to sign up on Menpha. Its free and instant!
+{% endblock %}
+
+{% block content %}
+<form method="post" action="." class="register"> {% csrf_token %}
+    {{ form.as_p }}
+		<input type="submit" class="bbtn blue large" role="button" value="{% trans 'Register' %}" />
+		<a href="{% url 'auth_login' %}" style="float:right; margin-top:10px;">Login</a>
+</form>
+{% endblock %}

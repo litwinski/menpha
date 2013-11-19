@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Account Activation Notice {% endblock %}
+
+{% block notify %}
+	Hurray! Your account activation is complete; proceed to login.
+{% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+			<p> {% trans "Your Account is now activated successfully" %} </p>
+			<a href="{% url 'search' %}" class="bbtn blue large">Start Searching</a>
+	</div>
+{% endblock %}

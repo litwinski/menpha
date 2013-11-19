@@ -1,0 +1,69 @@
+{% load static %}
+{% load i18n %}
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static "css.css"%}">
+	<link rel="stylesheet" type="text/css" href="{% static "scrollbar.css"%}">
+	<link rel="stylesheet" type="text/css" href="{% static "bbtn.css"%}">
+	<link rel="stylesheet" type="text/css" href="{% static "simptip.css"%}"/>
+	<title> {% block title %} Base Homepage ( Overrite ){% endblock %} - Menpha</title>
+</head>
+
+{% block nav %}
+	<nav>
+		<div class="logo">
+			<img src="{% static "logo.png" %}" />
+		</div>
+		<ul>
+		{% if user.is_authenticated %}
+	      <li><a href="/">{% trans "Home" %}</a></li>
+	      <li><a href="{% url 'home' %}">{% trans "Search" %}</a>
+	      <li><a href="{% url 'add' %}">{% trans "Add" %}</a></li>
+	      <li><a href="{% url 'myList' %}">{% trans "My List" %}</a></li>
+	      <li><a href="{% url 'help' %}">{% trans "Help" %}</a></li>
+	      <li><a href="{% url 'myAccount' %}">{{ user.username|capfirst }}</a></li>
+	      <li class="last"><a href="{% url 'auth_logout' %}"> {% trans "Logout" %}</a></li>
+	    {% else %}
+	      <li><a href="{% url 'intro' %}" class="simptip-position-bottom simptip-movable simptip-info simptip-multiline" data-tooltip="Go to Home">{% trans "Home"%}</a></li> 
+	      <li><a href="{% url 'help' %}">{% trans "Help" %}</a></li>
+	      <li><a href="{% url 'registration_register' %}">{% trans "Register" %}</a></li>
+	      <li class="last"><a href="{% url 'auth_login' %}">{% trans "Login"%}</a></li>
+	    {% endif %}
+		</ul>
+	</nav>
+{% endblock %}
+<div class="notifycontent" id="notify">
+	<div class="notify">
+		{% block notify %}
+			Replace with Specific relating to page
+		{% endblock %}
+	</div>
+	<span class="closebutton" onclick="document.getElementById('notify').style.display='none';">
+		X
+	</span>
+</div>
+
+<div class="content">
+	{% block content %}
+	<div class="searchbox">
+		<div class="decobox">
+			<form class="search" action="/search/">
+				<input type="text" name="q" required placeholder="Enter IMEI Number" maxlength="15" />
+				<input type="submit" value="Search" class="bbtn blue large" />
+			</form>
+		</div>
+	</div>
+	{% endblock %}
+</div>
+
+<aside class="about" id="about">
+	<p>
+		Include credits here
+	</p>
+	<span class="closebutton" onclick="document.getElementById('about').style.display='none';">X</span>
+</aside>
+
+
+<footer>
+	<p>Menpha 2013 Copyright &copy; All Rights Reserved. - <a href="javascript:void(0);" onclick="document.getElementById('about').style.display='block';">About</a></p>
+</footer>

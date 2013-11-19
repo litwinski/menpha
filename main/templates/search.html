@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} Search Results for {{ query }} {% endblock %}
+
+{% block notify %}
+	Results for your searched query found below. No results? Learn why.
+{% endblock %}
+
+{% block content %}
+
+{% if query %}
+	{% if results %}
+		{% for result in results %}
+			<div class="resultbox stolen">
+				<span class="datebox">Last modified: <br/>{{ result.pub_date|timesince }}</span>
+				<h3>IMEI match found</h3> 
+				<p>
+					{{ query }}
+				</p>
+				<h3>Device</h3> 
+				<p>
+					{{ result.device }}
+				</p>
+				<h3>Description</h3> 
+				<p>
+					{{ result.description }}
+				</p>
+				<div class="resultoption"> 
+					<span> 
+						<a href="/app/delete/{{ result.imei }}/" class="bbtn red">Delete</a>
+					</span> 
+					<span> 
+						<a href="" class="bbtn blue">Share</a>
+					</span> 
+				</div>
+			</div>
+	{% endfor %}
+
+	{% else %}
+	<div class="confirmbox">
+		<p> Awww! 
+		</p>
+		<p>
+			No result of your search, "{{ query|escape }}", is with us. <p> Are you sure you made no mistake in typing the numbers? 
+		</p> 
+		<a href="{% url 'home' %}" title="Go to search page" class="bbtn blue large">Try again.</a>
+		</p>
+	</div>
+	<center> </center>
+	{% endif %}
+
+	{% else %}
+			<center>Would you search for something and stop playing around?</center>
+	{% endif %}
+{% endblock %}
