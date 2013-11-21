@@ -182,4 +182,4 @@ ACCOUNT_ACTIVATION_DAYS = 2
 #EMAIL_HOST_PASSWORD = 'yourpassword'
 
 # Overrides DATABASE SETTINGS locally. Enable for use on Heroku only.
-#from heroku_settings import *
+from heroku_settings import *
