@@ -32,20 +32,13 @@ class deleteItem(DeleteView):
 	context_object_name = 'to_delete'
 	success_url = reverse_lazy('myList')
 
-#second Option
-#class deleteItem(DeleteView):
-#	def get_object(self, queryset=None):
-#		obj = super(deleteItem, self).get_object()
-#		if not obj.owner == self.request.user:
-#			raise Http404
-#		return obj
-
-#-----------------------------------------------------
+# List View
 class list(ListView):
 	model = Item
-	template_name = 'my-list'
-	context_object_name = 'created_by'
-	queryset = Item.objects.filter('created_by')
+	def get_queryset(self):
+		qset = Q(created_by=self.request.user)
+		#s = Item.objects.get(created_by=self.request.user)
+		return Item.objects.filter(qset).distinct().order_by('-pub_date')
 
 
 # Function Based Views. Eliminate gradually when CBV takes over.
@@ -119,4 +112,3 @@ def deleted(request, item_imei):
 @login_required
 def myList(request):
 	return render(request, 'my-list.html')
-		

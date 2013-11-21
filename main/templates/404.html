@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Something's wrong {% endblock %}
+
+{% block notify %}
+	Page Not Found
+{% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+		<p> Do you wanna delete {{item_imei}} </p>
+		<a href="/app/detail/{{ item_imei}}" class="bbtn blue large">Homepage </a>
+		<a href="/app/deleted/{{ item_imei }}" class="bbtn white">search</a>
+	</div>
+{% endblock %}

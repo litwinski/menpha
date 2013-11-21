@@ -7,6 +7,8 @@ ADMINS = (
     ('Nkansah Rexford', 'webmaster@localhost'),
 )
 
+handler404 = 'Menpha.views.file_not_found_404'
+
 MANAGERS = ADMINS
 
 DATABASES = {

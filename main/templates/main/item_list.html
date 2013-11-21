@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %} My List {{ request.user }} {% endblock %}
+
+{% block notify %}
+{% if object_list %}
+	Please find below your items added.
+{% else %}
+	Ooooh! An empty list. Adding items to your list is instant and free.
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if object_list %}
+	{% for mylist in object_list %}
+		<div class="resultbox not-stolen">
+			<span class="datebox">Last modified: <br/>{{ mylist.pub_date|timesince }} <br> Posted by: <br> {{ mylist.created_by }}</span>
+			<h3>IMEI match found</h3> 
+			<p>
+				{{ mylist.slug }}
+			</p>
+			<h3>Device</h3> 
+			<p>
+				{{ mylist.device }}
+			</p>
+			<h3>Description</h3> 
+			<p>
+				{{ mylist.description }}
+			</p>
+					<div class="resultoption"> 
+						<span> 
+							<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
+						</span> 
+						<span> 
+							<a href="" class="bbtn blue" role="button">Share</a>
+						</span> 
+					</div>
+		</div>
+		{% endfor %}
+	{% else %}
+	<div class="confirmbox">
+		<p> Please, you do not have any item added so far. </p>
+		<a href="{% url 'add' %}" class="bbtn blue large"> Add </a>
+		<a href="{% url 'home' %}" class="bbtn white">Continue searching</a>
+	</div>
+{% endif %}
+{% endblock %}

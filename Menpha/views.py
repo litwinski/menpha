@@ -9,3 +9,8 @@ def faq(request):
 
 def privacy(request):
 	return render_to_response('help.html')
+
+
+def file_not_found_404(request):
+	return render(request, '404.html')
+
