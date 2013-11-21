@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Confirm box {% endblock %}
+
+{% block notify %}
+	<strong style="color:red;">NOT REVERSIBLE!</strong> Confirm delete of {{ to_delete }}. 
+{% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+		<form method="post" action="."> {% csrf_token %}
+			<p> Do you wanna delete {{ to_delete }}? </p>
+			<a href="/app/detail/{{ to_delete.slug }}" class="bbtn blue large2x">Don't delete</a>
+			<input type="submit" value="Delete" class="bbtn red" />
+		</form>
+	</div>
+{% endblock %}

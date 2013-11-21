@@ -6,34 +6,7 @@ from main.forms import ItemForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views.generic import ListView
-from django.views import generic
-
-from django.views.generic.edit import CreateView, UpdateView, DeleteView, DetailView
-from django.core.urlresolvers import reverse_lazy
-
-# Add Class
-class imeiCreate(CreateView):
-	template_name = 'add.html'
-	form_class = ItemForm
-	model = Item
-
-	def form_valid(self, form):
-		form.instance.created_by = self.request.user
-		return super(imeiCreate, self).form_valid(form)
-
-# UpdateView class
-class imeiUpdate(UpdateView):
-	model = Item
-
-# DeleteView Class
-class imeiDelete(DeleteView):
-	model = Item
-	success_url = reverse_lazy('deleted')
-
-class DetailView(generic.DetailView):
-	model = Poll
-	template_name = 'imei-detail.html'
+from django.views.generic.edit import CreateView
 
 def base(request):
 	return render_to_response('base.html')
@@ -65,9 +38,22 @@ def success(request):
 
 @login_required
 def detail(request, item_imei):
+	user = request.user
 	s = get_object_or_404(Item, imei = item_imei)
-	return render(request, 'imei-detail.html',)	
+	return render(request, 'imei-detail.html', {'s': s, 'user':user},)	
 
+
+@login_required
+def add(request):
+	if request.method == "POST":
+		form = ItemForm(request.POST)
+		pulled_imei = request.POST.get('imei')
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect('/app/detail/%s' % pulled_imei,)
+	else:
+		form = ItemForm()
+	return render(request, 'add.html', {'form':form})
 
 @login_required
 def edit(request, item_imei):
@@ -106,11 +92,5 @@ def deleted(request, item_imei):
 def myList(request):
 	return render(request, 'my-list.html')
 
-class MyListView(ListView):
-	template_name = 'my-list'
-	context_object_name = 'created_by'
-	
-	def get_queryset(self):
-		"""Return the last five published polls."""
-		return Item.objects.filter('created_by')
+
 		

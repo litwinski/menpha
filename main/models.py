@@ -13,7 +13,7 @@ class Item(models.Model):
 	device = models.CharField(max_length=250, 
 		#help_text='Enter device name'
 		)
-	imei = models.CharField(max_length=15, unique=True, 
+	slug = models.SlugField(max_length=15, unique=True, 
 		#help_text='Add IMEI number'
 		)
 	description = models.TextField(
@@ -32,4 +32,4 @@ class Item(models.Model):
 
 	def get_absolute_url(self):
 		#return reverse('views.search', args=[self.imei])
-		return reverse('detail', kwargs={'item_imei': self.imei})
+		return reverse('detail', kwargs={'slug': self.slug})

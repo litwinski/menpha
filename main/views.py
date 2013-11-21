@@ -6,8 +6,49 @@ from main.forms import ItemForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views.generic.edit import CreateView
+from django.views.generic import ListView
+from django.views import generic
 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse_lazy
+
+# Add Class
+class create(CreateView):
+	template_name = 'add.html'
+	form_class = ItemForm
+	model = Item
+
+	def form_valid(self, form):
+		form.instance.created_by = self.request.user
+		return super(create, self).form_valid(form)
+
+# UpdateView class- -----------------------------------
+class update(UpdateView):
+	model = Item
+
+# DeleteView Class----------------------------------------
+class deleteItem(DeleteView):
+	model = Item
+	context_object_name = 'to_delete'
+	success_url = reverse_lazy('myList')
+
+#second Option
+#class deleteItem(DeleteView):
+#	def get_object(self, queryset=None):
+#		obj = super(deleteItem, self).get_object()
+#		if not obj.owner == self.request.user:
+#			raise Http404
+#		return obj
+
+#-----------------------------------------------------
+class list(ListView):
+	model = Item
+	template_name = 'my-list'
+	context_object_name = 'created_by'
+	queryset = Item.objects.filter('created_by')
+
+
+# Function Based Views. Eliminate gradually when CBV takes over.
 def base(request):
 	return render_to_response('base.html')
 
@@ -22,7 +63,7 @@ def home(request):
 def search(request):
 	query = request.GET.get('q', '')
 	if query:
-		qset = Q(imei__iexact=query, stolen__iexact='s') 
+		qset = Q(slug__iexact=query, stolen__iexact='s') 
 		results = Item.objects.filter(qset).distinct()
 	else:
 		results = []
@@ -37,27 +78,14 @@ def success(request):
 	return HttpResponse('success')
 
 @login_required
-def detail(request, item_imei):
-	user = request.user
-	s = get_object_or_404(Item, imei = item_imei)
-	return render(request, 'imei-detail.html', {'s': s, 'user':user},)	
+def detail(request, slug):
+	s = get_object_or_404(Item, slug = slug)
+	return render(request, 'imei-detail.html', {'s':s})	
 
-
-@login_required
-def add(request):
-	if request.method == "POST":
-		form = ItemForm(request.POST)
-		pulled_imei = request.POST.get('imei')
-		if form.is_valid():
-			form.save()
-			return HttpResponseRedirect('/app/detail/%s' % pulled_imei,)
-	else:
-		form = ItemForm()
-	return render(request, 'add.html', {'form':form})
 
 @login_required
 def edit(request, item_imei):
-	item = get_object_or_404(Item, imei=item_imei)
+	item = get_object_or_404(Item, slug=item_imei)
 	if request.method == "POST":
 		form = ItemForm(request.POST, instance = item)
 		if form.is_valid():
@@ -75,7 +103,7 @@ def edit_info(request):
 @login_required
 def delete(request, item_imei):
 	try:
-		item = get_object_or_404(Item, imei=item_imei)
+		item = get_object_or_404(Item, slug=item_imei)
 		return render(request, 'del_confirm.html', {'item':item, 'item_imei':item_imei},)
 	except Item.DoesNotExist:
 		return render_to_response('del_success.html')
@@ -83,7 +111,7 @@ def delete(request, item_imei):
 	
 @login_required
 def deleted(request, item_imei):
-	query = get_object_or_404(Item, imei=item_imei)
+	query = get_object_or_404(Item, slug=item_imei)
 	query.delete()
 	return render(request, 'del_success.html', {'query':query},)
 
@@ -91,6 +119,4 @@ def deleted(request, item_imei):
 @login_required
 def myList(request):
 	return render(request, 'my-list.html')
-
-
 		
