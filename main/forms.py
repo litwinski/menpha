@@ -6,7 +6,7 @@ from main.models import Item
 class ItemForm(ModelForm):
 	class Meta:
 		model = Item
-		fields = ['device', 'slug', 'description', 'stolen']
+		fields = ['device', 'slug', 'description', 'photo', 'stolen']
 		
 	#device = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Device name'}))
 	#imei = forms.CharField(max_length=15, 

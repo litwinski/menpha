@@ -144,9 +144,10 @@ form.search {
 
 .resultbox span.datebox {
 	border: 1px solid #f1f1f1;
-	width: 180px;
+	width: auto;
 	height: auto;
 	float:right;
+	background-color:rgba(255, 255, 255, 0.9);
 }
 
 .stolen {

@@ -2,6 +2,9 @@ from django.conf.urls import patterns, include, url
 
 from . import views
 
+from django.conf.urls.static import static
+from Menpha import settings
+
 urlpatterns = patterns('',
 
     # Strictly related to Main app
@@ -14,14 +17,14 @@ urlpatterns = patterns('',
     url(r'^app/add/$', views.create.as_view(), name='add'),
     #url(r'^app/add/$', views.add, name='add'),
 
-    url(r'^app/success/', views.success, name='success'),
+    #url(r'^app/success/', views.success, name='success'),
 
     url(r'^app/detail/(?P<slug>\d+)/$', views.detail, name='detail'),
 
     url(r'^app/edit/(?P<slug>\d+)/$', views.update.as_view(), name='edit'),
     #url(r'^app/edit/(?P<item_imei>\d+)/$', views.edit, name='edit'),
 
-    url(r'^app/edit/$', views.edit_info, name='edit'),
+    #url(r'^app/edit/$', views.edit_info, name='edit'),
 
 	#delete listing
     url(r'^app/delete/(?P<slug>\d+)/$', views.deleteItem.as_view(), name='delete'),
@@ -34,7 +37,7 @@ urlpatterns = patterns('',
     #External links
     #check registration.backends.default.urls for profile link
 
-    #Just for testing
+    #Just for testing new additions or features
     url(r'^test/', views.base, name='base'),
 
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

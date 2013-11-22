@@ -22,6 +22,8 @@ class Item(models.Model):
 
 	stolen = models.CharField(max_length=2, choices=STOLEN_OPTION,)
 
+	photo = models.ImageField(upload_to='devices/', blank=True, null=True)
+
 	pub_date = models.DateTimeField(auto_now=True)
 
 	created_by = models.ForeignKey(User)
@@ -33,3 +35,12 @@ class Item(models.Model):
 	def get_absolute_url(self):
 		#return reverse('views.search', args=[self.imei])
 		return reverse('detail', kwargs={'slug': self.slug})
+
+	def clean_photo(self):
+		image = self.cleaned_data.get('photo',False)
+		if image:
+			if image._size > 1*1024*1024:
+				raise ValidationError("Image file too large ( > 1mb )")
+			return image
+		else:
+			raise ValidationError("Couldn't read uploaded image")

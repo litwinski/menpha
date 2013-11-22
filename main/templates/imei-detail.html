@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} Detail page {% endblock %}
 
 {% block notify %}
@@ -6,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-	<div class="resultbox not-stolen">
-		<span class="datebox">Last modified: <br/>{{ s.pub_date }} <br> Posted by: <br> {{ user }}</span>
+	<div class="resultbox {% if not s.stolen %} not-stolen {% else %} stolen {% endif %}" style="background:url('{{ s.photo.url }}') no-repeat bottom right; background-size: 250px 250px;">
+		<span class="datebox">Last modified: {{ s.pub_date|timesince }} ago <br> Posted by: {{ s.created_by }}</span>
 		<h3>IMEI match found</h3> 
 		<p>
 			{{ s.slug }}
@@ -20,13 +21,16 @@
 		<p>
 			{{ s.description }}
 		</p>
-				<div class="resultoption"> 
-					<span> 
-						<a href="/app/delete/{{ s.slug }}" class="bbtn red" role="button">Delete</a>
-					</span> 
-					<span> 
-						<a href="" class="bbtn blue" role="button">Share</a>
-					</span> 
-				</div>
+			<div class="resultoption"> 
+				<span> 
+					<a href="/app/delete/{{ s.slug }}" class="bbtn red" role="button">Delete</a>
+				</span> 
+				<span> 
+					<a href="" class="bbtn blue" role="button">Share</a>
+				</span> 
+			</div>
+			<div class="detailimage">
+				<!--<img src="{% static "test.png" %}" />-->
+			</div>
 	</div>
 {% endblock %}

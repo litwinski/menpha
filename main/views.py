@@ -38,12 +38,13 @@ class list(ListView):
 	def get_queryset(self):
 		qset = Q(created_by=self.request.user)
 		#s = Item.objects.get(created_by=self.request.user)
+		#return Item.objects.get(created_by=self.request.user)
 		return Item.objects.filter(qset).distinct().order_by('-pub_date')
 
 
 # Function Based Views. Eliminate gradually when CBV takes over.
 def base(request):
-	return render_to_response('base.html')
+	return render_to_response('version1.html')
 
 def intro(request):
 	return render(request, 'intro.html')
@@ -74,41 +75,3 @@ def success(request):
 def detail(request, slug):
 	s = get_object_or_404(Item, slug = slug)
 	return render(request, 'imei-detail.html', {'s':s})	
-
-
-@login_required
-def edit(request, item_imei):
-	item = get_object_or_404(Item, slug=item_imei)
-	if request.method == "POST":
-		form = ItemForm(request.POST, instance = item)
-		if form.is_valid():
-			form.save()
-			return HttpResponseRedirect('/detail/%s' % item_imei)
-	else:
-		form = ItemForm(instance=item)
-
-	return render(request, 'edit.html', {'item':item, 'form':form})
-
-@login_required
-def edit_info(request):
-	return HttpResponse('Hmmm! It looks like you wanna edit something.')
-
-@login_required
-def delete(request, item_imei):
-	try:
-		item = get_object_or_404(Item, slug=item_imei)
-		return render(request, 'del_confirm.html', {'item':item, 'item_imei':item_imei},)
-	except Item.DoesNotExist:
-		return render_to_response('del_success.html')
-	#return render(request, 'delete_item.html', {'item':item, 'item_imei':item_imei},)
-	
-@login_required
-def deleted(request, item_imei):
-	query = get_object_or_404(Item, slug=item_imei)
-	query.delete()
-	return render(request, 'del_success.html', {'query':query},)
-
-
-@login_required
-def myList(request):
-	return render(request, 'my-list.html')
