@@ -35,11 +35,7 @@
               </div>
               <div class="span4">
                 <ul class="social-bar-black">
-                  <!--<li><a class="facebook-black" href="http://www.facebook.com" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>-->
                   <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-                  <!--<li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>-->
                 </ul>
               </div>
             </div>
@@ -49,7 +45,11 @@
           <section class="container">
             <div class="clearfix">
               <div class="tw-feed">
-                <p>Duis tincidunt erat quam. Etiam placerat sapien elit. Pellentesque egestas ornare sagittis. Sed augue lorem, dignissim eget bibendum vitae, scelerisque eget justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <p>
+                  My name is Menpha and I live online. I do not like it when people unknowingly purchase stolen smartphones or tablets or similar devices with IMEI's. I can help you be in the knowing. That's what I'm built for.</p>
+                <p>
+                  You can join hands so we help each other make this a reality.<a href="{% url 'about' %}">learn more?</a>
+                </p>
               </div>
               <div class="tw-feed-author">
                 <a href="#" title="@Nikson">Rexford</a><span>, Currently undergoing heavy debugging and development</span>
@@ -61,6 +61,7 @@
             <div class="container">
               <div class="span12 clearfix">
                 <div class="span4">
+      {% if not user.is_authenticated %}
                   <a class="small-navi about" href="{% url 'auth_login' %}" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Login</a>
 
                   <a class="small-navi team" href="{% url 'registration_register' %}" onclick="gotoPageWithTrans1(2)" title="Register"><i class="navi-icons team-icon"></i>Register</a>
@@ -73,8 +74,23 @@
                 <div class="span4">
                   <a class="middle-navi contacts" href="{% url 'contact' %}" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons blog-icon"></i>Contacts</a>
                   <a class="small-navi blog" href="{% url 'learn' %}" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Learn</a>
-                  <!--<a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons contacts-icon"></i>Contact</a>-->
                 </div>
+     {% else %}
+                  <a class="small-navi about" href="{% url 'auth_logout' %}" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Logout</a>
+
+                  <a class="small-navi team" href="{% url 'myAccount' %}" onclick="gotoPageWithTrans1(2)" title="Register"><i class="navi-icons team-icon"></i>{{ user.username|capfirst }}</a>
+
+                  <a class="middle-navi resume" href="http://google.com/+Nkansahrexford" title="Resume" target="_blank"><i class="navi-icons resume-icon"></i>+Menpha</a>
+                </div>
+                <div class="span4">
+                  <a class="big-navi works" href="{% url 'home' %}"  title="Our Works"><i class="navi-icons works-icon"></i>Start</a>
+                </div>
+                <div class="span4">
+                  <a class="middle-navi contacts" href="{% url 'contact' %}" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons blog-icon"></i>Contacts</a>
+                  <a class="small-navi blog" href="{% url 'learn' %}" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Learn</a>
+                </div>
+      {% endif %}
+
               </div>
             </div>
           </nav>
@@ -95,7 +111,16 @@
           <section class="container">
             <div class="clearfix">
               <div class="tw-feed">
-                <p>Duis tincidunt erat quam. Etiam placerat sapien elit. Pellentesque egestas ornare sagittis. Sed augue lorem, dignissim eget bibendum vitae, scelerisque eget justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <p>I become better in serving you and many others across your street and all over the world when you help track your personal devices. By just marking your device as lost when it really has been, you're sharing that information with the millions around the world who uses Menpha. </p>
+                <p>
+                Trust me, almost everyone wouldn't want to purchase a stolen item making criminals keep their stolen devices to themselves. At the end of the day, How many iPads or Tablets can one person use?
+                </p>
+                <p>
+                I think it gives a useless meaning to criminals who steal devices in order to sell and make money.
+                </p>
+                <p>
+                The next time you plan buying a second-hand smartphone or gadget, be sure to know the real origin. Our user-generated feed from humans around the world are genuine and authentic. You can rely on.
+                </p>
               </div>
               <div class="tw-feed-author">
                 <a href="#" title="@Nikson">Rexford</a><span>, Currently undergoing heavy debugging and development</span>
@@ -114,7 +139,7 @@
      {% endblock %}
      
      {% block content %}
-       <center>Kindly overrite me in the template you reference from by using the block content tag</center> 
+       <center style="margin-top:50px;">Loading</center> 
      {% endblock %}
 </div>
     <!-- jQuery -->
