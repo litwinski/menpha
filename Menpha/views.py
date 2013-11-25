@@ -10,6 +10,11 @@ def contact(request):
 def privacy(request):
 	return render_to_response('privacy.html')
 
+def team(request):
+	return render_to_response('team.html')
+
+def learn(request):
+	return render_to_response('learn.html')
 
 def file_not_found_404(request):
 	return render(request, '404.html')

@@ -63,7 +63,7 @@
                 <div class="span4">
                   <a class="small-navi about" href="{% url 'auth_login' %}" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Login</a>
 
-                  <a class="small-navi team" href="{% url 'registration_register' %}" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Register</a>
+                  <a class="small-navi team" href="{% url 'registration_register' %}" onclick="gotoPageWithTrans1(2)" title="Register"><i class="navi-icons team-icon"></i>Register</a>
 
                   <a class="middle-navi resume" href="http://google.com/+Nkansahrexford" title="Resume" target="_blank"><i class="navi-icons resume-icon"></i>+Menpha</a>
                 </div>
@@ -71,8 +71,8 @@
                   <a class="big-navi works" href="{% url 'home' %}"  title="Our Works"><i class="navi-icons works-icon"></i>Start</a>
                 </div>
                 <div class="span4">
-                  <a class="middle-navi contacts page-transition" href="#contacts" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons blog-icon"></i>Contacts</a>
-                  <a class="small-navi blog page-transition" href="#blog" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Learn</a>
+                  <a class="middle-navi contacts" href="{% url 'contact' %}" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons blog-icon"></i>Contacts</a>
+                  <a class="small-navi blog" href="{% url 'learn' %}" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Learn</a>
                   <!--<a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons contacts-icon"></i>Contact</a>-->
                 </div>
               </div>
@@ -82,11 +82,11 @@
             <div class="container">
               <div class="span12 clearfix">
                 <div class="span6">
-                  <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
-                  <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>
+                  <a class="small-navi about" href="{% url 'about' %}" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
+                  <a class="small-navi team" href="{% url 'team' %}" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>
                 </div>
                 <div class="span6">
-                  <a class="small-navi about page-transition" href="#privacy" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Privacy</a>
+                  <a class="small-navi about" href="{% url 'privacy' %}" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Privacy</a>
                   <!--<a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>-->
                 </div>              
               </div>
@@ -114,69 +114,8 @@
      {% endblock %}
      
      {% block content %}
-     <!--Contact Us Screen-->
-      <article class="pt-page pt-page-5" id="contacts">
-        <div class="outer-wrapper pink-bg">
-          <!--Header-->
-          <header class="row-fluid">
-            <div class="container">
-              <div class="span8 relative">
-                <div class="page-navi">
-                  <a class="home-page page-transition" href="#home" onclick="gotoPageWithTrans2(0)" title="Go Home"></a>
-                  <a class="prev-page page-transition" href="#works" onclick="gotoPageWithTrans3(3)" title="Go To Previous Page"></a>
-                </div>
-                <h1>Contact Us</h1>
-                <nav class="submenu page5-submenu">
-                  <ul>
-                    <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
-                    <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
-                    <li><a href="#works" class="page-transition" onclick="gotoPageWithTrans5(3)">Our Works</a></li>
-                    <li class="current"><a href="#contacts">Contact Us</a></li>
-                    <li class="inline"><a href="#blog" class="page-transition" onclick="gotoPageWithTrans4(5)">Our Blog</a></li>
-                    <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="span4">
-                <ul class="social-bar-white">
-                  <li><a class="facebook-white" href="#" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-white" href="#" title="Twitter" target="_blank"></a></li>
-                  <li><a class="googleplus-white" href="#" title="Google+" target="_blank"></a></li>
-                  <li><a class="linkedin-white" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-white" href="#" title="Behance" target="_blank"></a></li>
-                </ul>
-              </div>
-            </div>
-          </header>
-          <!--Content-->
-          <section class="row-fluid">
-            <div class="container">
-              <div class="span4 addspace">
-                <h2>Address</h2>
-                <p>49 Archdale, 2B Charleston, New York City,<br/>USA</p>
-              </div>
-              <div class="span4 addspace">
-                <h2>Phone</h2>
-                <p>Support: +777 (100) 1234 (10am - 6pm)</p>
-                <p>Director: +777 (100) 1243 (6am - 11pm)</p>
-              </div>
-              <div class="span4 addspace">
-                <h2>Email</h2>
-                <p>Support: <a href="mailto:support@example.com" title="mailto:support@example.com">support@example.com</a></p>
-                <p>Director: <a href="mailto:chief@example.com" title="mailto:chief@example.com">chief@example.com</a></p>
-              </div>
-            </div>
-          </section>
-          <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
-        </div>
-        <!--Footer-->
-        <footer>
-          <div class="container">
-            <p>Copyright &copy; ItemBridge inc., 2013</p>
-          </div>
-        </footer>
-      </article>
-    {% endblock %}
+       <center>Kindly overrite me in the template you reference from by using the block content tag</center> 
+     {% endblock %}
 </div>
     <!-- jQuery -->
     <script src="{% static "js/jquery.js" %}"></script>

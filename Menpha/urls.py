@@ -22,6 +22,10 @@ urlpatterns = patterns('',
 
     url(r'^privacy/', views.privacy, name='privacy'),
 
+    url(r'^team/', views.team, name='team'),
+
+    url(r'^learn/', views.learn, name='learn'),
+
 )
 
 urlpatterns += patterns('',
