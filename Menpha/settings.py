@@ -1,6 +1,10 @@
 # Django settings for Menpha project.
 
-DEBUG = False
+#import os.path
+
+#CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
+
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -75,6 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    # os.path.join(CURRENT_DIR, "static")
 )
 
 # List of finder classes that know how to find static files in
@@ -117,6 +122,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    #os.path.join(CURRENT_DIR, "templates"),
 )
 
 INSTALLED_APPS = (
@@ -188,21 +194,4 @@ ACCOUNT_ACTIVATION_DAYS = 2
 #from heroku_settings import *
 
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-# Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# Parse database configuration from $DATABASE_URL

@@ -23,12 +23,12 @@
 	      <li><a href="{% url 'home' %}">{% trans "Search" %}</a>
 	      <li><a href="{% url 'add' %}">{% trans "Add" %}</a></li>
 	      <li><a href="{% url 'myList' %}">{% trans "My List" %}</a></li>
-	      <li><a href="{% url 'help' %}">{% trans "Help" %}</a></li>
+	      <li><a href="{% url 'about' %}">{% trans "Help" %}</a></li>
 	      <li><a href="{% url 'myAccount' %}">{{ user.username|capfirst }}</a></li>
 	      <li class="last"><a href="{% url 'auth_logout' %}"> {% trans "Logout" %}</a></li>
 	    {% else %}
 	      <li><a href="{% url 'intro' %}" class="simptip-position-bottom simptip-movable simptip-info simptip-multiline" data-tooltip="Go to Home">{% trans "Home"%}</a></li> 
-	      <li><a href="{% url 'help' %}">{% trans "Help" %}</a></li>
+	      <li><a href="{% url 'about' %}">{% trans "Help" %}</a></li>
 	      <li><a href="{% url 'registration_register' %}">{% trans "Register" %}</a></li>
 	      <li class="last"><a href="{% url 'auth_login' %}">{% trans "Login"%}</a></li>
 	    {% endif %}

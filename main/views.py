@@ -44,7 +44,7 @@ class list(ListView):
 
 # Function Based Views. Eliminate gradually when CBV takes over.
 def base(request):
-	return render_to_response('version1.html')
+	return render_to_response('metrika.html')
 
 def intro(request):
 	return render(request, 'intro.html')

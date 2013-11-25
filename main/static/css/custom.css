@@ -172,8 +172,8 @@ a:hover {
 /*Screens*/
 /*Header*/
 header {
-    padding-top: 45px;
-    margin-bottom: 100px;
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
 header h1 {
     max-width: 360px;
@@ -491,10 +491,11 @@ a.big-navi:hover > .navi-icons{
 .tw-feed-author {
     float: right;
     font: 0.75em "Open Sans", Arial, Helvetica, sans-serif;
+    margin-bottom: 58px;
 }
 .tw-feed-author a {
     display: inline-block;
-    background: url(../img/icons_png/twit.png) no-repeat;/*fallback fo IE8*/
+    background: url(../img/icons_png/googleplus-color.png) no-repeat;/*fallback fo IE8*/
     background-image: url(../img/icons_svg/twit.svg), none;
     background-repeat: no-repeat;
     background-position: left center;

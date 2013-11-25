@@ -1,22 +1,20 @@
-{% load static %}
-
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Menpha - Community-based Smartphone Tracker</title>
+    <title>Metrika | Responsive Multipurpose HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <!--Bootstrap-->
-    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <!-- Custom styles -->
-    <link href="{% static "css/custom.css" %}" rel="stylesheet" media="screen">
-    <link href="{% static "css/animations.css" %}" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/animations.css" rel="stylesheet" media="screen">
     <!-- Modernizr -->
-		<script src="{% static "js/modernizr.custom.js" %}"></script>
+		<script src="js/modernizr.custom.js"></script>
     <!--[if lt IE 9]>
-      <script src="{% static "js/html5shiv.js" %}" type="text/javascript"></script>
+      <script src="js/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
   </head>
 
@@ -31,15 +29,15 @@
           <header class="row-fluid">
             <div class="container">
               <div class="span8 logo">
-                <h1 class="dark">Menpha</h1>
+                <h1 class="dark">Metrika</h1>
               </div>
               <div class="span4">
                 <ul class="social-bar-black">
-                  <!--<li><a class="facebook-black" href="http://www.facebook.com" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>-->
+                  <li><a class="facebook-black" href="http://www.facebook.com" title="Facebook" target="_blank"></a></li>
+                  <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
                   <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-                  <!--<li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>-->
+                  <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
+                  <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
                 </ul>
               </div>
             </div>
@@ -49,32 +47,18 @@
             <div class="container">
               <div class="span12 clearfix">
                 <div class="span4">
-                  <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>Login</a>
-                  <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Register</a>
-                  <a class="middle-navi resume" href="#" title="Resume" target="_blank"><i class="navi-icons resume-icon"></i>+Menpha</a>
+                  <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About Us</a>
+                  <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>
+                  <a class="middle-navi resume" href="#" title="Resume" target="_blank"><i class="navi-icons resume-icon"></i>Resume</a>
                 </div>
                 <div class="span4">
-                  <a class="big-navi works page-transition" href="#works" onclick="gotoPageWithTrans1(3)" title="Our Works"><i class="navi-icons works-icon"></i>Start</a>
+                  <a class="big-navi works page-transition" href="#works" onclick="gotoPageWithTrans1(3)" title="Our Works"><i class="navi-icons works-icon"></i>Our Works</a>
                 </div>
                 <div class="span4">
-                  <a class="middle-navi contacts page-transition" href="#contacts" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons blog-icon"></i>Contacts</a>
-                  <a class="small-navi blog page-transition" href="#blog" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Learn</a>
-                  <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons contacts-icon"></i>Contact</a>
+                  <a class="middle-navi contacts page-transition" href="#contacts" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons contacts-icon"></i>Contacts</a>
+                  <a class="small-navi blog page-transition" href="#blog" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Blog</a>
+                  <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Feedback</a>
                 </div>
-              </div>
-            </div>
-          </nav>
-          <nav class="navi row-fluid">
-            <div class="container">
-              <div class="span12 clearfix">
-                <div class="span6">
-                  <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
-                  <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>
-                </div>
-                <div class="span6">
-                  <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
-                  <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Team</a>
-                </div>              
               </div>
             </div>
           </nav>
@@ -110,18 +94,16 @@
                   <a class="prev-page page-transition" href="#about" onclick="gotoPageWithTrans3(6)" title="Go To Previous Page"></a>
                 </div>
                 <h1>About Us</h1>
-                <!--<nav class="submenu page2-submenu">
-
+                <nav class="submenu page2-submenu">
                   <ul>
-                    <li class="page-transition"><a href="#about">About</a></li>
-                    <li class="page-transition"><a href="#team" class="page-transition" onclick="gotoPageWithTrans4(2)">Our Team</a></li>
+                    <li class="current"><a href="#about">About Us</a></li>
+                    <li class="inline"><a href="#team" class="page-transition" onclick="gotoPageWithTrans4(2)">Our Team</a></li>
                     <li><a href="#works" class="page-transition" onclick="gotoPageWithTrans4(3)">Our Works</a></li>
                     <li><a href="#contacts" class="page-transition" onclick="gotoPageWithTrans4(4)">Contact Us</a></li>
                     <li><a href="#blog" class="page-transition" onclick="gotoPageWithTrans4(5)">Our Blog</a></li>
                     <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                   </ul>
-
-                </nav>-->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -174,7 +156,7 @@
                   <a class="prev-page page-transition" href="#about" onclick="gotoPageWithTrans3(1)" title="Go To Previous Page"></a>
                 </div>
                 <h1>Our Team</h1>
-                <!--<nav class="submenu page3-submenu">
+                <nav class="submenu page3-submenu">
                   <ul>
                     <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                     <li class="current"><a href="#team">Our Team</a></li>
@@ -183,7 +165,7 @@
                     <li><a href="#blog" class="page-transition" onclick="gotoPageWithTrans4(5)">Our Blog</a></li>
                     <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                   </ul>
-                </nav>-->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -276,7 +258,7 @@
                   <a class="prev-page page-transition" href="#team" onclick="gotoPageWithTrans3(2)" title="Go To Previous Page"></a>
                 </div>
                 <h1>Our Works</h1>
-               <!-- <nav class="submenu page4-submenu">
+                <nav class="submenu page4-submenu">
                   <ul>
                     <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                     <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
@@ -285,7 +267,7 @@
                     <li><a href="#blog" class="page-transition" onclick="gotoPageWithTrans4(5)">Our Blog</a></li>
                     <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                   </ul>
-                </nav> -->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -396,7 +378,7 @@
                   <a class="prev-page page-transition" href="#works" onclick="gotoPageWithTrans3(3)" title="Go To Previous Page"></a>
                 </div>
                 <h1>Contact Us</h1>
-                <!--<nav class="submenu page5-submenu">
+                <nav class="submenu page5-submenu">
                   <ul>
                     <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                     <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
@@ -405,7 +387,7 @@
                     <li class="inline"><a href="#blog" class="page-transition" onclick="gotoPageWithTrans4(5)">Our Blog</a></li>
                     <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                   </ul>
-                </nav>-->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -460,7 +442,7 @@
                   <a class="prev-page page-transition" href="#contacts" onclick="gotoPageWithTrans3(4)" title="Go To Previous Page"></a>
                 </div>
                 <h1>Our Blog</h1>
-                <!--<nav class="submenu page6-submenu">
+                <nav class="submenu page6-submenu">
                   <ul>
                     <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
                     <li><a href="#works" class="page-transition" onclick="gotoPageWithTrans5(3)">Our Works</a></li>
@@ -469,7 +451,7 @@
                     <li class="inline"><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                     <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                   </ul>
-                </nav>-->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -546,7 +528,7 @@
                   <a class="prev-page page-transition" href="#blog" onclick="gotoPageWithTrans3(5)" title="Go To Previous Page"></a>
                 </div>
                 <h1>Feedback</h1>
-                <!--<nav class="submenu page6-submenu">
+                <nav class="submenu page6-submenu">
                   <ul>
                     <li><a href="#works" class="page-transition" onclick="gotoPageWithTrans5(3)">Our Works</a></li>
                     <li><a href="#contacts" class="page-transition" onclick="gotoPageWithTrans5(4)">Contact Us</a></li>
@@ -555,7 +537,7 @@
                     <li class="inline"><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                     <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
                   </ul>
-              </nav>-->
+              </nav>
             </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -612,7 +594,7 @@
                   <a class="prev-page page-transition" href="#blog" onclick="gotoPageWithTrans7(5)" title="Go To Blog Posts"></a>
                 </div>
                 <h1>Our Blog</h1>
-                <!--<nav class="submenu page6-submenu">
+                <nav class="submenu page6-submenu">
                   <ul>
                     <li><a href="#team" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Team</a></li>
                     <li><a href="#works" class="page-transition" onclick="gotoPageWithTrans5(3)">Our Works</a></li>
@@ -621,7 +603,7 @@
                     <li class="inline"><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans4(6)">Feedback</a></li>
                     <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About Us</a></li>
                   </ul>
-                </nav>-->
+                </nav>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
@@ -705,11 +687,11 @@
       </article>
 		</div>
     <!-- jQuery -->
-    <script src="{% static "js/jquery.js" %}"></script>
-    <script src="{% static "js/pagetransitions.js" %}" type="text/javascript"></script>
-    <script src="{% static "js/validation.js" %}" type="text/javascript"></script>
-    <script src="{% static "js/grid.js" %}"></script>
-    <script src="{% static "js/scripts.js" %}"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/pagetransitions.js" type="text/javascript"></script>
+    <script src="js/validation.js" type="text/javascript"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/scripts.js"></script>
       
     <!-- Form validation -->
     <script type="text/javascript">

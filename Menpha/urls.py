@@ -16,11 +16,11 @@ urlpatterns = patterns('',
     url(r'^', include('main.urls'), name='intro'),
 
     # Sitewide Statics
-    url(r'^help/$', views.help, name='help'),
+    url(r'^about/$', views.about, name='about'),
+
+    url(r'^contact/', views.contact, name='contact'),
 
     url(r'^privacy/', views.privacy, name='privacy'),
-
-    url(r'^faq/', views.faq, name='faq'),
 
 )
 
