@@ -4,7 +4,7 @@
 
 #CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -80,6 +80,16 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     # os.path.join(CURRENT_DIR, "static")
+)
+
+# Static asset configuration
+import os
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_PATH, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -184,11 +194,11 @@ LOGIN_REDIRECT_URL = '/app/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_ACTIVATION_DAYS = 2
-#EMAIL_USE_TLS = True
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_PORT = 587
-#EMAIL_HOST_USER = 'your@email.com'
-#EMAIL_HOST_PASSWORD = 'yourpassword'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'your@email.com'
+EMAIL_HOST_PASSWORD = 'yourpassword'
 
 # Overrides DATABASE SETTINGS locally. Enable for use on Heroku only.
 #from heroku_settings import *
