@@ -13,6 +13,10 @@
     <!-- Custom styles -->
     <link href="{% static "css/custom.css" %}" rel="stylesheet" media="screen">
     <link href="{% static "css/animations.css" %}" rel="stylesheet" media="screen">
+    <!-- Google scroll bar -->
+    <link href="{% static "scrollbar.css" %}" rel="stylesheet" media="screen">
+    <!-- Button Bootstrap -->
+    <link href="{% static "bbtn.css" %}" rel="stylesheet" media="screen">
     <!-- Modernizr -->
 		<script src="{% static "js/modernizr.custom.js" %}"></script>
     <!--[if lt IE 9]>
@@ -44,15 +48,30 @@
 
           <section class="container">
             <div class="clearfix">
-              <div class="tw-feed">
-                <p>
-                  My name is Menpha and I live online. I do not like it when people unknowingly purchase stolen smartphones or tablets or similar devices with IMEI's. I can help you be in the knowing. That's what I'm built for.</p>
-                <p>
-                  You can join hands so we help each other make this a reality.<a href="{% url 'about' %}">learn more?</a>
+{% if not user.is_authenticated %}              
+            <div class="tw-feed">
+                <p style="font-size:46px; text-align:center;">
+                  Is the second-hand smartphone you want to purchase stolen or not?
+                </p>
+                <p style="text-align:center;">
+                  My name is Menpha. I can help you know. Really! <br/>
+                  <a href="{% url 'about' %}" class="bbtn blue large">Learn more</a>
                 </p>
               </div>
+{% else %}
+              <div class="tw-feed">
+                <p style="font-size:46px; text-align:center;">
+                  Welcome back, my dear!
+                </p>
+                <p style="text-align:center;">
+                  Its good to see you again. I'm glad to serve you. <br/>
+                  <a href="{% url 'search' %}" class="bbtn blue large">Search</a>
+                  <a href="{% url 'home' %}" class="bbtn blue large">Add Item</a>
+                </p>
+              </div>
+{% endif %}
               <div class="tw-feed-author">
-                <a href="#" title="@Nikson">Rexford</a><span>, Currently undergoing heavy debugging and development</span>
+                <a href="#" title="@Nikson">Learn how it works</a><span>, in less than a minute!</span>
               </div>
             </div>
           </section>

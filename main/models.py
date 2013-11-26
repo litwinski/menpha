@@ -3,6 +3,9 @@ from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User
 
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
+
 class Item(models.Model):
 
 	STOLEN_OPTION = (
@@ -22,7 +25,9 @@ class Item(models.Model):
 
 	stolen = models.CharField(max_length=2, choices=STOLEN_OPTION,)
 
-	photo = models.ImageField(upload_to='devices/', blank=True, null=True)
+	#photo = models.ImageField(upload_to='devices/', blank=True, null=True)
+	
+	photo = ProcessedImageField(upload_to='devices/', processors=[ResizeToFill(250, 250)], format='JPEG', options={'quality': 60})
 
 	pub_date = models.DateTimeField(auto_now=True)
 

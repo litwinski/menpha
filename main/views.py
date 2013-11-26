@@ -25,6 +25,8 @@ class create(CreateView):
 # UpdateView class- -----------------------------------
 class update(UpdateView):
 	model = Item
+	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
+
 
 # DeleteView Class----------------------------------------
 class deleteItem(DeleteView):
@@ -44,10 +46,10 @@ class list(ListView):
 
 # Function Based Views. Eliminate gradually when CBV takes over.
 def base(request):
-	return render_to_response('metrika.html')
+	return render(request, 'intro.html')
 
 def intro(request):
-	return render(request, 'intro.html')
+	return render(request, 'metrika.html')
 
 @login_required
 def home(request):
