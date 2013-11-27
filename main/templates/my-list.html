@@ -2,7 +2,7 @@
 {% block title %} My List - {{ request.user }} {% endblock %}
 
 {% block notify %}
-	Under contruction. Will display your personal IMEI list.
+	I list all your items for you.
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,7 @@
 						<a href="/app/delete/{{ s.imei }}" class="bbtn red" role="button">Delete</a>
 					</span> 
 					<span> 
-						<a href="" class="bbtn blue" role="button">Share</a>
+						<a href="/app/edit/{{ s.imei }}" class="bbtn blue" role="button">Edit</a>
 					</span> 
 				</div>
 	</div>
@@ -49,7 +49,7 @@
 						<a href="/app/delete/{{ s.imei }}" class="bbtn red" role="button">Delete</a>
 					</span> 
 					<span> 
-						<a href="" class="bbtn blue" role="button">Share</a>
+						<a href="/app/edit/{{ s.imei }}" class="bbtn blue" role="button">Edit</a>
 					</span> 
 				</div>
 	</div>

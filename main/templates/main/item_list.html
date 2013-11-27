@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} My List {{ request.user }} {% endblock %}
+{% block title %} My List {{ mylist.created_by }} {% endblock %}
 
 {% block notify %}
 {% if object_list %}

@@ -10,23 +10,23 @@
             <div class="container">
               <div class="span8 relative">
               	<div class="page-navi">
-                	<a class="home-page" href="{% url 'base' %}" title="Go Home"></a>
+                	<a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
                 </div>
                 <h1>Learn Quick</h1>
                
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
-                  <li><a class="googleplus-white" href="#" title="Google+" target="_blank"></a></li>
-           </ul>
-              </div>
+                   {% include "socialmedia.html" %}
+                </ul>
+              </div>            
             </div>
           </header>
           <!--Content-->
           <section class="row-fluid">
             <div class="container blogpost-row">
             	<div class="span6">
-              	<a class="blogpost page-transition" href="#blog-single" onclick="gotoPageWithTrans6(7)">
+              	<a class="blogpost page-transition" href="" onclick="gotoPageWithTrans6(7)">
                 	<span class="figcap"></span>
                   <h2>Etiam Tristique Consectetu</h2>
                   <span class="post-meta">Mike Example, 03.11.2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="comments-icon"></i>&nbsp;3</span>
@@ -34,7 +34,7 @@
                 </a>
               </div>
             	<div class="span6">
-              	<a class="blogpost page-transition" href="#blog-single" onclick="gotoPageWithTrans6(7)">
+              	<a class="blogpost page-transition" href="" onclick="gotoPageWithTrans6(7)">
                 	<span class="figcap"></span>
                   <h2>Curabitur Egestas Est</h2>
                   <span class="post-meta">Mike Example, 03.11.2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="comments-icon"></i>&nbsp;3</span>
@@ -44,7 +44,7 @@
             </div>
             <div class="container blogpost-row">
             	<div class="span6">
-              	<a class="blogpost page-transition" href="#blog-single" onclick="gotoPageWithTrans6(7)">
+              	<a class="blogpost page-transition" href="" onclick="gotoPageWithTrans6(7)">
                 	<span class="figcap"></span>
                   <h2>Etiam Tristique Consectetu</h2>
                   <span class="post-meta">Mike Example, 03.11.2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="comments-icon"></i>&nbsp;3</span>
@@ -52,7 +52,7 @@
                 </a>
               </div>
             	<div class="span6">
-              	<a class="blogpost page-transition" href="#blog-single" onclick="gotoPageWithTrans6(7)">
+              	<a class="blogpost page-transition" href="" onclick="gotoPageWithTrans6(7)">
                 	<span class="figcap"></span>
                   <h2>Curabitur Egestas Est</h2>
                   <span class="post-meta">Mike Example, 03.11.2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="comments-icon"></i>&nbsp;3</span>

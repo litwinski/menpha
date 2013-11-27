@@ -11,14 +11,14 @@
             <div class="container">
               <div class="span8 relative">
               	<div class="page-navi">
-                  <a class="home-page" href="{% url 'base' %}" title="Go Home"></a>
+                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
                 </div>
                 <h1>Our Team</h1>
                 
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
-                  <li><a class="google-white" href="#" title="Facebook" target="_blank"></a></li>
+                   {% include "socialmedia.html" %}
                 </ul>
               </div>
             </div>
@@ -27,10 +27,7 @@
           <section class="row-fluid">
             <div class="container">
               <div class="span12">
-                <p>I appreciate the effort my master puts into making me serve you better. Though he has got not so many people supporting, he is dedicated to improving me steadily and better.</p>
-                <p>
-                I'm glad to present to you my maintainers below. Besides, I'm not that stubborn to have many maintainers keeping me in check.
-                </p>
+                <p> See Menpha's maintainers and developers.</p>
               </div>
             </div>
             <div class="container">

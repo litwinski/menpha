@@ -29,7 +29,7 @@
 						<a href="/app/delete/{{ result.imei }}/" class="bbtn red">Delete</a>
 					</span> 
 					<span> 
-						<a href="" class="bbtn blue">Share</a>
+						<a href="/app/edit/{{ result.imei }}/" class="bbtn blue">Edit</a>
 					</span> 
 				</div>
 			</div>
@@ -40,15 +40,20 @@
 		<p> Awww! 
 		</p>
 		<p>
-			No result of your search, "{{ query|escape }}", is with us. <p> Are you sure you made no mistake in typing the numbers? 
+			I did not find your search, "{{ query|escape }}", in my system. 
 		</p> 
-		<a href="{% url 'home' %}" title="Go to search page" class="bbtn blue large">Try again.</a>
+			Are you sure you made no mistake in typing the numbers? 
+		<p> 
+		<a href="{% url 'home' %}" title="Go to search page" class="bbtn blue large">Try again</a>
 		</p>
 	</div>
 	<center> </center>
 	{% endif %}
 
 	{% else %}
-			<center>Would you search for something and stop playing around?</center>
+	<div class="confirmbox">
+		Please, will you search for an IMEI and stop playing around?
+		<a href="{% url 'home' %}" title="Go to search page" class="bbtn blue large">Search now!</a>
+	</div>
 	{% endif %}
 {% endblock %}

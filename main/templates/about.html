@@ -11,18 +11,14 @@
             <div class="container">
               <div class="span8 relative">
               	<div class="page-navi">
-                  <a class="home-page" href="{% url 'base' %}" title="Go Home"></a>
+                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
                 </div>
                 <h1>About Us</h1>
                
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
-                  <li><a class="facebook-white" href="#" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-white" href="#" title="Twitter" target="_blank"></a></li>
-                  <li><a class="googleplus-white" href="#" title="Google+" target="_blank"></a></li>
-                  <li><a class="linkedin-white" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-white" href="#" title="Behance" target="_blank"></a></li>
+                   {% include "socialmedia.html" %}
                 </ul>
               </div>
             </div>
@@ -55,10 +51,6 @@
           <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
         </div>
         <!--Footer-->
-        <footer>
-          <div class="container">
-            <p>Copyright &copy; ItemBridge inc., 2013</p>
-          </div>
-        </footer>
+        {% include "footer.html" %}
       </article>
   	{% endblock %}
