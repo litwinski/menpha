@@ -192,18 +192,14 @@ LOGGING = {
 LOGIN_REDIRECT_URL = '/app/'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_ACTIVATION_DAYS = 2
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'your@email.com'
-EMAIL_HOST_PASSWORD = 'yourpassword'
+EMAIL_HOST_USER = 'menphaproject@gmail.com'
+EMAIL_HOST_PASSWORD = '00113399'
 
-# Overrides DATABASE SETTINGS locally. Enable for use on Heroku only.
-#from heroku_settings import *
-
-# Parse database configuration from $DATABASE_URL
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()

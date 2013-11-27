@@ -12,17 +12,13 @@
               	<div class="page-navi">
                 	<a class="home-page" href="{% url 'base' %}" title="Go Home"></a>
                 </div>
-                <h1>Our Blog</h1>
+                <h1>Learn Quick</h1>
                
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
-                  <li><a class="facebook-white" href="#" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-white" href="#" title="Twitter" target="_blank"></a></li>
                   <li><a class="googleplus-white" href="#" title="Google+" target="_blank"></a></li>
-                  <li><a class="linkedin-white" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-white" href="#" title="Behance" target="_blank"></a></li>
-                </ul>
+           </ul>
               </div>
             </div>
           </header>
@@ -70,11 +66,6 @@
           </section>
           <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
         </div>
-        <!--Footer-->
-        <footer>
-          <div class="container">
-            <p>Copyright &copy; ItemBridge inc., 2013</p>
-          </div>
-        </footer>
+                {% include "footer.html" %}
       </article> }
       {% endblock %}

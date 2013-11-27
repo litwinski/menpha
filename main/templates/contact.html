@@ -11,18 +11,14 @@
             <div class="container">
               <div class="span8 relative">
               	<div class="page-navi">
-                  <a class="home-page" href="{% url 'base' %}" title="Go Home"></a>
+                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
                 </div>
-                <h1>Contact Us</h1>
+                <h1>Contact Me</h1>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">
-                  <li><a class="facebook-white" href="#" title="Facebook" target="_blank"></a></li>
-                  <li><a class="twitter-white" href="#" title="Twitter" target="_blank"></a></li>
                   <li><a class="googleplus-white" href="#" title="Google+" target="_blank"></a></li>
-                  <li><a class="linkedin-white" href="#" title="LinkedIn" target="_blank"></a></li>
-                  <li><a class="behance-white" href="#" title="Behance" target="_blank"></a></li>
-                </ul>
+                </ul> 
               </div>
             </div>
           </header>
@@ -31,27 +27,22 @@
             <div class="container">
               <div class="span4 addspace">
                 <h2>Address</h2>
-                <p>49 Archdale, 2B Charleston, New York City,<br/>USA</p>
+                <p>G129/11, Densuano Street, Koforudia, Eastern Region<br/>Ghana</p>
               </div>
               <div class="span4 addspace">
                 <h2>Phone</h2>
-                <p>Support: +777 (100) 1234 (10am - 6pm)</p>
-                <p>Director: +777 (100) 1243 (6am - 11pm)</p>
+                <p>Support: +233 266 811 165 (24 hours/7 days a week)</p>
               </div>
               <div class="span4 addspace">
                 <h2>Email</h2>
-                <p>Support: <a href="mailto:support@example.com" title="mailto:support@example.com">support@example.com</a></p>
-                <p>Director: <a href="mailto:chief@example.com" title="mailto:chief@example.com">chief@example.com</a></p>
+                <p>Support: <a href="mailto:menphaproject@gmail.com" title="mailto:menphaproject@gmail.com">menphaproject@gmail.com</a></p>
               </div>
             </div>
           </section>
           <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
         </div>
         <!--Footer-->
-        <footer>
-          <div class="container">
-            <p>Copyright &copy; ItemBridge inc., 2013</p>
-          </div>
-        </footer>
+        {% include "footer.html" %}
+
       </article>
     {% endblock %}
