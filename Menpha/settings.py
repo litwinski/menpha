@@ -1,8 +1,6 @@
 # Django settings for Menpha project.
-
-#import os.path
-
-#CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
+# import os.path
+# CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -155,6 +153,9 @@ INSTALLED_APPS = (
 
     #image processor
     'imagekit',
+
+    # South Schema Migration
+    'south',
 
 )
 
