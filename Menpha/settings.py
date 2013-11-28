@@ -2,7 +2,7 @@
 # import os.path
 # CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -157,7 +157,7 @@ INSTALLED_APPS = (
     'imagekit',
 
     # South Schema Migration
-    'south',
+    #'south',
 
 )
 
