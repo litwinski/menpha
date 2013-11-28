@@ -40,12 +40,3 @@ class Item(models.Model):
 	def get_absolute_url(self):
 		#return reverse('views.search', args=[self.imei])
 		return reverse('detail', kwargs={'slug': self.slug})
-
-	def clean_photo(self):
-		image = self.cleaned_data.get('photo',False)
-		if image:
-			if image._size > 1*1024*1024:
-				raise ValidationError("Image file too large ( > 1mb )")
-			return image
-		else:
-			raise ValidationError("Couldn't read uploaded image")
