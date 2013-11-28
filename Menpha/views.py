@@ -19,3 +19,8 @@ def learn(request):
 def file_not_found_404(request):
 	return render(request, '404.html')
 
+def server_error(request):
+	return render(request, '500.html')
+
+def perm_denied(request):
+	return render(request, '403.html')

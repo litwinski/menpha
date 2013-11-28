@@ -10,6 +10,8 @@ ADMINS = (
 )
 
 handler404 = 'Menpha.views.file_not_found_404'
+handler500 = 'Menpha.views.server_error'
+handler403 = 'Menpha.views.perm_denied'
 
 MANAGERS = ADMINS
 
