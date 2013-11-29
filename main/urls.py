@@ -32,7 +32,7 @@ urlpatterns = patterns('',
 	#url(r'^app/deleted/(?P<item_imei>\d+)/', views.deleted, name='deleted'),
 
     #My Account listings
-	url(r'^app/my-list/', views.list.as_view(), name='myList'),
+	url(r'^app/my-list/', views.myList.as_view(), name='myList'),
 
     #External links
     #check registration.backends.default.urls for profile link
