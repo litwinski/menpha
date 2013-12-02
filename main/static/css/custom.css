@@ -495,8 +495,8 @@ a.big-navi:hover > .navi-icons{
 }
 .tw-feed-author a {
     display: inline-block;
-    background: url(../img/icons_png/googleplus-color.png) no-repeat;/*fallback fo IE8*/
-    background-image: url(../img/icons_svg/twit.svg), none;
+    /*background: url(../img/icons_png/googleplus-color.png) no-repeat;/*fallback fo IE8
+    background-image: url(../img/icons_svg/twit.svg), none;*/
     background-repeat: no-repeat;
     background-position: left center;
     height: 14px;
