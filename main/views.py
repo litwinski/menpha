@@ -23,12 +23,16 @@ class Create(CreateView):
 		form.instance.created_by = self.request.user
 		return super(Create, self).form_valid(form)
 
+	@method_decorator(login_required())
+	def dispatch(self, * args, ** kwargs):
+		return super(Create, self).dispatch( * args, ** kwargs)
+
 class Update(UpdateView):
 	""" Updates an object in context """
 	model = Item
 	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
 
-	@method_decorator(permission_required('main.change_item', raise_exception=True,))
+	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
 		return super(Update, self).dispatch( * args, ** kwargs)
 
@@ -39,7 +43,7 @@ class DeleteItem(DeleteView):
 	context_object_name = 'to_delete'
 	success_url = reverse_lazy('myList')
 
-	@method_decorator(permission_required('main.delete_item'))
+	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
 		return super(DeleteItem, self).dispatch( * args, ** kwargs)
 
