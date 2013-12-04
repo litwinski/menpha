@@ -184,7 +184,7 @@ form.addbox {
 	width: 600px;
 }
 
-.addbox input[type='text']{
+.addbox input[type='text'], .addbox input[type='file']{
 	width: 100%;
 	line-height: 30px;
 	outline: 0;
@@ -193,6 +193,7 @@ form.addbox {
 	padding-left:8px;
 	border:1px solid #f2f2f2;
 }
+
 
 .addbox input[type='text']:hover, .addbox input[type='text']:focus {
 	border: 1px solid black;
