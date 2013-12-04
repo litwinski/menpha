@@ -2,7 +2,7 @@
 # import os.path
 # CURRENT_DIR = os.path.dirname(os.path.realpath(__file__ )) 
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

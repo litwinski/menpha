@@ -13,7 +13,7 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 
-class create(CreateView):
+class Create(CreateView):
 	""" Adds an object to database by a user in context"""
 	template_name = 'add.html'
 	form_class = ItemForm
@@ -21,19 +21,19 @@ class create(CreateView):
 
 	def form_valid(self, form):
 		form.instance.created_by = self.request.user
-		return super(create, self).form_valid(form)
+		return super(Create, self).form_valid(form)
 
-class update(UpdateView):
+class Update(UpdateView):
 	""" Updates an object in context """
 	model = Item
 	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
 
 	@method_decorator(permission_required('main.change_item', raise_exception=True,))
 	def dispatch(self, * args, ** kwargs):
-		return super(update, self).dispatch( * args, ** kwargs)
+		return super(Update, self).dispatch( * args, ** kwargs)
 
 
-class deleteItem(DeleteView):
+class DeleteItem(DeleteView):
 	""" Deletes the the context object """
 	model = Item
 	context_object_name = 'to_delete'
@@ -41,9 +41,9 @@ class deleteItem(DeleteView):
 
 	@method_decorator(permission_required('main.delete_item'))
 	def dispatch(self, * args, ** kwargs):
-		return super(deleteItem, self).dispatch( * args, ** kwargs)
+		return super(DeleteItem, self).dispatch( * args, ** kwargs)
 
-class myList(ListView):
+class MyList(ListView):
 	""" Lists all the items added by a user."""
 	model = Item
 	def get_queryset(self):
@@ -54,7 +54,7 @@ class myList(ListView):
 
 	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
-		return super(myList, self).dispatch( * args, ** kwargs)
+		return super(MyList, self).dispatch( * args, ** kwargs)
 
 
 # Function Based Views. Eliminate gradually when CBV takes over.
