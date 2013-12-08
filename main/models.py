@@ -11,7 +11,7 @@ class Item(models.Model):
 
 	STOLEN_OPTION = (
 		('ns', 'Not Stolen'),
-		('s', 'Stolen'),
+		('s', 'Stolen/Missing'),
 		)
 
 	device = models.CharField(max_length=250, 
