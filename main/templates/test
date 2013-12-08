@@ -1,0 +1,5 @@
+{% if not user == s.created_by %}
+Proceed with showing without delete button 
+{% else %}
+Show delete button. Another check on its way if bypassed by stubbon webdeveloper
+{% endif %}

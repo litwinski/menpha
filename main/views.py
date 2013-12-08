@@ -95,3 +95,12 @@ def imei_detail(request, slug):
 	Class Based View DetailView class."""
 	s = get_object_or_404(Item, slug = slug)
 	return render(request, 'imei-detail.html', {'s':s})	
+
+# Give the code below a test-drive. For preventing unauthorized
+# Update of IMEI.
+def post(self, request, * args, ** kwargs):
+	s = get_object_or_404(Item, slug = slug)
+	if not request.user == s.created_by:
+		return HttpResponseForbidden()
+	self.object = self.get_object()
+	return super(AuthorInterest, self).post(request, * args, ** kwargs)
