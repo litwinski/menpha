@@ -1,3 +1,4 @@
+# Admin.py Handwritten by google.com/+Nkansahrexford
 from django.contrib import admin
 from main.models import Item
 
