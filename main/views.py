@@ -50,11 +50,11 @@ class CreateImei(CreateView):
 
 	def form_valid(self, form):
 		form.instance.created_by = self.request.user
-		return super(Create, self).form_valid(form)
+		return super(CreateImei, self).form_valid(form)
 
 	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
-		return super(Create, self).dispatch( * args, ** kwargs)
+		return super(CreateImei, self).dispatch( * args, ** kwargs)
 
 class UpdateImei(UpdateView):
 	""" Updates an object in context """
@@ -63,7 +63,7 @@ class UpdateImei(UpdateView):
 
 	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
-		return super(Update, self).dispatch( * args, ** kwargs)
+		return super(UpdateImei, self).dispatch( * args, ** kwargs)
 
 
 class DeleteImei(DeleteView):
@@ -74,7 +74,7 @@ class DeleteImei(DeleteView):
 
 	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
-		return super(DeleteItem, self).dispatch( * args, ** kwargs)
+		return super(DeleteImei, self).dispatch( * args, ** kwargs)
 
 class ListImei(ListView):
 	""" Lists all the items added by a user."""
@@ -87,7 +87,7 @@ class ListImei(ListView):
 
 	@method_decorator(login_required())
 	def dispatch(self, * args, ** kwargs):
-		return super(MyList, self).dispatch( * args, ** kwargs)
+		return super(ListImei, self).dispatch( * args, ** kwargs)
 
 @login_required
 def imei_detail(request, slug):
