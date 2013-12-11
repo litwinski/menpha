@@ -6,8 +6,9 @@ from main.models import Item
 from main.forms import ItemForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.exceptions import PermissionDenied
 from django.utils.decorators import method_decorator
-#from django.contrib import messages # Apply use in Use
+#from django.contrib import messages # Apply later
 from django.views.generic import ListView
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -35,6 +36,7 @@ def search(request):
 	return render(request, "search.html", {
 		'results': results,
 		'query': query,
+		'user': request.user,
 	})
 
 
@@ -61,9 +63,16 @@ class UpdateImei(UpdateView):
 	model = Item
 	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
 
-	@method_decorator(login_required())
-	def dispatch(self, * args, ** kwargs):
-		return super(UpdateImei, self).dispatch( * args, ** kwargs)
+	@method_decorator(login_required)
+	def dispatch(self, request, *args, **kwargs):
+		pulled = Item.objects.get(slug=kwargs['slug'])
+		if pulled.created_by == request.user:
+			return super(UpdateImei, self).dispatch(request, *args, **kwargs)
+		raise PermissionDenied
+
+	#@method_decorator(login_required())
+	#def dispatch(self, * args, ** kwargs):
+	#	return super(UpdateImei, self).dispatch( * args, ** kwargs)
 
 
 class DeleteImei(DeleteView):
@@ -72,9 +81,12 @@ class DeleteImei(DeleteView):
 	context_object_name = 'to_delete'
 	success_url = reverse_lazy('myList')
 
-	@method_decorator(login_required())
-	def dispatch(self, * args, ** kwargs):
-		return super(DeleteImei, self).dispatch( * args, ** kwargs)
+	@method_decorator(login_required)
+	def dispatch(self, request, *args, **kwargs):
+		pulled = Item.objects.get(slug=kwargs['slug'])
+		if pulled.created_by == request.user:
+			return super(DeleteImei, self).dispatch(request, *args, **kwargs)
+		raise PermissionDenied
 
 class ListImei(ListView):
 	""" Lists all the items added by a user."""
@@ -94,7 +106,7 @@ def imei_detail(request, slug):
 	""" Still used to display detail of object. Should be replaced with 
 	Class Based View DetailView class."""
 	s = get_object_or_404(Item, slug = slug)
-	return render(request, 'imei-detail.html', {'s':s})	
+	return render(request, 'imei-detail.html', {'s':s, 'user':request.user})	
 
 # Give the code below a test-drive. For preventing unauthorized
 # Update of IMEI.

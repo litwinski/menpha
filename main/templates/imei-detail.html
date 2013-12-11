@@ -22,12 +22,18 @@
 			{{ s.description }}
 		</p>
 			<div class="resultoption"> 
+			{% if user == s.created_by %}
 				<span> 
 					<a href="/app/delete/{{ s.slug }}" class="bbtn red" role="button">Delete</a>
 				</span> 
 				<span> 
 					<a href="/app/edit/{{ s.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
+			{% else %}
+				<span>
+					<a href="" class="bbtn blue" role="button"> Share </a>
+				</span>
+			{% endif %}
 			</div>
 			<div class="detailimage">
 			</div>
