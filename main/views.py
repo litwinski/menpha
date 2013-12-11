@@ -14,6 +14,10 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 
+def base(request):
+	""" Old introductory page deprecated"""
+	return render(request, 'intro.html')
+
 def intro_page(request):
 	"""Current introductory page in use"""
 	return render(request, 'metrika.html')
@@ -36,13 +40,8 @@ def search(request):
 	return render(request, "search.html", {
 		'results': results,
 		'query': query,
-		'user': request.user,
+		'user': request.user, # For checking permission in template
 	})
-
-
-def base(request):
-	""" Old introductory page deprecated"""
-	return render(request, 'intro.html')
 
 class CreateImei(CreateView):
 	""" Adds an object to database by a user in context"""
@@ -59,7 +58,12 @@ class CreateImei(CreateView):
 		return super(CreateImei, self).dispatch( * args, ** kwargs)
 
 class UpdateImei(UpdateView):
-	""" Updates an object in context """
+	""" Updates an object in context.
+
+	If request.user is same as created_by value in model, dispatch fucntion proceeds.
+	Else PermissionDenied. 
+
+	Useful for preventing one user from editing item added by another user. """
 	model = Item
 	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
 
@@ -76,7 +80,12 @@ class UpdateImei(UpdateView):
 
 
 class DeleteImei(DeleteView):
-	""" Deletes the the context object """
+	""" Deletes the the context object. 
+
+	If request.user is same as created_by value in model, dispatch fucntion proceeds.
+	Else PermissionDenied. 
+
+	Useful for preventing one user from deleting item added by another user. """
 	model = Item
 	context_object_name = 'to_delete'
 	success_url = reverse_lazy('myList')
@@ -93,8 +102,6 @@ class ListImei(ListView):
 	model = Item
 	def get_queryset(self):
 		qset = Q(created_by=self.request.user)
-		#s = Item.objects.get(created_by=self.request.user) # No idea why, but results in error
-		#return Item.objects.get(created_by=self.request.user)
 		return Item.objects.filter(qset).distinct().order_by('-pub_date')
 
 	@method_decorator(login_required())
@@ -106,13 +113,4 @@ def imei_detail(request, slug):
 	""" Still used to display detail of object. Should be replaced with 
 	Class Based View DetailView class."""
 	s = get_object_or_404(Item, slug = slug)
-	return render(request, 'imei-detail.html', {'s':s, 'user':request.user})	
-
-# Give the code below a test-drive. For preventing unauthorized
-# Update of IMEI.
-def post(self, request, * args, ** kwargs):
-	s = get_object_or_404(Item, slug = slug)
-	if not request.user == s.created_by:
-		return HttpResponseForbidden()
-	self.object = self.get_object()
-	return super(AuthorInterest, self).post(request, * args, ** kwargs)
+	return render(request, 'imei-detail.html', {'s':s, 'user':request.user})

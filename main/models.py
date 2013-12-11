@@ -10,8 +10,8 @@ from imagekit.processors import ResizeToFill
 class Item(models.Model):
 
 	STOLEN_OPTION = (
-		('ns', 'Not Stolen'),
-		('s', 'Stolen/Missing'),
+		('ns', 'Its with me'),
+		('s', 'Its stolen/missing'),
 		)
 
 	device = models.CharField(max_length=250, 

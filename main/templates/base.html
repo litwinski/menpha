@@ -1,18 +1,27 @@
-<!-- Handwritten by Nkansah Rexford
+<!-- 
+	Handwritten by Nkansah Rexford
 	google.com/+Nkansahrexford
+	Menpha Project
+	Version 1.0
 -->
 {% load static %}
 {% load i18n %}
 
-<head>
-	<link rel="stylesheet" type="text/css" href="{% static "css.css"%}">
-	<link rel="stylesheet" type="text/css" href="{% static "scrollbar.css"%}">
-	<link rel="stylesheet" type="text/css" href="{% static "bbtn.css"%}">
-	<link rel="stylesheet" type="text/css" href="{% static "simptip.css"%}"/>
-	<title> {% block title %} Base Homepage ( Overrite ){% endblock %} - Menpha</title>
-</head>
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include 'meta.html' %}
 
-{% block nav %}
+		<link rel="stylesheet" type="text/css" href="{% static "css.css"%}">
+		<link rel="stylesheet" type="text/css" href="{% static "scrollbar.css"%}">
+		<link rel="stylesheet" type="text/css" href="{% static "bbtn.css"%}">
+		<link rel="stylesheet" type="text/css" href="{% static "simptip.css"%}"/>
+		<!--<link rel="shortcut icon" href="{% static "favicon.ico" %}">-->
+		<title> {% block title %} Community-based IMEI-tagged Gadget Tracker{% endblock %} - Menpha</title>
+
+	</head>
+
+	{% block nav %}
 	<nav>
 		<div class="logo">
 			<img src="{% static "logo.png" %}" />
@@ -34,42 +43,46 @@
 	    {% endif %}
 		</ul>
 	</nav>
-{% endblock %}
-<div class="notifycontent" id="notify">
-	<div class="notify">
-		{% block notify %}
-			Welcome!
+	{% endblock %}
+
+<!-- Body Begins -->
+	<div class="notifycontent" id="notify">
+		<div class="notify">
+			{% block notify %}
+				Welcome!
+			{% endblock %}
+		</div>
+		<span class="closebutton" onclick="document.getElementById('notify').style.display='none';">
+			X
+		</span>
+	</div>
+
+	<div class="content">
+		{% block content %}
+		<div class="searchbox">
+			<div class="decobox">
+				<form class="search" action="/search/">
+					<input type="text" name="q" required placeholder="Enter IMEI Number" maxlength="15" />
+					<input type="submit" value="Search" class="bbtn blue large" />
+				</form>
+			</div>
+		</div>
 		{% endblock %}
 	</div>
-	<span class="closebutton" onclick="document.getElementById('notify').style.display='none';">
-		X
-	</span>
-</div>
 
-<div class="content">
-	{% block content %}
-	<div class="searchbox">
-		<div class="decobox">
-			<form class="search" action="/search/">
-				<input type="text" name="q" required placeholder="Enter IMEI Number" maxlength="15" />
-				<input type="submit" value="Search" class="bbtn blue large" />
-			</form>
-		</div>
-	</div>
-	{% endblock %}
-</div>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-45946260-1', 'menpha.herokuapp.com');
+	  ga('send', 'pageview');
 
-  ga('create', 'UA-45946260-1', 'menpha.herokuapp.com');
-  ga('send', 'pageview');
+	</script>
 
-</script>
+	<footer>
+		<p> Copyright &copy; Menpha, 2013 <a href="{% url 'about' %}">About</a> | <a href="{% url 'learn' %}">Learn</a></p>
+	</footer>
 
-<footer>
-	<p> Copyright &copy; Menpha, 2013 <a href="{% url 'about' %}">About</a></p>
-</footer>
+</html>
