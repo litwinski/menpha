@@ -28,7 +28,7 @@ class Item(models.Model):
 
 	#photo = models.ImageField(upload_to='devices/', blank=True, null=True)
 	
-	photo = ProcessedImageField(upload_to='devices/', processors=[ResizeToFill(250, 250)], format='JPEG', options={'quality': 80})
+	photo = ProcessedImageField(blank=True, null=True, upload_to='devices/', processors=[ResizeToFill(250, 250)], format='JPEG', options={'quality': 80})
 
 	pub_date = models.DateTimeField(auto_now=True)
 
@@ -41,3 +41,7 @@ class Item(models.Model):
 	def get_absolute_url(self):
 		#return reverse('views.search', args=[self.imei])
 		return reverse('detail', kwargs={'slug': self.slug})
+
+	#def photo_url(self):
+	#	if self.photo and hasattr(self.photo, 'url'):
+	#		self.photo.url

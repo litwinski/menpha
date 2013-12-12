@@ -12,6 +12,7 @@ class ItemForm(ModelForm):
 			'device': 'Name of my device',
 			'slug': 'IMEI of my device',
 			'stolen': 'Indicate state of device',
+			'photo': 'Photo of your device (optional)'
 		}
 	#device = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Device name'}))
 	#imei = forms.CharField(max_length=15, 
