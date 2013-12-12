@@ -13,7 +13,7 @@
 {% block content %}
 {% if object_list %}
 	{% for mylist in object_list %}
-		<div class="resultbox {% if not s.stolen %} not-stolen {% else %} stolen {% endif %}" style="background:url('{{ mylist.photo.url }}') no-repeat bottom right; background-size: 250px 250px;">
+		<div class="resultbox {% if not s.stolen %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if mylist.photo %}}{{ mylist.photo.url }}{% endif %}') no-repeat bottom right; background-size: 250px 250px;">
 			<span class="datebox">Last modified: {{ mylist.pub_date|timesince }} ago <br> Posted by: {{ mylist.created_by }}</span>
 			<h3>IMEI match found</h3> 
 			<p>
