@@ -13,9 +13,10 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('device', self.gf('django.db.models.fields.CharField')(max_length=250)),
             ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=15)),
+            ('type_of_item', self.gf('django.db.models.fields.CharField')(max_length=5)),
             ('description', self.gf('django.db.models.fields.TextField')()),
             ('stolen', self.gf('django.db.models.fields.CharField')(max_length=2)),
-            ('photo', self.gf('imagekit.models.fields.ProcessedImageField')(max_length=100)),
+            ('photo', self.gf('imagekit.models.fields.ProcessedImageField')(max_length=100, null=True, blank=True)),
             ('pub_date', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
             ('created_by', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
         ))
@@ -70,10 +71,11 @@ class Migration(SchemaMigration):
             'description': ('django.db.models.fields.TextField', [], {}),
             'device': ('django.db.models.fields.CharField', [], {'max_length': '250'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'photo': ('imagekit.models.fields.ProcessedImageField', [], {'max_length': '100'}),
+            'photo': ('imagekit.models.fields.ProcessedImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'pub_date': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '15'}),
-            'stolen': ('django.db.models.fields.CharField', [], {'max_length': '2'})
+            'stolen': ('django.db.models.fields.CharField', [], {'max_length': '2'}),
+            'type_of_item': ('django.db.models.fields.CharField', [], {'max_length': '5'})
         }
     }
 

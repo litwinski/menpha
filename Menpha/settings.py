@@ -159,7 +159,7 @@ INSTALLED_APPS = (
     'imagekit',
 
     # South Schema Migration
-    #'south',
+    'south',
 
 )
 

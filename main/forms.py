@@ -8,10 +8,11 @@ from django.utils.translation import ugettext as _
 class ItemForm(ModelForm):
 	class Meta:
 		model = Item
-		fields = ('device', 'slug', 'description', 'photo', 'stolen')
+		fields = ('device', 'slug', 'type_of_item', 'description', 'photo', 'stolen')
 		labels = {
-			'device': _('Name of my device'),
-			'slug': _('IMEI of my device'),
+			'device': _('Name of the device'),
+			'slug': _('Unique Identifier ( IMEI, Serial number, etc )'),
+			'type_of_item': _('Select type of'),
 			'stolen': _('Indicate state of device'),
 			'photo': _('Photo of your device (optional)')
 		}

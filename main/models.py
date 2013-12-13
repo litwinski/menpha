@@ -10,6 +10,12 @@ from imagekit.processors import ResizeToFill
 
 class Item(models.Model):
 
+	TYPE_OF_ITEM = (
+		('auto', 'Automobile'),
+		('md', 'Mobile Devices'),
+		('com', 'Computers'),
+		)
+
 	STOLEN_OPTION = (
 		('ns', 'Its with me'),
 		('s', 'Its stolen/missing'),
@@ -21,6 +27,8 @@ class Item(models.Model):
 	slug = models.SlugField(max_length=15, unique=True, 
 		#help_text='Add IMEI number'
 		)
+	type_of_item = models.CharField(max_length=5, choices=TYPE_OF_ITEM,)
+	
 	description = models.TextField(
 		#help_text='Describe your device'
 		)
