@@ -1,6 +1,7 @@
 # Models.py Handwritten by google.com/+Nkansahrexford
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
 
 from django.contrib.auth.models import User
 

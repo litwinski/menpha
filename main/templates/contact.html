@@ -1,5 +1,6 @@
 {% extends 'metrika.html' %}
-
+{% load i18n %}
+{% block title %} Contact {% endblock %}
 {% block ifhomescreen %} <!-- --> {% endblock %}
 
 {% block content %}
@@ -13,7 +14,7 @@
               	<div class="page-navi">
                   <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
                 </div>
-                <h1>Contact Menpha</h1>
+                <h1>{% trans "Contact Menpha" %}</h1>
               </div>
               <div class="span4">
                 <ul class="social-bar-white">

@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %} Account Profile {% endblock %}
+{% block title %} {% trans "Account Profile" %}{% endblock %}
 
 {% block content %}
 	<div class="confirmbox">
 		<div style="font-size:40px;">
-			<a href="" class="bbtn white">{{ account }}</a> is your username.
+			<a href="" class="bbtn white">{{ account }}</a> {% trans "is your username." %}
 		</div>	
 		<p> 
 			<a href="{% url 'auth_password_change' %}" class="bbtn blue large">Change Password </a>
 		</p>
-		I won't allow you to change your username, neither do I need more information from you.
+		{% trans "I won't allow you to change your username, neither do I need more information from you." %}
 	</div>
 {% endblock %}

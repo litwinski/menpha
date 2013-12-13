@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %} Add Item {% endblock %}
 
 {% block notify %}
-	The form below adds one IMEI to your personal list.
+	{% trans "The form below adds one IMEI to your personal list." %}
 {% endblock %}
 
 {% block content %}

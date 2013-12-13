@@ -4,6 +4,7 @@
 	Menpha Project
 	Version 1.0
 -->
+{% spaceless %}
 {% load static %}
 {% load i18n %}
 
@@ -17,10 +18,9 @@
 		<link rel="stylesheet" type="text/css" href="{% static "bbtn.css"%}">
 		<link rel="stylesheet" type="text/css" href="{% static "simptip.css"%}"/>
 		<!--<link rel="shortcut icon" href="{% static "favicon.ico" %}">-->
-		<title> {% block title %} Community-based IMEI-tagged Gadget Tracker{% endblock %} - Menpha</title>
+		<title> {% block title %} {% trans "Community-based IMEI-tagged Gadget Tracker" %}{% endblock %} - Menpha</title>
 
 	</head>
-
 	{% block nav %}
 	<nav>
 		<div class="logo">
@@ -86,3 +86,4 @@
 	</footer>
 
 </html>
+{% endspaceless %}

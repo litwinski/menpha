@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
-{% block title %} Something's wrong {% endblock %}
+{% load i18n %}
+
+{% block title %} {% trans "Something's wrong" %} {% endblock %}
 
 {% block notify %}
-	Permission Denied - 404
+	Permission Denied - 403
 {% endblock %}
 
 {% block content %}
 	<div class="confirmbox">
 		<p>
-			<strong>403</strong> Permission Denied.
+			<strong>403</strong> {% trans "That's a Permission Denied" %}
 		</p>
-		<p> Trust me! You do not have the permission to do what you wished to do. <br>
-		<span style="color:#666;">That’s all I know.</span></p>
-		<a href="{% url 'home' %}" class="bbtn blue large">Homepage </a>
-		<a href="{% url 'index' %}" class="bbtn white">search</a>
+		<p> {% trans "Trust me! You do not have the permission to do what you wished to do. %} <br>
+		<span style="color:#666;">{% trans "That’s all I know." %}</span></p>
+		<a href="{% url 'home' %}" class="bbtn blue large">{% trans "Homepage" </a>
+		<a href="{% url 'index' %}" class="bbtn white">{% trans "Search" %}</a>
 	</div>
 {% endblock %}

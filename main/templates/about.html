@@ -1,4 +1,5 @@
 {% extends 'metrika.html' %}
+{% load i18n %}
 
 {% block ifhomescreen %} <!-- --> {% endblock %}
 
@@ -28,17 +29,28 @@
             <div class="container">
               <div class="quotation span12 clearfix">
               <div class="quotation-mark"></div>
-                <p>Menpha is a community-based imei-tagged device tracker supporting people around the globe to learn more about the condition of any device they purpose to acquire through purchase or swapping.</p>
+                <p>{% blocktrans %}
+                 Menpha is a community-based imei-tagged device tracker supporting people around the globe to learn more about the condition of any device they purpose to acquire through purchase or swapping. 
+                 {% endblocktrans %}
+                </p>
 
                 <span class="quotation-author">Rexford N, Developer, Menpha</span>
             </div>
             </div>
             <div class="container">
               <div class="span6">
-                <p>To prevent the purchase of stolen or missing device(s) without your knowing, Menpha is a deployed platform aimed at informing you right based on user input information from the original owner.</p>
+                <p>
+                  {% blocktrans %} 
+                    To prevent the purchase of stolen or missing device(s) without your knowing, Menpha is a deployed platform aimed at informing you right based on user input information from the original owner.
+                  {% endblocktrans %}
+                </p>
               </div>
               <div class="span6">
-                <p>The goal of the Menpha project is to create a community of active users helping ensure the tracking of IMEI across the world. To ensure the right information for users, all input into the Menpha Project is contributed by humans, which is hightly reliable and flexible.</p>
+                <p>
+                  {% blocktrans %}
+                    The goal of the Menpha project is to create a community of active users helping ensure the tracking of IMEI across the world. To ensure the right information for users, all input into the Menpha Project is contributed by humans, which is hightly reliable and flexible.
+                  {% endblocktrans %}
+                </p>
               </div>
             </div>
           </section>

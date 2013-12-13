@@ -2,7 +2,7 @@
 {% block title %} Confirm box {% endblock %}
 
 {% block notify %}
-	<strong style="color:red;">NOT REVERSIBLE!</strong> Confirm delete of {{ item_imei }}. 
+	<strong style="color:red;">{% trans "NOT REVERSIBLE!" %}</strong> {% trans "Confirm delete of %} {{ item_imei }}. 
 {% endblock %}
 
 {% block content %}

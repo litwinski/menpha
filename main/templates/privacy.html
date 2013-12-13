@@ -1,4 +1,5 @@
 {% extends 'metrika.html' %}
+{% load i18n %}
 
 {% block ifhomescreen %} <!-- --> {% endblock %}
 
@@ -29,10 +30,15 @@
             <div class="container">
               <div class="quotation span12 clearfix">
               <div class="quotation-mark"></div>
-                <p>Privacy online is of great importance to all on the web. As a result, I request only relevant information needed to authenticate each user, leaving the rest for them to shelve in their bedroom. 
+                <p>
+                {% blocktrans %}
+                Privacy online is of great importance to all on the web. As a result, I request only relevant information needed to authenticate each user, leaving the rest for them to shelve in their bedroom. 
+                {% endblocktrans %}
                 </p>
                 <p>
-                Only a Username, Password and Email are required on the part of any account holder. Nothing more is expected of you. </p>
+                {% blocktrans %}
+                Only a Username, Password and Email are required on the part of any account holder. Nothing more is expected of you.
+                {% endblocktrans %} </p>
                 <span class="quotation-author">Rexford, Menpha Developer</span>
             </div>
             </div>

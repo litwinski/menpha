@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
+
 {% block title %} My List {{ mylist.created_by }} {% endblock %}
 
 {% block notify %}
 {% if object_list %}
-	Please find below your items added.
+	{% trans "Please find below your items added." %}
 {% else %}
-	Ooooh! An empty list. Adding items to your list is instant and free.
+	{% trans "Ooooh! An empty list. Adding items to your list is instant and free." %}
 {% endif %}
 {% endblock %}
 
@@ -39,9 +41,9 @@
 		{% endfor %}
 	{% else %}
 	<div class="confirmbox">
-		<p> Please, you do not have any item added so far. </p>
-		<a href="{% url 'add' %}" class="bbtn blue large"> Add </a>
-		<a href="{% url 'home' %}" class="bbtn white">Continue searching</a>
+		<p> {% trans "Please, you do not have any item added so far." %}</p>
+		<a href="{% url 'add' %}" class="bbtn blue large"> {% trans "Add" %} </a>
+		<a href="{% url 'home' %}" class="bbtn white">{% trans "Continue searching" %}</a>
 	</div>
 {% endif %}
 {% endblock %}
