@@ -24,11 +24,11 @@ class Item(models.Model):
 	device = models.CharField(max_length=250, 
 		#help_text='Enter device name'
 		)
-	slug = models.SlugField(max_length=15, unique=True, 
+	slug = models.SlugField(max_length=30, unique=True, 
 		#help_text='Add IMEI number'
 		)
 	type_of_item = models.CharField(max_length=5, choices=TYPE_OF_ITEM,)
-	
+
 	description = models.TextField(
 		#help_text='Describe your device'
 		)
