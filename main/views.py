@@ -65,7 +65,7 @@ class UpdateImei(UpdateView):
 
 	Useful for preventing one user from editing item added by another user. """
 	model = Item
-	fields = fields = ['device', 'slug', 'description', 'photo', 'stolen']
+	fields = fields = ['device', 'slug', 'type_of_item' 'description', 'photo', 'stolen']
 
 	@method_decorator(login_required)
 	def dispatch(self, request, *args, **kwargs):
