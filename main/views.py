@@ -1,9 +1,10 @@
 # Views.py Handwritten by google.com/+Nkansahrexford
+from django.core.mail import send_mail
 from django.db.models import Q
 from django.shortcuts import render, render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from main.models import Item
-from main.forms import ItemForm
+from main.forms import ItemForm, NotifyForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
@@ -65,7 +66,7 @@ class UpdateImei(UpdateView):
 
 	Useful for preventing one user from editing item added by another user. """
 	model = Item
-	fields = fields = ['device', 'slug', 'type_of_item' 'description', 'photo', 'stolen']
+	fields = fields = ['device', 'slug', 'type_of_item', 'description', 'photo', 'stolen']
 
 	@method_decorator(login_required)
 	def dispatch(self, request, *args, **kwargs):
@@ -114,3 +115,28 @@ def imei_detail(request, slug):
 	Class Based View DetailView class."""
 	s = get_object_or_404(Item, slug = slug)
 	return render(request, 'imei-detail.html', {'s':s, 'user':request.user})
+
+@login_required
+def notify(request, slug):
+	""" Send notification email to original owner of device who lost it """
+	pull = Item.objects.get(slug = slug)
+	if request.method == "POST": # If the form has been submitted...
+		form = NotifyForm(request.POST) # A form bound to the POST data
+		if form.is_valid(): # All validation rules pass
+		# Process the data in form.cleaned_data
+			subject = form.cleaned_data['subject']
+			message = form.cleaned_data['message']
+			sender = request.user.email
+			cc_myself = form.cleaned_data['cc_myself']
+			recipients = [pull.created_by.email]
+
+			sender += 'Be careful! Use your maximum discretion in interpreting the message below'
+
+			if cc_myself:
+				recipients.append(sender)
+
+			send_mail(subject, message, sender, recipients)
+			return HttpResponseRedirect('/app/notify/thanks/') # Redirect after POST
+	else:
+		form = NotifyForm() # An unbound form
+	return render(request, 'send-mail.html', {'form': form,})

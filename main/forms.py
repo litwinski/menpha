@@ -16,6 +16,13 @@ class ItemForm(ModelForm):
 			'stolen': _('Indicate state of device'),
 			'photo': _('Photo of your device (optional)')
 		}
+
+class NotifyForm(forms.Form):
+	subject = forms.CharField(max_length=100)
+	message = forms.CharField(widget=forms.Textarea)
+	#sender = forms.EmailField()
+	cc_myself = forms.BooleanField(required=False)
+
 	#device = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Device name'}))
 	#imei = forms.CharField(max_length=15, 
 	#	widget=forms.TextInput(attrs={'placeholder':'IMEI '})

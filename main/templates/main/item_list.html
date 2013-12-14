@@ -25,6 +25,10 @@
 			<p>
 				{{ mylist.device }}
 			</p>
+			<h3>Of type</h3> 
+			<p>
+				{{ mylist.type_of_item }}
+			</p>
 			<h3>Description</h3> 
 			<p>
 				{{ mylist.description }}
@@ -36,6 +40,9 @@
 						<span> 
 							<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 						</span> 
+						<span>
+							<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+						</span>
 					</div>
 		</div>
 		{% endfor %}

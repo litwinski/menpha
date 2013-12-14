@@ -3,9 +3,13 @@
 || plus.google.com/+Nkansahrexford
 */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
 html {
-	font-family: "Open Sans","Arial",sans-serif;
+	font-family: "Roboto","Open Sans","Arial",sans-serif;
 }
+
 
 /* Site-wide Navigation */
 nav {

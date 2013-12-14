@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %} Notify Official Owner {% endblock %}
+
+{% block notify %}
+	{% trans " <a href=''> Learn when to use this form.</a> " %}
+{% endblock %}
+
+{% block content %}
+	<div class="addbox">
+		<form action='.' method='post'>{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" class="bbtn large blue" role="button" value="Send Notice">
+		</form>
+	</div>
+{% endblock %}

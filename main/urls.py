@@ -1,5 +1,7 @@
 # Urls.py Handwritten by google.com/+Nkansahrexford
 from django.conf.urls import patterns, include, url
+from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 from . import views
 from django.conf.urls.static import static
 from Menpha import settings
@@ -23,7 +25,11 @@ urlpatterns = patterns('',
     url(r'^app/edit/(?P<slug>\d+)/$', views.UpdateImei.as_view(), name='edit'),
     #url(r'^app/edit/(?P<item_imei>\d+)/$', views.edit, name='edit'),
 
-	#delete listing
+    url(r'^app/notify/(?P<slug>\d+)/$', views.notify, name='notify'),
+    # Notify Thank you
+    url(r'^app/notify/thanks/$', login_required(TemplateView.as_view(template_name='notify-thanks.html')), name='notify-thanks'),
+	
+    #delete listing
     url(r'^app/delete/(?P<slug>\d+)/$', views.DeleteImei.as_view(), name='delete'),
 	#url(r'^app/delete/(?P<item_imei>\d+)/$', views.delete, name='delete'),
 	#url(r'^app/deleted/(?P<item_imei>\d+)/', views.deleted, name='deleted'),

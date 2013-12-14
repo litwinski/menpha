@@ -19,6 +19,10 @@
 		<p>
 			{{ s.device }}
 		</p>
+		<h3>Of type</h3>
+		<p>
+			{{ s.type_of_item }}
+		</p>
 		<h3>Description</h3> 
 		<p class="overlay">
 			{{ s.description }}
@@ -36,6 +40,9 @@
 					<a href="" class="bbtn blue" role="button"> Share </a>
 				</span>
 			{% endif %}
+				<span>
+					<a href="/app/notify/{{ s.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+				</span>
 			</div>
 			<div class="detailimage">
 			</div>
