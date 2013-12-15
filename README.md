@@ -1,7 +1,7 @@
 Menpha
 ======
 
-I'm not good at Licenses. Use this though:
+I'm not good at Licenses. MIT license should apply to this project. In addition, you may use this though:
 
 You may use any part or all of the code to work on something unique from the idea of Menpha. You are free to use them. Attributing menpha as the inspiration for what you'll do isn't mandatory. Doing so actually doesn't put money in my pocket, unless you explicitly want that to happen. I'll be much appreciative then.
 

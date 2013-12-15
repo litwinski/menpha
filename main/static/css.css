@@ -5,11 +5,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
-
 html {
-	font-family: "Roboto","Open Sans","Arial",sans-serif;
+	font-family: "Roboto","Open Sans","Arial",sans-serif; /* Lovely google font */
 }
-
 
 /* Site-wide Navigation */
 nav {

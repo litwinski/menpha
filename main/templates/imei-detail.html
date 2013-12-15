@@ -21,7 +21,7 @@
 		</p>
 		<h3>Of type</h3>
 		<p>
-			{{ s.type_of_item }}
+			{{ s.get_type_of_item_display }}
 		</p>
 		<h3>Description</h3> 
 		<p class="overlay">
@@ -37,7 +37,7 @@
 				</span> 
 			{% else %}
 				<span>
-					<a href="" class="bbtn blue" role="button"> Share </a>
+					<a href="javascript:void(0);" onclick="document.getElementById('overlay').style.display='block';" class="bbtn blue" role="button"> Share </a>
 				</span>
 			{% endif %}
 				<span>
