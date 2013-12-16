@@ -35,9 +35,12 @@
 				<span> 
 					<a href="/app/edit/{{ s.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
+				<span>
+				<a href="#login_form" id="login_pop" class="bbtn blue" role="button"> Share </a>
+				</span>
 			{% else %}
 				<span>
-					<a href="javascript:void(0);" onclick="document.getElementById('overlay').style.display='block';" class="bbtn blue" role="button"> Share </a>
+				<a href="#login_form" id="login_pop"> Share </a>
 				</span>
 			{% endif %}
 				<span>

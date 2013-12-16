@@ -130,7 +130,7 @@ def notify(request, slug):
 			cc_myself = form.cleaned_data['cc_myself']
 			recipients = [pull.created_by.email]
 
-			sender += 'Be careful! Use your maximum discretion in interpreting the message below'
+			message += 'Be careful! Use your maximum discretion in interpreting the message below'
 
 			if cc_myself:
 				recipients.append(sender)
