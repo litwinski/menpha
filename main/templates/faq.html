@@ -1,56 +1,308 @@
-{% extends 'base.html' %}
-{% block title %} Help - Menpha {% endblock %}
-{% block notify %}
-	Learn more about Menpha and our service. Visit FAQ to learn more.
-{% endblock %}
+{% extends 'menpha.html' %}
+{% load static %}
+{% block title %} Frequently Asked Questions {% endblock %}
+
 {% block content %}
-	<div class="help">
-		<article id="pagetop">
-			<section class="header">
-				<ul>
-					<li><a href="#whatis">What Menpha is</a></li>
-					<li><a href="#howto">How to use Menpha </a></li>
-					<li><a href="">What is Menpha</a></li>
-				</ul>
-			</section>
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <h1 class="maia-display">
+        Frequently Asked Questions
+      </h1>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-collapse" id="what-is-one-today"><a href="javascript:void(0);">
+        What is One Today?
+      </a></h4>
+      <div style="overflow: hidden;"><div style="opacity: 1; margin-top: 0px;">
+        <p>
+          One Today is a mobile app available to Android users in the U.S. that lets people learn
+          about different nonprofits every day, donate to projects that inspire them, and amplify
+          their impact by matching their friends’ donations.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-is-google-doing-this"><a href="javascript:void(0);">
+        Why is Google doing this?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          Google has a long-standing commitment to supporting nonprofits and to doing good. One
+          Today makes fundraising easy for nonprofits; it also makes giving simple and fun for
+          users.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-get-one-today"><a href="javascript:void(0);">
+        How do I get One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          Android users can download One Today straight from the Play Store.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-does-it-work"><a href="javascript:void(0);">
+        How does it work?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <ol>
+          <li>Learn about a different project from a nonprofit every day. The more you engage with
+          the app, the better we'll get at picking projects for you.
+          </li>
+          <li>Choose to donate to projects you like.
+          </li>
+          <li>Amplify your impact by matching donations and sharing your favorite projects with
+          your friends on social media.
+          </li>
+          <li>Pay your balance. Donations are grouped together for easy payments through <a href="http://www.google.com/wallet/">Google Wallet</a>.
+          </li>
+          <li>Do good daily! Engage with hundreds of nonprofit projects each year and help
+          contribute to their success.
+          </li>
+        </ol>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-you-find-the-nonprofits-featured-on-one-today"><a href="javascript:void(0);">
+        How do you find the nonprofits featured on One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          All the nonprofits on One Today are members of <a href="http://www.google.com/nonprofits/">Google for Nonprofits</a>.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-select-the-causes-that-i-care-about"><a href="javascript:void(0);">
+        Can I select the causes that I care about?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          You can not select the causes you care about but One Today will learn what types of
+          causes matter most to you based on the projects you have donated to in the past. The more
+          projects you give to on One Today, the better the app will become at presenting you with
+          projects that are tailored to your interests.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-donate-more-than-1"><a href="javascript:void(0);">
+        Can I donate more than $1?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          Individually, you can only donate $1 per project per day. However, if you want to donate
+          more, you can challenge your friends to match your donations.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="if-a-nonprofit-is-on-one-today-does-that-mean-its-endorsed-by-google"><a href="javascript:void(0);">
+        If a nonprofit is on One Today, does that mean it’s endorsed by Google?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          No. One Today is a new way to help all eligible nonprofits raise awareness and money
+          through micro-donations. Inclusion on the app is in no way an endorsement by Google.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-change-how-often-i-receive-a-notification-from-one-today"><a href="javascript:void(0);">
+        Can I change how often I receive a notification from One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          Yes, you can choose how frequently you receieve notifications in the settings menu on the
+          app.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-are-the-requirements-for-a-nonprofit-to-join-one-today"><a href="javascript:void(0);">
+        What are the requirements for a nonprofit to join One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          One Today is open to all nonprofits in the United States with valid 501(c)3 status that
+          are members of Google for Nonprofits. Eligibility criteria for Google for NonProfits are
+          detailed <a href="https://support.google.com/nonprofits/answer/3215869?hl=en">here</a>.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-do-one-today-projects-come-from"><a href="javascript:void(0);">
+        Where do One Today projects come from?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          Nonprofits create projects where $1 can make a meaningful impact.
+        </p>
+        <p>
+          All projects must comply with <a href="http://play.google.com/about/developer-content-policy.html">Google Play Developer
+          Program Policies</a> and with the One Today project guidelines.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="do-nonprofits-have-to-pay-to-use-one-today"><a href="javascript:void(0);">
+        Do nonprofits have to pay to use One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          No, there is absolutely no fee for nonprofits to sign up with One Today.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-sign-up-my-nonprofit-for-one-today"><a href="javascript:void(0);">
+        How do I sign up my nonprofit for One Today?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          To sign up for One Today, simply <a href="https://google-for-nonprofits.appspot.com/home">sign in</a> to your Google For
+          Nonprofits account and enroll for One Today by clicking on the “Product enrollments”
+          button.<br>
+          If you are not yet a Google for Nonprofits member, you can register for free at
+          http://www.google.com/nonprofits/join/. Registration only takes a few minutes.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="when-i-donate-i-dont-need-to-provide-any-payment-information-how-come"><a href="javascript:void(0);">
+        When I donate, I don't need to provide any payment information. How come?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          When you click the "give" button, the app will record that as a pledge rather than a
+          charge. Your balance reflects the aggregated dollar amount you have pledged and not paid
+          yet. Instead of charging you every time you donate, we'll add each of your donations to
+          your account's balance. The app will periodically total your unpaid balance and ask you
+          to approve a credit card transaction for that amount.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-pay-my-balance"><a href="javascript:void(0);">
+        How do I pay my balance?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          You can pay your balance at any time. We'll also remind you to pay whenever a deadline is
+          approaching. If you accept the balance, we'll charge your credit card through <a href="http://www.google.com/wallet/">Google Wallet</a>. You can pay your balance directly from
+          the app or have the app send you an invoice via email to let you pay from the Web.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="are-my-donations-tax-deductible"><a href="javascript:void(0);">
+        Are my donations tax deductible?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          If you're in the U.S., your donations are tax deductible -- the confirmation email from
+          Google Wallet serves as your <a href="http://support.google.com/wallet/bin/answer.py?hl=en&amp;answer=105654">donation
+          receipt</a>, or for donations over $250, a tax deduction certificate will be emailed to
+          you at the end of the year by our payment processing partners so there is no need to keep
+          track of your payments.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-much-of-my-donation-will-reach-the-nonprofit"><a href="javascript:void(0);">
+        How much of my donation will reach the nonprofit?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          The nonprofit will get all of your donation except the payment processing fee of 1.9%, so
+          for every $10 donated, the nonprofit receives $9.81. Unless mentioned otherwise, your
+          donation goes into unrestricted funds that will be used by the nonprofit at its
+          discretion.<br>
+          One Today partners with Network for Good, an industry leader in Donor Advised Funds, to
+          collect money from donors and disburse it to nonprofit recipients. For each transaction
+          that you approved, you will see a line item on your credit card receipt, with the label
+          GOOGLE *One Today NfG.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-is-user-matching"><a href="javascript:void(0);">
+        What is user matching?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          You can challenge your friends to donate to a project by offering to match each of their
+          $1 donations, up to a certain limit that is capped by One Today. Simply select the total
+          dollar amount and then share your offer through your social networks. This amount will be
+          added to your donation balance, whether you choose to share or not.<br>
+          If your friends don't consume all of your matches or if you choose not to share your
+          match with particular people, the system will automatically show your match to other
+          people (from the One Today community) viewing the project until all the matches are
+          consumed. In the extremely rare case that the project ends before all of your matches can
+          be consumed, the nonprofit will receive your donation anyway.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-do-you-limit-the-amount-i-can-match"><a href="javascript:void(0);">
+        Why do you limit the amount I can match?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          We automatically cap how much you can match based on your donation history on One Today
+          to account for cases when people forget to pay their balances. The more you give on One
+          Today, the higher the cap will be. You can think of it like a spending limit on a credit
+          card.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-information-is-shared-when-i-share-my-match"><a href="javascript:void(0);">
+        What information is shared when I "share" my match?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          When sharing, you choose the social medium you want to use (e.g. email, G+, Twitter,
+          etc.) and publish a link for the project you donated to. By following the link, people
+          will learn about the project and the fact that you donated to the project and are
+          offering to match other people's donations.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-send-feedback"><a href="javascript:void(0);">
+        How do I send feedback?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          If you’d like to send us feedback, we'd love to hear from you! Send us your thoughts
+          anytime by clicking "Send feedback" in the app's menu.
+        </p>
+      </div></div>
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-can-i-learn-more"><a href="javascript:void(0);">
+        Where can I learn more?
+      </a></h4>
+      <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
+        <p>
+          To learn more about One Today, please visit our <a href="https://support.google.com/onetodayapp/">help center</a>.
+        </p>
+      </div></div>
+    </div>
+    {% endblock %}
+   
+    <script>
+(function() {
+    var g,l=this;function aa(){}
+function ba(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";else if("function"==
+b&&"undefined"==typeof a.call)return"object";return b}function m(a){return"array"==ba(a)}function n(a){var b=ba(a);return"array"==b||"object"==b&&"number"==typeof a.length}function p(a){return"string"==typeof a}function q(a){return"function"==ba(a)}function ca(a){var b=typeof a;return"object"==b&&null!=a||"function"==b}var r="closure_uid_"+(1E9*Math.random()>>>0),da=0;function ea(a,b,c){return a.call.apply(a.bind,arguments)}
+function fa(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}}function s(a,b,c){s=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?ea:fa;return s.apply(null,arguments)}var ga=Date.now||function(){return+new Date};
+function t(a,b){function c(){}c.prototype=b.prototype;a.u=b.prototype;a.prototype=new c}Function.prototype.bind=Function.prototype.bind||function(a,b){if(1<arguments.length){var c=Array.prototype.slice.call(arguments,1);c.unshift(this,a);return s.apply(null,c)}return s(this,a)};var ha;function ia(a){if(!ja.test(a))return a;-1!=a.indexOf("&")&&(a=a.replace(ka,"&amp;"));-1!=a.indexOf("<")&&(a=a.replace(la,"&lt;"));-1!=a.indexOf(">")&&(a=a.replace(ma,"&gt;"));-1!=a.indexOf('"')&&(a=a.replace(na,"&quot;"));return a}var ka=/&/g,la=/</g,ma=/>/g,na=/\"/g,ja=/[&<>\"]/;function oa(a,b){return a<b?-1:a>b?1:0};var u=Array.prototype,v=u.indexOf?function(a,b,c){return u.indexOf.call(a,b,c)}:function(a,b,c){c=null==c?0:0>c?Math.max(0,a.length+c):c;if(p(a))return p(b)&&1==b.length?a.indexOf(b,c):-1;for(;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1},pa=u.forEach?function(a,b,c){u.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=p(a)?a.split(""):a,f=0;f<d;f++)f in e&&b.call(c,e[f],f,a)},qa=u.filter?function(a,b,c){return u.filter.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=[],f=0,h=p(a)?
+a.split(""):a,k=0;k<d;k++)if(k in h){var E=h[k];b.call(c,E,k,a)&&(e[f++]=E)}return e};function ra(a){return u.concat.apply(u,arguments)}function w(a){var b=a.length;if(0<b){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];return c}return[]}function sa(a,b,c){return 2>=arguments.length?u.slice.call(a,b):u.slice.call(a,b,c)};var x,ta,ua,va;function wa(){return l.navigator?l.navigator.userAgent:null}va=ua=ta=x=!1;var y;if(y=wa()){var xa=l.navigator;x=0==y.lastIndexOf("Opera",0);ta=!x&&(-1!=y.indexOf("MSIE")||-1!=y.indexOf("Trident"));ua=!x&&-1!=y.indexOf("WebKit");va=!x&&!ua&&!ta&&"Gecko"==xa.product}var ya=x,z=ta,A=va,B=ua;function za(){var a=l.document;return a?a.documentMode:void 0}var Aa;
+a:{var Ba="",C;if(ya&&l.opera)var Ca=l.opera.version,Ba="function"==typeof Ca?Ca():Ca;else if(A?C=/rv\:([^\);]+)(\)|;)/:z?C=/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/:B&&(C=/WebKit\/(\S+)/),C)var Da=C.exec(wa()),Ba=Da?Da[1]:"";if(z){var Ea=za();if(Ea>parseFloat(Ba)){Aa=String(Ea);break a}}Aa=Ba}var Fa={};
+function D(a){var b;if(!(b=Fa[a])){b=0;for(var c=String(Aa).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),d=String(a).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var h=c[f]||"",k=d[f]||"",E=RegExp("(\\d*)(\\D*)","g"),Sb=RegExp("(\\d*)(\\D*)","g");do{var W=E.exec(h)||["","",""],X=Sb.exec(k)||["","",""];if(0==W[0].length&&0==X[0].length)break;b=oa(0==W[1].length?0:parseInt(W[1],10),0==X[1].length?0:parseInt(X[1],10))||oa(0==W[2].length,0==X[2].length)||
+oa(W[2],X[2])}while(0==b)}b=Fa[a]=0<=b}return b}var Ga=l.document,Ha=Ga&&z?za()||("CSS1Compat"==Ga.compatMode?parseInt(Aa,10):5):void 0;var Ia=!z||z&&9<=Ha;!A&&!z||z&&z&&9<=Ha||A&&D("1.9.1");z&&D("9");function Ja(a){a=a.className;return p(a)&&a.match(/\S+/g)||[]}function Ka(a,b){for(var c=Ja(a),d=sa(arguments,1),e=c.length+d.length,f=c,h=0;h<d.length;h++)0<=v(f,d[h])||f.push(d[h]);a.className=c.join(" ");return c.length==e}function La(a,b){var c=Ja(a),d=sa(arguments,1),c=Ma(c,d);a.className=c.join(" ")}function Ma(a,b){return qa(a,function(a){return!(0<=v(b,a))})};function Na(a,b){for(var c in a)b.call(void 0,a[c],c,a)}function Oa(a){var b=[],c=0,d;for(d in a)b[c++]=a[d];return b}function Pa(a){var b=[],c=0,d;for(d in a)b[c++]=d;return b}function Qa(){var a=F,b;for(b in a)return!1;return!0}var Ra="constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
+function Sa(a,b){for(var c,d,e=1;e<arguments.length;e++){d=arguments[e];for(c in d)a[c]=d[c];for(var f=0;f<Ra.length;f++)c=Ra[f],Object.prototype.hasOwnProperty.call(d,c)&&(a[c]=d[c])}};function G(a,b){return p(b)?a.getElementById(b):b}
+function Ta(a,b,c){var d=document;c=c||d;var e=a&&"*"!=a?a.toUpperCase():"";if(c.querySelectorAll&&c.querySelector&&(e||b))return c.querySelectorAll(e+(b?"."+b:""));if(b&&c.getElementsByClassName){a=c.getElementsByClassName(b);if(e){c={};for(var f=d=0,h;h=a[f];f++)e==h.nodeName&&(c[d++]=h);c.length=d;return c}return a}a=c.getElementsByTagName(e||"*");if(b){c={};for(f=d=0;h=a[f];f++){var e=h.className,k;if(k="function"==typeof e.split)k=0<=v(e.split(/\s+/),b);k&&(c[d++]=h)}c.length=d;return c}return a}
+function Ua(a,b){Na(b,function(b,d){"style"==d?a.style.cssText=b:"class"==d?a.className=b:"for"==d?a.htmlFor=b:d in Va?a.setAttribute(Va[d],b):0==d.lastIndexOf("aria-",0)||0==d.lastIndexOf("data-",0)?a.setAttribute(d,b):a[d]=b})}var Va={cellpadding:"cellPadding",cellspacing:"cellSpacing",colspan:"colSpan",frameborder:"frameBorder",height:"height",maxlength:"maxLength",role:"role",rowspan:"rowSpan",type:"type",usemap:"useMap",valign:"vAlign",width:"width"};
+function Wa(a,b,c){return Xa(document,arguments)}function Xa(a,b){var c=b[0],d=b[1];if(!Ia&&d&&(d.name||d.type)){c=["<",c];d.name&&c.push(' name="',ia(d.name),'"');if(d.type){c.push(' type="',ia(d.type),'"');var e={};Sa(e,d);delete e.type;d=e}c.push(">");c=c.join("")}c=a.createElement(c);d&&(p(d)?c.className=d:m(d)?Ka.apply(null,[c].concat(d)):Ua(c,d));2<b.length&&Ya(a,c,b);return c}
+function Ya(a,b,c){function d(c){c&&b.appendChild(p(c)?a.createTextNode(c):c)}for(var e=2;e<c.length;e++){var f=c[e];!n(f)||ca(f)&&0<f.nodeType?d(f):pa(Za(f)?w(f):f,d)}}function Za(a){if(a&&"number"==typeof a.length){if(ca(a))return"function"==typeof a.item||"string"==typeof a.item;if(q(a))return"function"==typeof a.item}return!1}function $a(a){this.r=a||l.document||document}g=$a.prototype;g.ua=function(a,b,c){return Xa(this.r,arguments)};g.createElement=function(a){return this.r.createElement(a)};
+g.createTextNode=function(a){return this.r.createTextNode(String(a))};g.appendChild=function(a,b){a.appendChild(b)};g.contains=function(a,b){if(a.contains&&1==b.nodeType)return a==b||a.contains(b);if("undefined"!=typeof a.compareDocumentPosition)return a==b||Boolean(a.compareDocumentPosition(b)&16);for(;b&&a!=b;)b=b.parentNode;return b==a};var ab=!z||z&&9<=Ha,bb=z&&!D("9");!B||D("528");A&&D("1.9b")||z&&D("8")||ya&&D("9.5")||B&&D("528");A&&!D("8")||z&&D("9");function H(){0!=cb&&(this[r]||(this[r]=++da))}var cb=0;function I(a,b){this.type=a;this.currentTarget=this.target=b}g=I.prototype;g.q=!1;g.defaultPrevented=!1;g.pa=!0;g.stopPropagation=function(){this.q=!0};g.preventDefault=function(){this.defaultPrevented=!0;this.pa=!1};function db(a){db[" "](a);return a}db[" "]=aa;function J(a,b){if(a){var c=this.type=a.type;I.call(this,c);this.target=a.target||a.srcElement;this.currentTarget=b;var d=a.relatedTarget;if(d){if(A){var e;a:{try{db(d.nodeName);e=!0;break a}catch(f){}e=!1}e||(d=null)}}else"mouseover"==c?d=a.fromElement:"mouseout"==c&&(d=a.toElement);this.relatedTarget=d;this.offsetX=B||void 0!==a.offsetX?a.offsetX:a.layerX;this.offsetY=B||void 0!==a.offsetY?a.offsetY:a.layerY;this.clientX=void 0!==a.clientX?a.clientX:a.pageX;this.clientY=void 0!==a.clientY?a.clientY:
+a.pageY;this.screenX=a.screenX||0;this.screenY=a.screenY||0;this.button=a.button;this.keyCode=a.keyCode||0;this.charCode=a.charCode||("keypress"==c?a.keyCode:0);this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=a.metaKey;this.state=a.state;this.G=a;a.defaultPrevented&&this.preventDefault();delete this.q}}t(J,I);g=J.prototype;g.target=null;g.relatedTarget=null;g.offsetX=0;g.offsetY=0;g.clientX=0;g.clientY=0;g.screenX=0;g.screenY=0;g.button=0;g.keyCode=0;g.charCode=0;
+g.ctrlKey=!1;g.altKey=!1;g.shiftKey=!1;g.metaKey=!1;g.G=null;g.stopPropagation=function(){J.u.stopPropagation.call(this);this.G.stopPropagation?this.G.stopPropagation():this.G.cancelBubble=!0};g.preventDefault=function(){J.u.preventDefault.call(this);var a=this.G;if(a.preventDefault)a.preventDefault();else if(a.returnValue=!1,bb)try{if(a.ctrlKey||112<=a.keyCode&&123>=a.keyCode)a.keyCode=-1}catch(b){}};var eb="closure_listenable_"+(1E6*Math.random()|0);function K(a){try{return!(!a||!a[eb])}catch(b){return!1}}var fb=0;function gb(a,b,c,d,e){this.s=a;this.X=null;this.src=b;this.type=c;this.capture=!!d;this.R=e;this.key=++fb;this.A=this.O=!1}function hb(a){a.A=!0;a.s=null;a.X=null;a.src=null;a.R=null};function L(a){this.src=a;this.d={};this.L=0}L.prototype.add=function(a,b,c,d,e){var f=this.d[a];f||(f=this.d[a]=[],this.L++);var h=ib(f,b,d,e);-1<h?(a=f[h],c||(a.O=!1)):(a=new gb(b,this.src,a,!!d,e),a.O=c,f.push(a));return a};L.prototype.remove=function(a,b,c,d){if(!(a in this.d))return!1;var e=this.d[a];b=ib(e,b,c,d);return-1<b?(hb(e[b]),u.splice.call(e,b,1),0==e.length&&(delete this.d[a],this.L--),!0):!1};
+function jb(a,b){var c=b.type;if(!(c in a.d))return!1;var d=a.d[c],e=v(d,b),f;(f=0<=e)&&u.splice.call(d,e,1);f&&(hb(b),0==a.d[c].length&&(delete a.d[c],a.L--));return f}L.prototype.oa=function(a){var b=0,c;for(c in this.d)if(!a||c==a){for(var d=this.d[c],e=0;e<d.length;e++)++b,hb(d[e]);delete this.d[c];this.L--}return b};L.prototype.I=function(a,b,c,d){a=this.d[a];var e=-1;a&&(e=ib(a,b,c,d));return-1<e?a[e]:null};
+function ib(a,b,c,d){for(var e=0;e<a.length;++e){var f=a[e];if(!f.A&&f.s==b&&f.capture==!!c&&f.R==d)return e}return-1};var kb="closure_lm_"+(1E6*Math.random()|0),M={},lb=0;function N(a,b,c,d,e){if(m(b)){for(var f=0;f<b.length;f++)N(a,b[f],c,d,e);return null}c=mb(c);if(K(a))a=a.T(b,c,d,e);else{if(!b)throw Error("Invalid event type");var f=!!d,h=O(a);h||(a[kb]=h=new L(a));c=h.add(b,c,!1,d,e);c.X||(d=nb(),c.X=d,d.src=a,d.s=c,a.addEventListener?a.addEventListener(b,d,f):a.attachEvent(b in M?M[b]:M[b]="on"+b,d),lb++);a=c}return a}
+function nb(){var a=ob,b=ab?function(c){return a.call(b.src,b.s,c)}:function(c){c=a.call(b.src,b.s,c);if(!c)return c};return b}function pb(a,b,c,d,e){if(m(b))for(var f=0;f<b.length;f++)pb(a,b[f],c,d,e);else c=mb(c),K(a)?a.ga(b,c,d,e):a&&(a=O(a))&&(b=a.I(b,c,!!d,e))&&qb(b)}
+function qb(a){if("number"==typeof a||!a||a.A)return!1;var b=a.src;if(K(b))return jb(b.o,a);var c=a.type,d=a.X;b.removeEventListener?b.removeEventListener(c,d,a.capture):b.detachEvent&&b.detachEvent(c in M?M[c]:M[c]="on"+c,d);lb--;(c=O(b))?(jb(c,a),0==c.L&&(c.src=null,b[kb]=null)):hb(a);return!0}function rb(a){if(a)if(K(a))a.o&&a.o.oa(void 0);else if(a=O(a)){var b=0,c;for(c in a.d)for(var d=w(a.d[c]),e=0;e<d.length;++e)qb(d[e])&&++b}}
+function sb(a,b,c,d){var e=1;if(a=O(a))if(b=a.d[b])for(b=w(b),a=0;a<b.length;a++){var f=b[a];f&&f.capture==c&&!f.A&&(e&=!1!==tb(f,d))}return Boolean(e)}function tb(a,b){var c=a.s,d=a.R||a.src;a.O&&qb(a);return c.call(d,b)}
+function ob(a,b){if(a.A)return!0;if(!ab){var c;if(!(c=b))a:{c=["window","event"];for(var d=l,e;e=c.shift();)if(null!=d[e])d=d[e];else{c=null;break a}c=d}e=c;c=new J(e,this);d=!0;if(!(0>e.keyCode||void 0!=e.returnValue)){a:{var f=!1;if(0==e.keyCode)try{e.keyCode=-1;break a}catch(h){f=!0}if(f||void 0==e.returnValue)e.returnValue=!0}e=[];for(f=c.currentTarget;f;f=f.parentNode)e.push(f);for(var f=a.type,k=e.length-1;!c.q&&0<=k;k--)c.currentTarget=e[k],d&=sb(e[k],f,!0,c);for(k=0;!c.q&&k<e.length;k++)c.currentTarget=
+e[k],d&=sb(e[k],f,!1,c)}return d}return tb(a,new J(b,this))}function O(a){a=a[kb];return a instanceof L?a:null}var ub="__closure_events_fn_"+(1E9*Math.random()>>>0);function mb(a){return q(a)?a:a[ub]||(a[ub]=function(b){return a.handleEvent(b)})};function P(){H.call(this);this.o=new L(this);this.ra=this}t(P,H);P.prototype[eb]=!0;g=P.prototype;g.na=null;g.addEventListener=function(a,b,c,d){N(this,a,b,c,d)};g.removeEventListener=function(a,b,c,d){pb(this,a,b,c,d)};
+g.dispatchEvent=function(a){var b,c=this.na;if(c)for(b=[];c;c=c.na)b.push(c);var c=this.ra,d=a.type||a;if(p(a))a=new I(a,c);else if(a instanceof I)a.target=a.target||c;else{var e=a;a=new I(d,c);Sa(a,e)}var e=!0,f;if(b)for(var h=b.length-1;!a.q&&0<=h;h--)f=a.currentTarget=b[h],e=vb(f,d,!0,a)&&e;a.q||(f=a.currentTarget=c,e=vb(f,d,!0,a)&&e,a.q||(e=vb(f,d,!1,a)&&e));if(b)for(h=0;!a.q&&h<b.length;h++)f=a.currentTarget=b[h],e=vb(f,d,!1,a)&&e;return e};
+g.T=function(a,b,c,d){return this.o.add(String(a),b,!1,c,d)};g.ga=function(a,b,c,d){return this.o.remove(String(a),b,c,d)};function vb(a,b,c,d){b=a.o.d[String(b)];if(!b)return!0;b=w(b);for(var e=!0,f=0;f<b.length;++f){var h=b[f];if(h&&!h.A&&h.capture==c){var k=h.s,E=h.R||h.src;h.O&&jb(a.o,h);e=!1!==k.call(E,d)&&e}}return e&&!1!=d.pa}g.I=function(a,b,c,d){return this.o.I(String(a),b,c,d)};function Q(){P.call(this);this.m=wb;this.ka=this.startTime=null}t(Q,P);var wb=0;Q.prototype.J=function(){this.n("begin")};Q.prototype.U=function(){this.n("end")};Q.prototype.n=function(a){this.dispatchEvent(a)};function R(a,b,c){H.call(this);this.ma=a;this.Ca=b||0;this.S=c;this.sa=s(this.wa,this)}t(R,H);R.prototype.w=0;R.prototype.start=function(a){this.stop();var b=this.sa;a=void 0!==a?a:this.Ca;if(!q(b))if(b&&"function"==typeof b.handleEvent)b=s(b.handleEvent,b);else throw Error("Invalid listener argument");this.w=2147483647<a?-1:l.setTimeout(b,a||0)};R.prototype.stop=function(){0!=this.w&&l.clearTimeout(this.w);this.w=0};R.prototype.wa=function(){this.w=0;this.ma&&this.ma.call(this.S)};var F={},xb=null;function yb(a){a=a[r]||(a[r]=++da);delete F[a];Qa()&&xb&&xb.stop()}function zb(){xb||(xb=new R(function(){Ab()},20));var a=xb;0!=a.w||a.start()}function Ab(){var a=ga();Na(F,function(b){Bb(b,a)});Qa()||zb()};function Cb(a,b,c,d){Q.call(this);if(!m(a)||!m(b))throw Error("Start and end parameters must be arrays");if(a.length!=b.length)throw Error("Start and end points must be the same length");this.K=a;this.xa=b;this.duration=c;this.ha=d;this.coords=[]}t(Cb,Q);g=Cb.prototype;g.g=0;
+g.play=function(a){if(a||this.m==wb)this.g=0,this.coords=this.K;else if(1==this.m)return!1;yb(this);this.startTime=a=ga();-1==this.m&&(this.startTime-=this.duration*this.g);this.ka=this.startTime+this.duration;this.g||this.J();this.n("play");-1==this.m&&this.n("resume");this.m=1;var b=this[r]||(this[r]=++da);b in F||(F[b]=this);zb();Bb(this,a);return!0};g.stop=function(a){yb(this);this.m=wb;a&&(this.g=1);Db(this,this.g);this.n("stop");this.U()};
+function Bb(a,b){a.g=(b-a.startTime)/(a.ka-a.startTime);1<=a.g&&(a.g=1);Db(a,a.g);1==a.g?(a.m=wb,yb(a),a.n("finish"),a.U()):1==a.m&&a.ea()}function Db(a,b){q(a.ha)&&(b=a.ha(b));a.coords=Array(a.K.length);for(var c=0;c<a.K.length;c++)a.coords[c]=(a.xa[c]-a.K[c])*b+a.K[c]}g.ea=function(){this.n("animate")};g.n=function(a){this.dispatchEvent(new Eb(a,this))};
+function Eb(a,b){I.call(this,a);this.coords=b.coords;this.x=b.coords[0];this.y=b.coords[1];this.z=b.coords[2];this.duration=b.duration;this.g=b.g;this.state=b.m}t(Eb,I);function Fb(a,b){var c=a.style;"opacity"in c?c.opacity=b:"MozOpacity"in c?c.MozOpacity=b:"filter"in c&&(c.filter=""===b?"":"alpha(opacity="+100*b+")")};function S(a,b,c,d,e){Cb.call(this,b,c,d,e);this.element=a}t(S,Cb);S.prototype.Z=aa;S.prototype.ea=function(){this.Z();S.u.ea.call(this)};S.prototype.U=function(){this.Z();S.u.U.call(this)};S.prototype.J=function(){this.Z();S.u.J.call(this)};function Gb(a,b,c,d,e){"number"==typeof b&&(b=[b]);"number"==typeof c&&(c=[c]);S.call(this,a,b,c,d,e);if(1!=b.length||1!=c.length)throw Error("Start and end points must be 1D");}t(Gb,S);Gb.prototype.Z=function(){Fb(this.element,this.coords[0])};
+Gb.prototype.show=function(){this.element.style.display=""};function Hb(a,b,c){Gb.call(this,a,0,1,b,c)}t(Hb,Gb);Hb.prototype.J=function(){this.show();Hb.u.J.call(this)};function Ib(a){return a*a*a}function Jb(a){return 1-Math.pow(1-a,3)};var Kb;var Lb=!!l.DOMTokenList,Mb=Lb?function(a){return a.classList}:function(a){a=a.className;return p(a)&&a.match(/\S+/g)||[]},Nb=Lb?function(a,b){return a.classList.contains(b)}:function(a,b){var c=Mb(a);return 0<=v(c,b)},Ob=Lb?function(a,b){a.classList.add(b)}:function(a,b){Nb(a,b)||(a.className+=0<a.className.length?" "+b:b)},Pb=Lb?function(a,b){a.classList.remove(b)}:function(a,b){Nb(a,b)&&(a.className=qa(Mb(a),function(a){return a!=b}).join(" "))};function T(a){H.call(this);this.S=a;this.b={}}t(T,H);var Qb=[];T.prototype.T=function(a,b,c,d){m(b)||(Qb[0]=b,b=Qb);for(var e=0;e<b.length;e++){var f=N(a,b[e],c||this.handleEvent,d||!1,this.S||this);if(!f)break;this.b[f.key]=f}return this};T.prototype.ga=function(a,b,c,d,e){if(m(b))for(var f=0;f<b.length;f++)this.ga(a,b[f],c,d,e);else c=c||this.handleEvent,e=e||this.S||this,c=mb(c),d=!!d,b=K(a)?a.I(b,c,d,e):a?(a=O(a))?a.I(b,c,d,e):null:null,b&&(qb(b),delete this.b[b.key]);return this};
+T.prototype.oa=function(){Na(this.b,qb);this.b={}};T.prototype.handleEvent=function(){throw Error("EventHandler.handleEvent not implemented");};function Rb(a,b,c,d,e){function f(a){a&&(a.tabIndex=0,a.setAttribute("role","tab"),Ob(a,"goog-zippy-header"),a&&h.Fa.T(a,"click",h.Ia),a&&h.Ea.T(a,"keydown",h.Ja))}P.call(this);this.aa=e||ha||(ha=new $a);this.i=G(this.aa.r,a)||null;this.ba=G(this.aa.r,d||null);this.h=(this.da=q(b)?b:null)||!b?null:G(this.aa.r,b);this.p=!0==c;this.Ea=new T(this);this.Fa=new T(this);var h=this;f(this.i);f(this.ba);this.C(this.p)}t(Rb,P);g=Rb.prototype;g.toggle=function(){this.C(!this.p)};
+g.C=function(a){this.h?this.h.style.display=a?"":"none":a&&this.da&&(this.h=this.da());this.h&&Ob(this.h,"goog-zippy-content");this.ba?(this.i.style.display=a?"none":"",this.ba.style.display=a?"":"none"):this.Y(a);this.p=a;this.dispatchEvent(new Tb("toggle",this))};
+g.Y=function(a){if(this.i){var b=this.i;a?Ob(b,"goog-zippy-expanded"):Pb(b,"goog-zippy-expanded");b=this.i;a?Pb(b,"goog-zippy-collapsed"):Ob(b,"goog-zippy-collapsed");b=this.i;n(a)&&(a=a.join(" "));""===a||void 0==a?(Kb||(Kb={atomic:!1,autocomplete:"none",dropeffect:"none",haspopup:!1,live:"off",multiline:!1,multiselectable:!1,orientation:"vertical",readonly:!1,relevant:"additions text",required:!1,sort:"none",busy:!1,disabled:!1,hidden:!1,invalid:"false"}),a=Kb,"expanded"in a?b.setAttribute("aria-expanded",
+a.expanded):b.removeAttribute("aria-expanded")):b.setAttribute("aria-expanded",a)}};g.Ja=function(a){if(13==a.keyCode||32==a.keyCode)this.toggle(),this.dispatchEvent(new I("action",this)),a.preventDefault(),a.stopPropagation()};g.Ia=function(){this.toggle();this.dispatchEvent(new I("action",this))};function Tb(a,b){I.call(this,a,b)}t(Tb,I);function Ub(a,b,c,d){d=d||ha||(ha=new $a);var e=d.ua("div",{style:"overflow:hidden"});b=G(d.r,b);b.parentNode.replaceChild(e,b);e.appendChild(b);this.Q=e;this.j=null;Rb.call(this,a,b,c,void 0,d);a=this.p;this.Q.style.display=a?"":"none";this.Y(a)}t(Ub,Rb);g=Ub.prototype;g.N=500;g.M=Jb;
+g.C=function(a){if(this.p!=a||this.j){"none"==this.Q.style.display&&(this.Q.style.display="");var b=this.h.offsetHeight,c=0;this.j?(a=this.p,rb(this.j),this.j.stop(!1),c=b-Math.abs(parseInt(this.h.style.marginTop,10))):c=a?0:b;this.Y(a);this.j=new Cb([0,c],[0,a?b:0],this.N,this.M);N(this.j,["begin","animate","end"],this.Ga,!1,this);N(this.j,"end",s(this.Ha,this,a));this.j.play(!1)}};g.Ga=function(a){var b=this.h;b.style.marginTop=a.y-b.offsetHeight+"px"};
+g.Ha=function(a){a&&(this.h.style.marginTop="0");rb(this.j);this.p=a;this.j=null;a||(this.Q.style.display="none");this.dispatchEvent(new Tb("toggle",this))};function Vb(a){if("function"==typeof a.k)return a.k();if(p(a))return a.split("");if(n(a)){for(var b=[],c=a.length,d=0;d<c;d++)b.push(a[d]);return b}return Oa(a)}function Wb(a,b,c){if("function"==typeof a.forEach)a.forEach(b,c);else if(n(a)||p(a))pa(a,b,c);else{var d;if("function"==typeof a.v)d=a.v();else if("function"!=typeof a.k)if(n(a)||p(a)){d=[];for(var e=a.length,f=0;f<e;f++)d.push(f)}else d=Pa(a);else d=void 0;for(var e=Vb(a),f=e.length,h=0;h<f;h++)b.call(c,e[h],d&&d[h],a)}};function Xb(a,b){this.l={};this.b=[];this.c=0;var c=arguments.length;if(1<c){if(c%2)throw Error("Uneven number of arguments");for(var d=0;d<c;d+=2)this.set(arguments[d],arguments[d+1])}else if(a){a instanceof Xb?(c=a.v(),d=a.k()):(c=Pa(a),d=Oa(a));for(var e=0;e<c.length;e++)this.set(c[e],d[e])}}g=Xb.prototype;g.k=function(){Yb(this);for(var a=[],b=0;b<this.b.length;b++)a.push(this.l[this.b[b]]);return a};g.v=function(){Yb(this);return this.b.concat()};g.D=function(a){return U(this.l,a)};
+g.remove=function(a){return U(this.l,a)?(delete this.l[a],this.c--,this.b.length>2*this.c&&Yb(this),!0):!1};function Yb(a){if(a.c!=a.b.length){for(var b=0,c=0;b<a.b.length;){var d=a.b[b];U(a.l,d)&&(a.b[c++]=d);b++}a.b.length=c}if(a.c!=a.b.length){for(var e={},c=b=0;b<a.b.length;)d=a.b[b],U(e,d)||(a.b[c++]=d,e[d]=1),b++;a.b.length=c}}g.get=function(a,b){return U(this.l,a)?this.l[a]:b};g.set=function(a,b){U(this.l,a)||(this.c++,this.b.push(a));this.l[a]=b};g.P=function(){return new Xb(this)};
+function U(a,b){return Object.prototype.hasOwnProperty.call(a,b)};var Zb=RegExp("^(?:([^:/?#.]+):)?(?://(?:([^/?#]*)@)?([^/#?]*?)(?::([0-9]+))?(?=[/#?]|$))?([^?#]+)?(?:\\?([^#]*))?(?:#(.*))?$");function $b(a){if(ac){ac=!1;var b=l.location;if(b){var c=b.href;if(c&&(c=(c=$b(c)[3]||null)&&decodeURIComponent(c))&&c!=b.hostname)throw ac=!0,Error();}}return a.match(Zb)}var ac=B;function bc(a,b){var c;if(a instanceof bc)this.f=void 0!==b?b:a.f,cc(this,a.B),c=a.$,V(this),this.$=c,c=a.F,V(this),this.F=c,dc(this,a.W),c=a.V,V(this),this.V=c,ec(this,a.t.P()),c=a.H,V(this),this.H=c;else if(a&&(c=$b(String(a)))){this.f=!!b;cc(this,c[1]||"",!0);var d=c[2]||"";V(this);this.$=d?decodeURIComponent(d):"";d=c[3]||"";V(this);this.F=d?decodeURIComponent(d):"";dc(this,c[4]);d=c[5]||"";V(this);this.V=d?decodeURIComponent(d):"";ec(this,c[6]||"",!0);c=c[7]||"";V(this);this.H=c?decodeURIComponent(c):
+""}else this.f=!!b,this.t=new fc(null,0,this.f)}g=bc.prototype;g.B="";g.$="";g.F="";g.W=null;g.V="";g.H="";g.Da=!1;g.f=!1;g.toString=function(){var a=[],b=this.B;b&&a.push(gc(b,hc),":");if(b=this.F){a.push("//");var c=this.$;c&&a.push(gc(c,hc),"@");a.push(encodeURIComponent(String(b)));b=this.W;null!=b&&a.push(":",String(b))}if(b=this.V)this.F&&"/"!=b.charAt(0)&&a.push("/"),a.push(gc(b,"/"==b.charAt(0)?ic:jc));(b=this.t.toString())&&a.push("?",b);(b=this.H)&&a.push("#",gc(b,kc));return a.join("")};
+g.P=function(){return new bc(this)};function cc(a,b,c){V(a);a.B=c?b?decodeURIComponent(b):"":b;a.B&&(a.B=a.B.replace(/:$/,""))}function dc(a,b){V(a);if(b){b=Number(b);if(isNaN(b)||0>b)throw Error("Bad port number "+b);a.W=b}else a.W=null}function ec(a,b,c){V(a);b instanceof fc?(a.t=b,a.t.fa(a.f)):(c||(b=gc(b,lc)),a.t=new fc(b,0,a.f))}function V(a){if(a.Da)throw Error("Tried to modify a read-only Uri");}g.fa=function(a){this.f=a;this.t&&this.t.fa(a);return this};
+function gc(a,b){return p(a)?encodeURI(a).replace(b,mc):null}function mc(a){a=a.charCodeAt(0);return"%"+(a>>4&15).toString(16)+(a&15).toString(16)}var hc=/[#\/\?@]/g,jc=/[\#\?:]/g,ic=/[\#\?]/g,lc=/[\#\?@]/g,kc=/#/g;function fc(a,b,c){this.e=a||null;this.f=!!c}
+function Y(a){if(!a.a&&(a.a=new Xb,a.c=0,a.e))for(var b=a.e.split("&"),c=0;c<b.length;c++){var d=b[c].indexOf("="),e=null,f=null;0<=d?(e=b[c].substring(0,d),f=b[c].substring(d+1)):e=b[c];e=decodeURIComponent(e.replace(/\+/g," "));e=Z(a,e);a.add(e,f?decodeURIComponent(f.replace(/\+/g," ")):"")}}g=fc.prototype;g.a=null;g.c=null;g.add=function(a,b){Y(this);this.e=null;a=Z(this,a);var c=this.a.get(a);c||this.a.set(a,c=[]);c.push(b);this.c++;return this};
+g.remove=function(a){Y(this);a=Z(this,a);return this.a.D(a)?(this.e=null,this.c-=this.a.get(a).length,this.a.remove(a)):!1};g.D=function(a){Y(this);a=Z(this,a);return this.a.D(a)};g.v=function(){Y(this);for(var a=this.a.k(),b=this.a.v(),c=[],d=0;d<b.length;d++)for(var e=a[d],f=0;f<e.length;f++)c.push(b[d]);return c};g.k=function(a){Y(this);var b=[];if(p(a))this.D(a)&&(b=ra(b,this.a.get(Z(this,a))));else{a=this.a.k();for(var c=0;c<a.length;c++)b=ra(b,a[c])}return b};
+g.set=function(a,b){Y(this);this.e=null;a=Z(this,a);this.D(a)&&(this.c-=this.a.get(a).length);this.a.set(a,[b]);this.c++;return this};g.get=function(a,b){var c=a?this.k(a):[];return 0<c.length?String(c[0]):b};g.toString=function(){if(this.e)return this.e;if(!this.a)return"";for(var a=[],b=this.a.v(),c=0;c<b.length;c++)for(var d=b[c],e=encodeURIComponent(String(d)),d=this.k(d),f=0;f<d.length;f++){var h=e;""!==d[f]&&(h+="="+encodeURIComponent(String(d[f])));a.push(h)}return this.e=a.join("&")};
+g.P=function(){var a=new fc;a.e=this.e;this.a&&(a.a=this.a.P(),a.c=this.c);return a};function Z(a,b){var c=String(b);a.f&&(c=c.toLowerCase());return c}g.fa=function(a){a&&!this.f&&(Y(this),this.e=null,Wb(this.a,function(a,c){var d=c.toLowerCase();c!=d&&(this.remove(c),this.remove(d),0<a.length&&(this.e=null,this.a.set(Z(this,d),w(a)),this.c+=a.length))},this));this.f=a};function nc(a){P.call(this);this.ta=a;this.qa=[];a=Ta(a.twistyTag,a.classTwisty,G(document,a.parentId));pa(a,this.va,this)}t(nc,P);nc.prototype.va=function(a){var b;if(void 0!=a.nextElementSibling)b=a.nextElementSibling;else for(b=a.nextSibling;b&&1!=b.nodeType;)b=b.nextSibling;if(b){if("A"!=a.tagName){var c=Wa("A",{href:"javascript: void 0"});c.innerHTML=a.innerHTML;a.innerHTML="";a.appendChild(c)}a=new $(a,b,this.ta);N(a,"toggle",this.za,null,this);this.qa.push(a)}};
+nc.prototype.za=function(a){this.dispatchEvent(new I("toggle",a.currentTarget))};function $(a,b,c){c=c||{};this.ia=c.classCollapse||"goog-zippy-expanded";this.ja=c.classExpand||"goog-zippy-collapsed";this.Aa=c.intervalCollapse&&10*c.intervalCollapse||150;this.la=c.intervalExpand&&10*c.intervalExpand||200;this.Ba=c.intervalFade&&10*c.intervalFade||150;this.ca=c.enableFade;this.N=this.la;this.M=Jb;Ub.call(this,a,b,!1);N(this,"toggle",this.Ka,null,this);this.ca&&(this.ya=new Hb(this.h,this.Ba))}
+t($,Ub);$.prototype.Y=function(a){this.i&&(a?(La(this.i,this.ja),Ka(this.i,this.ia)):(La(this.i,this.ia),Ka(this.i,this.ja)))};$.prototype.C=function(a){$.u.C.call(this,a);this.ca&&!a&&Fb(this.h,0)};$.prototype.Ka=function(){this.ca&&(this.p?(this.ya.play(),this.N=this.Aa,this.M=Ib):(this.N=this.la,this.M=Jb))};var oc,pc=(new bc(document.location)).H;
+oc={"what-is-one-today":0,"why-is-google-doing-this":1,"how-do-i-get-one-today":2,"how-does-it-work":3,"how-do-you-find-the-nonprofits-featured-on-one-today":4,"can-i-select-the-causes-that-i-care-about":5,"can-i-donate-more-than-1":6,"if-a-nonprofit-is-on-one-today-does-that-mean-its-endorsed-by-google":7,"can-i-change-how-often-i-receive-a-notification-from-one-today":8,"what-are-the-requirements-for-a-nonprofit-to-join-one-today":9,"where-do-one-today-projects-come-from":10,"do-nonprofits-have-to-pay-to-use-one-today":11,
+"how-do-i-sign-up-my-nonprofit-for-one-today":12,"when-i-donate-i-dont-need-to-provide-any-payment-information-how-come":13,"how-do-i-pay-my-balance":14,"are-my-donations-tax-deductible":15,"how-much-of-my-donation-will-reach-the-nonprofit":16,"what-is-user-matching":17,"why-do-you-limit-the-amount-i-can-match":18,"what-information-is-shared-when-i-share-my-match":19,"how-do-i-send-feedback":20,"where-can-i-learn-more":21}[ia(pc.split("&")[0])]||0;
+(new nc({enableFade:!0,classTwisty:"suez-zippy",classCollapse:"suez-zippy-collapse",classExpand:"suez-zippy-expand"})).qa[oc].C(!0);
+  })();
+    </script> 
 
-			<section class="header">
-				<ul>
-					<li><a href="">What is Menpha</a></li>
-					<li><a href="">What is Menpha</a></li>
-					<li><a href="">What is Menpha</a></li>
-				</ul>
-			</section>
-
-			<section>
-				<div class="content">
-					<h3 id="whatis">What is Menpha?</h3>
-					<p>"In a nutshell, Menpha is a platform to inform you the potential state of the device you wish to purchase - either its a stolen device, or of genuine orgin(s)." - Developer
-					</p>
-						<b>Menpha</b>, ( pronounced <i>M3n-fa</i>) is a local <a href="http://en.wikipedia.org/wiki/Akan" target="_blank">Akan</a> word in Ghana, which means when transliterated, "Don't take". Menpha is a web app developed to solve one problem of international scale by a Django Developer in Ghana. The service provided by the Menpha web app is simple and one.
-					<p>
-						In today's world, trading (selling and buying) of smartphones or generally electronic gadgets is the norm. However, Menpha with its platform, meets head-on with this global cancar, by informing its uses of potentially stolen item, giving them a better insight into making the right decision either to purchase a second-hand device or otherwise.
-					</p>
-					<p>
-						Many second-hand item buyers often trade stolen items without their knowledge, which indirectly 
-					</p>
-					<a href="#pagetop" class="bbtn white mini">Back to top</a>
-				</div>
-			</section>		
-
-			<section>
-				<div class="content">
-					<h3 id="howto">How to use Menpha</h3>
-					<p>
-						Follow the simple steps below to get started with Menpha.
-					</p>
-
-					<p>
-						Etiam enim lacus, ornare et tempor et, rhoncus rhoncus sem. Cras in velit ante, eget pellentesque sem. Duis tincidunt erat quam. Etiam placerat sapien. Fusce sed est orci, vel condimentum felis. Phasellus et enim sed est dictum luctus a in nibh. In metus dolor, interdum eget consectetur vel, ornare sodales felis.
-					</p>
-					<a href="#pagetop" class="bbtn white mini">Back to top</a>
-				</div>
-			</section>		
-		</article>
-	</div>	
-{% endblock %}

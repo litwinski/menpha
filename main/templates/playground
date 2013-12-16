@@ -1,0 +1,3 @@
+{% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}
+
+{% include 'socialbuttons.html' %} 

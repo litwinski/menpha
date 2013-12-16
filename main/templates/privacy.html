@@ -1,58 +1,49 @@
-{% extends 'metrika.html' %}
-{% load i18n %}
+{% extends 'menpha.html' %}
+{% block title %} Privacy & Terms {% endblock %}
 
-{% block ifhomescreen %} <!-- --> {% endblock %}
+{% load static %}
 
-      {% block content %}
-      <!--About Screen-->
-      <article class="pt-page pt-page-1" id="about">
-        <div class="outer-wrapper green1-bg">
-          <!--Header-->
-          <header class="row-fluid">
-            <div class="container">
-              <div class="span8 relative">
-              	<div class="page-navi">
-                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
-
-                </div>
-                <h1>Privacy</h1>
-
-              </div>
-              <div class="span4">
-                <ul class="social-bar-white">
-                   {% include "socialmedia.html" %}
-                </ul>
-              </div>
+{% block content %} 
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div class="project-hero">
+        <div class="maia-cols">
+          <div class="maia-col-4 hero-img">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+          </div>
+          <div class="maia-col-8 hero-content">
+            <p>
+              Learn about Menpha
+            </p>
+            <h1 class="project-title">
+              Menpha Project
+            </h1>
+            <p class="project-organization">
+              Menpha is an open project, conceptualized by Felix, and brought to fruition by Rexford N. 
+            </p>
+            <p class="project-content">
+              Menpha Project is a start-up platform developed to use the power of information, provided by humans in solving a real life problem. With our vast storage of details about uniquely-identifiable devices across the world, Menpha is able to give you the right insight should you want to purchase a second-hand item. <a href="">Learn about the Menpha steps</a>
+            </p>
+            <p class="project-content">
+              On the other hand, losing a cheerished device can be unfortunate. Menpha gives you the opportunity to gently notify millions of persons using our platform daily. You may be then notified by someone somewhere who might come in contact with your item via email through our system. Perhaps the 'theif' will wanna sell off your item or even present it as a gift. You and notify can therefore form the best alliance in union with your local security agency in bringing to book such unscrupturous persons in our communities.
+            </p>
+            <p class="project-content">
+              Menpha gets more and more accurate with its growing user-base. Having the most of information about devices globally, we are poised to offer the details to users of our platform.
+            </p>
+            <p class="project-impact-blurb">
+              Its everyone's job to help make the world a better and safer place.
+            </p>
+            <div class="hero-footer">
+              <img alt="Project logo" src="{% static "hero-logo.png" %}">
+              <p class="hero-footer-link">
+                <a href="{% url 'donate' %}" target="_blank">Donate</a>
+                <a href="" target="_blank">Contribute Code</a>
+              </p>
             </div>
-          </header>        
-          <!--Content-->
-          <section class="row-fluid">
-            <div class="container">
-              <div class="quotation span12 clearfix">
-              <div class="quotation-mark"></div>
-                <p>
-                {% blocktrans %}
-                Privacy online is of great importance to all on the web. As a result, I request only relevant information needed to authenticate each user, leaving the rest for them to shelve in their bedroom. 
-                {% endblocktrans %}
-                </p>
-                <p>
-                {% blocktrans %}
-                Only a Username, Password and Email are required on the part of any account holder. Nothing more is expected of you.
-                {% endblocktrans %} </p>
-                <span class="quotation-author">Rexford, Menpha Developer</span>
-            </div>
-            </div>
-            <div class="container">
-              <div class="span6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor et, rhoncus rhoncus sem. Cras in velit ante, eget pellentesque sem.</p>
-              </div>
-              <div class="span6">
-                <p>Praesent rhoncus nunc vitae metus condimentum viverra. Fusce sed est orci, vel condimentum felis. Suspendisse ullamcorper vulputate sagittis. Quisque ullamcorper euismod diam at bibendum. Duis tincidunt erat quam. Etiam placerat sapien.</p>
-              </div>
-            </div>
-          </section>
-          <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+          </div>
         </div>
-        {% include "footer.html" %}
-      </article>
-  	{% endblock %}
+      </div>
+    </div>
+    <script src="statics/view.js"></script> 
+    {% endblock %}
+

@@ -25,9 +25,9 @@ class Item(models.Model):
 
 	device = models.CharField(max_length=250,)
 	slug = models.SlugField(max_length=30, unique=True,)
-	type_of_item = models.CharField(max_length=20, choices=TYPE_OF_ITEM,)
+	type_of_item = models.CharField(max_length=20, choices=TYPE_OF_ITEM)
 	description = models.TextField()
-	stolen = models.CharField(max_length=2, choices=STOLEN_OPTION,)
+	stolen = models.CharField(max_length=2, choices=STOLEN_OPTION)
 	#photo = models.ImageField(upload_to='devices/', blank=True, null=True)
 	photo = ProcessedImageField(blank=True, null=True, upload_to='devices/', processors=[ResizeToFill(250, 250)], format='JPEG', options={'quality': 80})
 	pub_date = models.DateTimeField(auto_now=True)

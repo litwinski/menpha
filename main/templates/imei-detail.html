@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-	<div class="resultbox {% if not s.stolen %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if s.photo %}}{{ s.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
+	<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if s.photo %}}{{ s.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
 		<span class="datebox">Last modified: {{ s.pub_date|timesince }} ago <br> Posted by: {{ s.created_by }}</span>
 		<h3>IMEI match found</h3> 
 		<p>

@@ -16,16 +16,25 @@ urlpatterns = patterns('',
     url(r'^', include('main.urls'), name='intro'),
 
     # Sitewide Statics
-    url(r'^about/$', views.about, name='about'),
+    url(r'^about-menpha/$', views.about, name='about'),
 
-    url(r'^contact/', views.contact, name='contact'),
+    url(r'^contact-menpha/', views.contact, name='contact'),
 
-    url(r'^privacy/', views.privacy, name='privacy'),
+    url(r'^privacy-terms/', views.privacy, name='privacy'),
 
-    url(r'^team/', views.team, name='team'),
+    url(r'^team-menpha/', views.team, name='team'),
 
-    url(r'^learn/', views.learn, name='learn'),
+    url(r'^learn-menpha/', views.start, name='start'),
 
+    url(r'^story-behind/', views.story, name='story'),
+
+    url(r'^faq/', views.faq, name='faq'),
+
+    url(r'^donate/', views.donate, name='donate'),
+
+    url(r'^technology/', views.technology, name='technology'),
+
+    url(r'^developer/', views.developer, name='developer'),
 )
 
 urlpatterns += patterns('',

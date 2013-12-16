@@ -13,8 +13,24 @@ def privacy(request):
 def team(request):
 	return render_to_response('team.html')
 
-def learn(request):
-	return render_to_response('learn.html')
+def story(request):
+	return render_to_response('story_behind.html')
+
+def start(request):
+	return render_to_response('get_started.html')
+
+def faq(request):
+	return render_to_response('faq.html')
+
+def donate(request):
+	return render_to_response('donate.html')
+
+def technology(request):
+	return render_to_response('technology.html')
+
+def developer(request):
+	return render_to_response('developer')
+
 
 def file_not_found_404(request):
 	return render(request, '404.html')

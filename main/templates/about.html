@@ -1,62 +1,48 @@
-{% extends 'metrika.html' %}
-{% load i18n %}
+{% extends 'menpha.html' %}
+{% load static %}
 
-{% block ifhomescreen %} <!-- --> {% endblock %}
+{% block title %} About Menpha Project {% endblock %}
 
-      {% block content %}
-      <!--About Screen-->
-      <article class="pt-page pt-page-1" id="about">
-        <div class="outer-wrapper green1-bg">
-          <!--Header-->
-          <header class="row-fluid">
-            <div class="container">
-              <div class="span8 relative">
-              	<div class="page-navi">
-                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
-                </div>
-                <h1>About Us</h1>
-               
-              </div>
-              <div class="span4">
-                <ul class="social-bar-white">
-                   {% include "socialmedia.html" %}
-                </ul>
-              </div>
+{% block content %}
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div class="project-hero">
+        <div class="maia-cols">
+          <div class="maia-col-4 hero-img">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+          </div>
+          <div class="maia-col-8 hero-content">
+            <p>
+              Learn about Menpha
+            </p>
+            <h1 class="project-title">
+              Menpha Project
+            </h1>
+            <p class="project-organization">
+              Menpha is an open project, conceptualized by Felix, and brought to fruition by Rexford N. 
+            </p>
+            <p class="project-content">
+              Menpha Project is a start-up platform developed to use the power of information, provided by humans in solving a real life problem. With our vast storage of details about uniquely-identifiable devices across the world, Menpha is able to give you the right insight should you want to purchase a second-hand item. <a href="">Learn about the Menpha steps</a>
+            </p>
+            <p class="project-content">
+              On the other hand, losing a cheerished device can be unfortunate. Menpha gives you the opportunity to gently notify millions of persons using our platform daily. You may be then notified by someone somewhere who might come in contact with your item via email through our system. Perhaps the 'theif' will wanna sell off your item or even present it as a gift. You and notify can therefore form the best alliance in union with your local security agency in bringing to book such unscrupturous persons in our communities.
+            </p>
+            <p class="project-content">
+              Menpha gets more and more accurate with its growing user-base. Having the most of information about devices globally, we are poised to offer the details to users of our platform.
+            </p>
+            <p class="project-impact-blurb">
+              Its everyone's job to help make the world a better and safer place.
+            </p>
+            <div class="hero-footer">
+              <img alt="Project logo" src="{% static "hero-logo.png" %}">
+              <p class="hero-footer-link">
+                <a href="" target="_blank">Donate</a>
+                <a href="" target="_blank">Contribute Code</a>
+              </p>
             </div>
-          </header>        
-          <!--Content-->
-          <section class="row-fluid">
-            <div class="container">
-              <div class="quotation span12 clearfix">
-              <div class="quotation-mark"></div>
-                <p>{% blocktrans %}
-                 Menpha is a community-based imei-tagged device tracker supporting people around the globe to learn more about the condition of any device they purpose to acquire through purchase or swapping. 
-                 {% endblocktrans %}
-                </p>
-
-                <span class="quotation-author">Rexford N, Developer, Menpha</span>
-            </div>
-            </div>
-            <div class="container">
-              <div class="span6">
-                <p>
-                  {% blocktrans %} 
-                   Rexford Nkansah; Developer of Menpha say the app seeks "to prevent the purchase of stolen or missing device(s) whose owners are unawares". Menpha is a deployed platform aimed at informing you right based on user input information from the original owner.
-                  {% endblocktrans %}
-                </p>
-              </div>
-              <div class="span6">
-                <p>
-                  {% blocktrans %}
-                    The goal of the Menpha project is to create a community of active users helping ensure the tracking of IMEI across the world. To ensure the right information for users, all input into the Menpha Project is contributed by humans, which is ensures a highly reliable and flexible portal.
-                  {% endblocktrans %}
-                </p>
-              </div>
-            </div>
-          </section>
-          <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+          </div>
         </div>
-        <!--Footer-->
-        {% include "footer.html" %}
-      </article>
-  	{% endblock %}
+      </div>
+     
+    </div>
+  {% endblock %}

@@ -21,7 +21,7 @@ def base(request):
 
 def intro_page(request):
 	"""Current introductory page in use"""
-	return render(request, 'metrika.html')
+	return render(request, 'menpha.html')
 
 @login_required
 def app_home(request):

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="google-js" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." name="description">
+    
+    <title>
+      {% block title %} Tracking, Better Done by Humans {% endblock %}- Menpha
+    </title>
+
+    <link href="{% static "css-google.css" %}" rel="stylesheet">
+    <link href="{% static "maia.css" %}" rel="stylesheet">
+    <link href="{% static "default.css" %}" rel="stylesheet">
+    <link href="http://onetoday.google.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta content="One Today by Google" property="og:title">
+    <meta content="{% static "share_icon.png" %}" property="og:image">
+    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." property="og:description">
+  </head>
+
+  <body>
+    <div class="maia-header" id="maia-header" role="banner">
+      <div class="maia-aux">
+        <h1>
+          <a data-g-label="One Today by Google" data-g-action="Maia: Header" data-g-event="Maia: Header" href="http://www.google.com/onetoday/"><img alt="One Today by Google" src="{% static "one_today_logo.png" %}"></a>
+        </h1><a class="maia-teleport" href="#content">Skip to content</a>
+      </div>
+    </div>
+    <div class="maia-nav" id="maia-nav-x" role="navigation">
+      <div class="maia-aux">
+        <ul>
+          <li> 
+          <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'intro' %}">Overview</a>
+          </li>
+          <li>
+            <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">Story Behind</a>
+          </li>
+          <li>
+            <a data-g-label="For nonprofits" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'start' %}">Get Started</a>
+          </li>
+          <li>
+            <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
+          </li>
+          <li>
+            <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="">Sign Up</a>
+          </li>        
+        </ul>
+      </div>
+    </div>
+    {% block content %}
+    <div id="promo-container">
+      <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-primary"><div class="ot-promo-pagination-expose"><div style="height: 455px;" class="ot-promo-pagination-scroll"><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
+          <img alt="Do a little. Change a lot." src="{% static "hero_bg_pencils.jpg" %}">
+        </div></div><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
+          <img alt="Do a little. Change a lot." src="{% static "hero_bg_vegetables.jpg" %}">
+        </div></div><div class="ot-promo-pagination-page ot-promo-pagination-active"><div class="ot-promo-pagination-content">
+          <img alt="Do a little. Change a lot." src="{% static "hero_bg_cheetah.jpg" %}">
+        </div></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
+      <div id="promo-content">
+        <h1 class="maia-display">
+          Stolen item? No more
+       </h1>
+        <div id="promo-intro">
+          <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-secondary">
+          <div class="ot-promo-pagination-expose">
+          <div style="height: 0px;" class="ot-promo-pagination-scroll">
+          <div class="ot-promo-pagination-page">
+          <img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_pencils.png" %}">
+          </div>
+          <div class="ot-promo-pagination-page">
+          <img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_gardens.png" %}">
+          </div>
+          <div class="ot-promo-pagination-page ot-promo-pagination-active"><img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_cheetah.png" %}"></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
+          <p class="ot-display">
+            One step at a time, with your support, Menpha is building the world's most realiable way to track your item, no matter what it is, provided its uniquely identifiable. Menpha relies, not on computer-generated data, but rather, real information from humans.
+          </p>
+          <div id="cta-container">
+            <p>
+              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="" id="app-cta">Learn basics</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static "promopagination.js" %}">
+</script>
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div class="maia-cols" id="section-promos">
+        <div class="maia-col-4">
+          <img alt="Donate to what inspires you." src="{% static "home_how_donate.jpg" %}">
+          <h3 class="ot-display">
+            Totally free, but for everyone.
+          </h3>
+        </div>
+        <div class="maia-col-4">
+          <img alt="Learn about a different cause every day." src="{% static "home_how_causes.png" %}">
+          <h3 class="ot-display">
+            Grab your lost item back. 
+          </h3>
+        </div>
+        <div class="maia-col-4">
+          <img alt="Amplify your impact by matching your friends' donations." src="{% static "home_how_friends.png" %}">
+          <h3 class="ot-display">
+            Don't buy that stolen item. Search and know!
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+
+    <div id="maia-signature"></div>
+    <div class="maia-footer" id="maia-footer">
+      <div id="maia-footer-global">
+        <div class="maia-aux">
+          <ul>
+            <li>
+              <a href="http://google.com/+Nkansahrexford" target="_blank">+Menpha</a>
+            </li>
+            <li>
+              <a href="{% url 'about' %}">About Menpha</a>
+            </li>
+            <li>
+              <a href="{% url 'privacy' %}">Privacy &amp; Terms</a>
+            </li>
+            <li>
+              <a href="{% url 'donate' %}">Donate</a>
+            </li>         
+            <li>
+              <a href="{% url 'contact' %}">Contact</a>
+            </li>   
+            <li>
+              <a href="{% url 'developer' %}">Developer</a>
+            </li> 
+            <li>
+              <a href="{% url 'technology' %}">Technology</a>
+            </li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="{% static "maia.js" %}"></script>
+</body></html>

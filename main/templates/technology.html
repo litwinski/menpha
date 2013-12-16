@@ -1,0 +1,61 @@
+{% extends 'menpha.html' %}
+{% load static %}
+
+{% block title %} Technologies Behind {% endblock %}
+
+{% block content %}
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div class="project-hero">
+        <div class="maia-cols">
+          <div class="maia-col-4 hero-img">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+          </div>
+          <div class="maia-col-8 hero-content">
+            <p>
+              What we run backstage
+            </p>
+            <h1 class="project-title">
+              Technology behind Menpha
+            </h1>
+            <p class="project-organization">
+              Menpha Project, like many other websites, relies on a few technologies. At the core, is the Django Project Framework built on the Python Programming languagen. We list them below.
+            </p>
+            <p class="project-content">
+            <ul>
+              <li>Python Programming Language</li>
+              <li>Django Project v1.6</li>
+              <li>Pillow (Similar to Python Image Library) v2.0.0</li>
+              <li>dj-database-url v0.2.2</li>
+              <li>dj-static v0.0.5</li>
+              <li>django-toolbelt v0.0.1</li>
+              <li>gunicorn v18.0</li>
+              <li>psycopg2 v2.4.5</li>
+              <li>static v0.4 </li>
+              <li>wsgiref v0.1.2</li>
+              <li>django-imagekit v3.0.4</li>
+              <li>South v0.8.4</li>
+            </ul>
+            </p>
+            <p class="project-content">
+  Domain name is from <a href="http://godaddy.com" target="_blank"> GoDaddy</a> and app hosting provided by <a href="http://heroku.com" target="_blank">Heroku</a>.
+            </p>
+            <p class="project-impact-blurb">
+              Be a part of Menpha Project. Donate today!
+            </p>
+            <p class="project-impact-blurb">
+              Your donation is channeled to scaling up our bandwidth to cover up for the daily increase in traffic.
+            </p>           
+             <div class="hero-footer">
+              <img alt="Project logo" src="{% static "hero-logo.png" %}">
+              <p class="hero-footer-link">
+                <a href="" target="_blank">Donate</a>
+                <a href="" target="_blank">Developers</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  {% endblock %}

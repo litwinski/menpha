@@ -1,0 +1,115 @@
+{% extends 'menpha.html' %}
+{% load static %}
+{% block title %} Get Started {% endblock %}
+
+{% block content %}
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div id="fnp-container">
+        <div class="maia-cols">
+          <div class="maia-col-4" id="top-bg">
+            <img alt="" src="{% static "fnp-bg-top.jpg" %}">
+          </div>
+          <div class="maia-col-8">
+            <h1 class="maia-display">
+              Get Started with Menpha
+            </h1>
+            <p class="ot-display">
+              Menpha is designed with simplicity and intuitiveness in mind. As such, using Menpha should not present any hitches here and there. However, we wish to give you a quick introduction to Menpha and its service plus how you can optimize its use.
+            </p>
+            <p>
+              Menpha respects deeply your privacy and cares about what you share with us. To read more about our privacy and site terms of use, please follow immediate link below.
+            </p>
+            <p>
+              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="{% url 'privacy' %}">Learn more</a>
+            </p>
+          </div>
+        </div>
+        <div class="maia-cols">
+          <div class="maia-col-4" id="pagination-container">
+            <div class="pagination-expose">
+              <div style="width: 2310px; margin-left: 0px;" class="pagination-scroll">
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="{% static "fornonprofit_why-1.jpg" %}">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Sign up for free, activate instantly and start to be in the knowing.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="{% static "fornonprofit_why-2.png" %}">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Search and know if an item you wish to purchase is stolen. Notify original owner instantly should that be the case.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="{% static "fornonprofit_why-3.png" %}">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Add your items' unique identifiers to Menpha and update them accordingly to help someone somewhere one day.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="dot-nav"><a class="current"></a><a class=""></a><a class=""></a></div>
+          </div>
+          <div class="maia-col-8 fnp-copy-block">
+            <div>
+              <h2 class="ot-display">
+                How does it work?
+              </h2>
+              <div class="bg-positioner" id="arrow-1">
+                <p>
+                  <strong>Sign Up</strong> Its free and instant and not subscription fees whatsoever. After Sign up, everypart of Menpha belongs to you!
+                </p>
+                <p>
+                  <strong>Search</strong> doors open for you on Menpha. Know if the item you wish to purchase is stolen. Notify the original owner should that be the case.
+              </div>
+              <div class="bg-positioner" id="arrow-2">
+                <p>
+                  <strong>Stock up</strong> your Items' list and update them accordingly to help prevent the resale of to another person when you loose it.
+                </p>
+                <p>
+                  <strong>Grab your item back</strong> when a user who comes into contact with your device notifies you of it, and discusses how to grab it back.
+                </p>
+              </div>
+              <div class="bg-positioner top-layer"></div>
+            </div>
+            <h2 class="ot-display">
+              Why should you sign up with Menpha?
+            </h2>
+            <p>
+              <strong>Reliably service.</strong> With our ever expanding user-generated database of unique identities of real products, Menpha goes the extra mile to offer realiable information at the right time quickly.
+            </p>
+            <p>
+              <strong>Help put an end to theft.</strong> One Today helps you fundraise by introducing
+              your projects to people who are more likely to donate to your cause because they, or
+              their friends, have donated to similar projects.
+            </p>
+            <p>
+              <strong>Raise awareness about the amazing things you do.</strong> Tell your story to
+              new audiences of users who care about the same things that you do.
+            </p>
+            <p>
+              <strong>Create a social movement around your fundraising.</strong> Give your fans and
+              followers on social media a new way to show their support.
+            </p>
+            <p>
+              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Register here</a>
+            </p>
+          </div>
+        </div>
+        <p>
+          <a href="https://support.google.com/onetoday/" target="_blank">The One Today Nonprofit
+          Help Center</a> has more information about how to use your One Today nonprofit account.
+        </p>
+      </div>
+    </div>
+    <script src="{% static "view.js" %}"></script>
+
+  {% endblock %}

@@ -1,67 +1,185 @@
-{% extends 'metrika.html' %}
-{% load i18n %}
+<!DOCTYPE html>
+<html class="google-js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-{% block ifhomescreen %} <!-- --> {% endblock %}
+    <script src="statics/ga.js" async="" type="text/javascript"></script><script>
+(function(H){H.className=H.className.replace(/\bgoogle\b/,'google-js')})(document.documentElement)
+    </script>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." name="description">
+    <title>
+      Get Started – Menpha
+    </title>
+    <script src="statics/google.js"></script>
 
-{% block content %}
-<!--Our Team Screen-->
-      <article class="pt-page pt-page-2" id="team">
-        <div class="outer-wrapper green2-bg">
-          <!--Header-->
-          <header class="row-fluid">
-            <div class="container">
-              <div class="span8 relative">
-              	<div class="page-navi">
-                  <a class="home-page" href="{% url 'intro' %}" title="Go Home"></a>
-                </div>
-                <h1>Our Team</h1>
-                
-              </div>
-              <div class="span4">
-                <ul class="social-bar-white">
-                   {% include "socialmedia.html" %}
-                </ul>
-              </div>
-            </div>
-          </header>
-          <!--Content-->
-          <section class="row-fluid">
-            <div class="container">
-              <div class="span12">
-                <p> See Menpha's maintainers and developers.</p>
-              </div>
-            </div>
-            <div class="container">
-
-              <div class="span4 team-mate">
-                <span class="figcap"></span>
-                <a href="http://google.com/+Nkansahrexford" target="_blank" title="Rexford N">
-                  <img src="/static/img/team/me.jpg" alt="Rexford N.">
-                  <h2>Rexford N.</h2>
-                  <h3>Website Developer</h3>
-                </a>
-                <p>{% trans "A website developer and 3D artist. Developer of the Menpha web application." %}</p>
-                <ul class="social-bar2">
-                  <li><a class="googleplus-black" href="http://google.com/+Nkansahrexford" title="Google+" target="_blank"></a></li>
-                </ul>
-              </div>
-              <div class="span4 team-mate">
-                <span class="figcap"></span>
-                <a href="" title="Felix N">
-                  <img src="/static/img/team/felix.jpg" alt="Felix N.">
-                  <h2>Felix N.</h2>
-                  <h3>CCIE + Founder, Redmango Ghana</h3>
-                </a>
-                <p>{% trans "One of Cisco Experts in West Africa, and the founder of RedMango Ghana. Felix is the origin of the Menpha concept." %}</p>
-                <ul class="social-bar2">
-                  <li><a class="googleplus-black" href="http://www.linkedin.com/in/felixnkansah" target="_blank" title="Google+"></a></li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+    <link href="statics/css.css" rel="stylesheet">
+    <link href="statics/maia.css" rel="stylesheet">
+    <link href="statics/default.css" rel="stylesheet">
+    <link href="http://onetoday.google.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta content="One Today by Google" property="og:title">
+    <meta content="https://www.google.com/onetoday/images/share_icon.png" property="og:image">
+    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." property="og:description">
+    <meta content="noindex" name="robots">
+  </head>
+  <body>
+    <div class="maia-header" id="maia-header" role="banner">
+      <div class="maia-aux">
+        <h1>
+          <a data-g-label="One Today by Google" data-g-action="Maia: Header" data-g-event="Maia: Header" href="http://www.google.com/onetoday/"><img alt="One Today by Google" src="statics/one_today_logo.png"></a>
+        </h1><a class="maia-teleport" href="#content">Skip to content</a>
+      </div>
+    </div>
+    <div class="maia-nav" id="maia-nav-x" role="navigation">
+      <div class="maia-aux">
+        <ul>
+          <li>
+            <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/">Overview</a>
+          </li>
+          <li>
+            <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/featured-projects.html">Featured projects</a>
+          </li>
+          <li>For nonprofits
+          </li>
+          <li>
+            <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/faq.html">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div id="fnp-container">
+        <div class="maia-cols">
+          <div class="maia-col-4" id="top-bg">
+            <img alt="" src="statics/fnp-bg-top.jpg">
+          </div>
+          <div class="maia-col-8">
+            <h1 class="maia-display">
+              What is Menpha
+            </h1>
+            <p class="ot-display">
+              Menpha is an open project developed to gather real information just about any uniquely-identifiable device in the world. With this information in hand, Menpha goes a step further to provide you with its core service of helping you find an item of yours should it get lost or stolen. Menpha does so by allowing any one within its vibrant global community to learn about your lost/stolen item, preventing the resale of it.
+            </p>
+            <p>
+              Registration is free and instant. Only the most important personal information about you is required by Menpha. The rest? Keep them in your private bedroom! <a href="">Learn about our privacy and terms</a>
+            </p>
+            <p>
+              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Sign up here</a>
+            </p>
+          </div>
         </div>
-        {% include "footer.html" %}
-
-      </article>
-    {% endblock %}
+        <div class="maia-cols">
+          <div class="maia-col-4" id="pagination-container">
+            <div class="pagination-expose">
+              <div style="width: 2310px; margin-left: 0px;" class="pagination-scroll">
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="statics/fornonprofit_why-1.jpg">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Receive notifications about projects you might be interested in based on your
+                      donation history.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="statics/fornonprofit_why-2.png">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Learn about the project and how your donation will help contribute.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+                <div style="width: 770px;" class="nf-slides">
+                  <img alt="" src="statics/fornonprofit_why-3.png">
+                  <div class="slide-box">
+                    <p class="slide-content">
+                      Track your donation impact and see how much money has been raised for the
+                      projects you’ve donated to.
+                    </p><a class="nextFact">Next</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dot-nav"><a class="current"></a><a class=""></a><a class=""></a></div>
+          </div>
+          <div class="maia-col-8 fnp-copy-block">
+            <div>
+              <h2 class="ot-display">
+                How does it work?
+              </h2>
+              <div class="bg-positioner" id="arrow-1">
+                <p>
+                  <strong>We connect users with causes most likely to interest them.</strong> Each
+                  day, the app highlights cool projects from organizations like yours.
+                </p>
+                <p>
+                  <strong>Users donate</strong> to projects they like.
+                </p>
+              </div>
+              <div class="bg-positioner" id="arrow-2">
+                <p>
+                  <strong>A few dollars become many</strong> as users invite their friends to
+                  donate through social media. The more people who donate, the faster your project
+                  gets funded.
+                </p>
+                <p>
+                  <strong>Your nonprofit receives monthly project donations</strong> through our
+                  partner Network for Good.
+                </p>
+              </div>
+              <div class="bg-positioner top-layer"></div>
+            </div>
+            <h2 class="ot-display">
+              Why should my nonprofit sign up?
+            </h2>
+            <p>
+              <strong>It takes minutes, not months.</strong> Creating projects with One Today only
+              requires about ten minutes of planning.
+            </p>
+            <p>
+              <strong>Expand your donor base.</strong> One Today helps you fundraise by introducing
+              your projects to people who are more likely to donate to your cause because they, or
+              their friends, have donated to similar projects.
+            </p>
+            <p>
+              <strong>Raise awareness about the amazing things you do.</strong> Tell your story to
+              new audiences of users who care about the same things that you do.
+            </p>
+            <p>
+              <strong>Create a social movement around your fundraising.</strong> Give your fans and
+              followers on social media a new way to show their support.
+            </p>
+            <p>
+              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Register here</a>
+            </p>
+          </div>
+        </div>
+        <p>
+          <a href="https://support.google.com/onetoday/" target="_blank">The One Today Nonprofit
+          Help Center</a> has more information about how to use your One Today nonprofit account.
+        </p>
+      </div>
+    </div>
+    <div id="maia-signature"></div>
+    <div class="maia-footer" id="maia-footer">
+      <div id="maia-footer-global">
+        <div class="maia-aux">
+          <ul>
+            <li>
+              <a href="http://www.google.com/">Google</a>
+            </li>
+            <li>
+              <a href="http://www.google.com/intl/en/about/">About Google</a>
+            </li>
+            <li>
+              <a href="http://www.google.com/intl/en/policies/">Privacy &amp; Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><script src="statics/view.js">
+</script> <script src="statics/maia.js">
+</script>
+  
+</body></html>

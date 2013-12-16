@@ -12,7 +12,7 @@
 {% if query %}
 	{% if results %}
 		{% for result in results %}
-			<div class="resultbox stolen">
+			<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}">
 				<span class="datebox">Last modified: <br/>{{ result.pub_date|timesince }}</span>
 				<h3>IMEI match found</h3> 
 				<p>
@@ -33,10 +33,10 @@
 				<div class="resultoption"> 
 					{% if user == result.created_by %}
 				<span> 
-					<a href="/app/delete/{{ s.slug }}" class="bbtn red" role="button">Delete</a>
+					<a href="/app/delete/{{ result.slug }}" class="bbtn red" role="button">Delete</a>
 				</span> 
 				<span> 
-					<a href="/app/edit/{{ s.slug }}" class="bbtn blue" role="button">Edit</a>
+					<a href="/app/edit/{{ result.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
 			{% else %}
 				<span>
