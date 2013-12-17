@@ -1,0 +1,45 @@
+{% extends 'menpha.html' %}
+{% load static %}
+
+{% block title %} Developer {% endblock %}
+
+{% block content %}
+    <div id="maia-main" role="main">
+      <div class="maia-teleport" id="content"></div>
+      <div class="project-hero">
+        <div class="maia-cols">
+          <div class="maia-col-4 hero-img">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+          </div>
+          <div class="maia-col-8 hero-content">
+            <p>
+              Learn about Menpha
+            </p>
+            <h1 class="project-title">
+              Developer
+            </h1>
+            <p class="project-organization">
+              Menpha currently has one core developer, a feature developer, and another code contributor. 
+            </p>
+            <p class="project-content">
+              To help grow Menpha to its highest peak, Menpha is made open-sourced. This is aimed at improving features as quickly as possible and make efficient the use of Menpha. Menpha currently depends on these <a href="{% url 'technology' %}">Open Technologies</a>.
+            </p>
+            <p class="project-content">
+              Our project code is hosted on Github and your contribution is most welcomed. 
+            </p>
+            <p class="project-impact-blurb">
+              Its everyone's job to help make the world a better and safer place.
+            </p>
+            <div class="hero-footer">
+              <img alt="Project logo" src="{% static "hero-logo.png" %}">
+              <p class="hero-footer-link">
+                <a href="{% url 'donate' %}">Support </a>
+                <a href="http://github.com/seanmavley/menpha.git" target="_blank">Contribute Code</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  {% endblock %}

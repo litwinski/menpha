@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'menpha.html' %}
 {% load i18n %}
 
 {% block title %} Account Activation {% endblock %}
@@ -17,7 +17,7 @@
 		{% else %}
 			<p>
 				{% trans "Account Activation Failed. Learn more about why activation failed" %}
-				<a href="{% url 'help' %}">Learn more.</a>
+				<a href="{% url 'start' %}">Learn more.</a>
 			</p>
 		{% endif %}
 	</div>

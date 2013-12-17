@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'menpha.html' %}
 {% load static %}
 {% load i18n %}
 
@@ -11,9 +11,13 @@
 {% block content %}
 	<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if s.photo %}}{{ s.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
 		<span class="datebox">Last modified: {{ s.pub_date|timesince }} ago <br> Posted by: {{ s.created_by }}</span>
-		<h3>IMEI match found</h3> 
+		<h3>Unique identity match found</h3> 
 		<p>
 			{{ s.slug }}
+		</p>
+		<h3> Owner </h3>
+		<p>
+			{{ s.created_by }}
 		</p>
 		<h3>Device</h3> 
 		<p>
@@ -24,7 +28,7 @@
 			{{ s.get_type_of_item_display }}
 		</p>
 		<h3>Description</h3> 
-		<p class="overlay">
+		<p>
 			{{ s.description }}
 		</p>
 			<div class="resultoption"> 

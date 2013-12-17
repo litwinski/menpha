@@ -1,17 +1,13 @@
-{% extends 'base.html' %}
+{% extends 'menpha.html' %}
 {% load i18n %}
 
 {% block title %} Add Item {% endblock %}
-
-{% block notify %}
-	{% trans "The form below adds one IMEI to your personal list." %}
-{% endblock %}
 
 {% block content %}
 	<div class="addbox">
 		<form action='.' method='post' enctype="multipart/form-data">{% csrf_token %}
 			{{form.as_p}}
-			<input type="submit" class="bbtn large blue" role="button" value="Add">
+			<input type="submit" class="bbtn large blue" role="button" value="{% trans "Add" %}">
 		</form>
 	</div>
 {% endblock %}

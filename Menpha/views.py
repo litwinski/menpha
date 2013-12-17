@@ -29,7 +29,7 @@ def technology(request):
 	return render_to_response('technology.html')
 
 def developer(request):
-	return render_to_response('developer')
+	return render_to_response('developer.html')
 
 
 def file_not_found_404(request):

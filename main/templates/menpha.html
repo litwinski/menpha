@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html class="google-js" lang="en">
 
 <head>
@@ -13,6 +14,11 @@
       {% block title %} Tracking, Better Done by Humans {% endblock %}- Menpha
     </title>
 
+    <link rel="stylesheet" type="text/css" href="{% static "css.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "scrollbar.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "bbtn.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "simptip.css"%}"/>
+    
     <link href="{% static "css-google.css" %}" rel="stylesheet">
     <link href="{% static "maia.css" %}" rel="stylesheet">
     <link href="{% static "default.css" %}" rel="stylesheet">
@@ -46,8 +52,11 @@
             <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
           </li>
           <li>
-            <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="">Sign Up</a>
-          </li>        
+            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="">Sign Up</a>
+          </li>  
+          <li>
+            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="">Login</a>
+          </li>
         </ul>
       </div>
     </div>
