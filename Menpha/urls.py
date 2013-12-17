@@ -4,13 +4,13 @@ from . import views
 from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
-from django.contrib import admin
-admin.autodiscover()
+#from django.contrib import admin
+#admin.autodiscover()
 
 urlpatterns = patterns('',
 
 	# For Admin Page
-    url(r'^admin/', include(admin.site.urls)),
+    #url(r'^admin/', include(admin.site.urls)),
 
     # intro page
     url(r'^', include('main.urls'), name='intro'),

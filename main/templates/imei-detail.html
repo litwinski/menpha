@@ -35,19 +35,13 @@
 				<span> 
 					<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
-				<span>
-				<a href="#login_form" id="login_pop" class="bbtn blue" role="button"> Share </a>
-				</span>
-			{% else %}
-				<span>
-				<a href="#login_form" id="login_pop"> Share </a>
-				</span>
 			{% endif %}
 				<span>
 					<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
 				</span>
-			</div>
-			<div class="detailimage">
+				<span>
+					Modified {{ mylist.pub_date|timesince }} ago
+				</span>			
 			</div>
 	</div>
 {% endblock %}

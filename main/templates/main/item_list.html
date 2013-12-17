@@ -37,17 +37,20 @@
 			<p>
 				{{ mylist.description }}
 			</p>
-					<div class="resultoption"> 
-						<span> 
-							<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
-						</span> 
-						<span> 
-							<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
-						</span> 
-						<span>
-							<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
-						</span>
-					</div>
+				<div class="resultoption"> 
+					<span> 
+						<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
+					</span> 
+					<span> 
+						<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
+					</span> 
+					<span>
+						<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+					</span>
+				<span>
+					Modified {{ mylist.pub_date|timesince }} ago
+				</span>
+				</div>
 		</div>
 		{% endfor %}
 	{% else %}

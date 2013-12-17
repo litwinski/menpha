@@ -42,6 +42,14 @@
           <li> 
           <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'intro' %}">{% trans "Overview" %}</a>
           </li>
+          {% if user.is_authenticated %}
+              <li> 
+              <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'home' %}">{% trans "Search" %}</a>
+              </li>
+              <li> 
+              <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'add' %}">{% trans "Add" %}</a>
+              </li>
+          {% endif %}
           <li>
             <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">{% trans "Story Behind" %}</a>
           </li>
@@ -51,12 +59,21 @@
           <li>
             <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
           </li>
-          <li>
-            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'registration_register' %}">{% trans "Sign Up" %}</a>
-          </li>  
-          <li>
-            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_login' %}">{% trans "Login" %}</a>
-          </li>
+          {% if user.is_authenticated %}
+              <li> 
+              <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'myAccount' %}"> {{ user.username|capfirst }}</a>
+              </li>
+              <li> 
+              <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_logout' %}">{% trans "Logout" %}</a>
+              </li>
+          {% else %}
+              <li>
+                <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'registration_register' %}">{% trans "Sign Up" %}</a>
+              </li>  
+              <li>
+                <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_login' %}">{% trans "Login" %}</a>
+              </li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -122,7 +139,10 @@
         </div>
       </div>
     </div>
-
+    {% endblock %}
+    
+    {% block googlesocial %}
+      {% include 'gbadge.html' %}
     {% endblock %}
 
     <div id="maia-signature"></div>

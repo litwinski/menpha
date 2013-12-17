@@ -9,7 +9,6 @@
 	{% if results %}
 		{% for mylist in results %}
 			<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}">
-				<span class="datebox">Last modified: <br/>{{ mylist.pub_date|timesince }}</span>
 				<h3>IMEI match found</h3> 
 				<p>
 					{{ query }}
@@ -39,6 +38,9 @@
 					<a href="" class="bbtn blue" role="button"> Share </a>
 				</span>
 			{% endif %}
+				<span>
+					Modified {{ mylist.pub_date|timesince }} ago
+				</span>
 				</div>
 			</div>
 	{% endfor %}
