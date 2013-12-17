@@ -1,6 +1,4 @@
 {% load i18n %}
-{% load static %}
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,19 +21,15 @@
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
 									<td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
-										<b>{% trans "Password Reset Email from {{ site.name }}" %}</b>
+										<b>{% trans "Activate Your Account at {{ site.name }}" %}</b>
 									</td>
 								</tr>
 								<tr>
 									<td style="padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-										{% trans "Someone, probably you, requested for a Password Reset. If you truly initiated such a request, please follow instructions below to proceed" %}
-										<br/> <br/>
-										{% block reset_link %}
-										{{ protocol }}://{{ domain }}{% url 'auth_password_reset_confirm' uidb36=uid token=token %}
+										{% trans "Thank you for signing up with Menpha. If you are reading this, then it is your last step in activating your account at {{ site.name }}. Please follow the link below to activate your account instantly." %}<br/> <br/>
+										<a href="http://{{ site.domain }}{% url 'registration_activate' activation_key %}">{% trans "Activate your Account now!" %}</a> 
 										<br><br>
-										{% blocktrans %}
-										Please note that the link above is valid for {{ expiration_days }} days.
-										{% endblocktrans %}
+										{% blocktrans %}Please note that the link above is valid for {{ expiration_days }} days.{% endblocktrans %}
 										<br><br>
 										google.com/+Nkansahrexford <br/>
 										Developer, <a href="http://{{ site.domain }}">Menpha Project </a>				

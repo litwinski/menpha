@@ -9,35 +9,35 @@
 {% endblock %}
 
 {% block content %}
-	<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if s.photo %}}{{ s.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
-		<span class="datebox">Last modified: {{ s.pub_date|timesince }} ago <br> Posted by: {{ s.created_by }}</span>
+	<div class="resultbox {% if mylist.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if mylist.photo %}}{{ mylist.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
+		<span class="datebox">Last modified: {{ mylist.pub_date|timesince }} ago <br> Posted by: {{ mylist.created_by }}</span>
 		<h3>Unique identity match found</h3> 
 		<p>
-			{{ s.slug }}
+			{{ mylist.slug }}
 		</p>
 		<h3> Owner </h3>
 		<p>
-			{{ s.created_by }}
+			{{ mylist.created_by }}
 		</p>
 		<h3>Device</h3> 
 		<p>
-			{{ s.device }}
+			{{ mylist.device }}
 		</p>
 		<h3>Of type</h3>
 		<p>
-			{{ s.get_type_of_item_display }}
+			{{ mylist.get_type_of_item_display }}
 		</p>
 		<h3>Description</h3> 
 		<p>
-			{{ s.description }}
+			{{ mylist.description }}
 		</p>
 			<div class="resultoption"> 
-			{% if user == s.created_by %}
+			{% if user == mylist.created_by %}
 				<span> 
-					<a href="/app/delete/{{ s.slug }}" class="bbtn red" role="button">Delete</a>
+					<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
 				</span> 
 				<span> 
-					<a href="/app/edit/{{ s.slug }}" class="bbtn blue" role="button">Edit</a>
+					<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
 				<span>
 				<a href="#login_form" id="login_pop" class="bbtn blue" role="button"> Share </a>
@@ -48,7 +48,7 @@
 				</span>
 			{% endif %}
 				<span>
-					<a href="/app/notify/{{ s.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+					<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
 				</span>
 			</div>
 			<div class="detailimage">

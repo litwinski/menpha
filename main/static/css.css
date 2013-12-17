@@ -511,21 +511,6 @@ form.register {
 	width:300px;
 }
 
-form.register input, form.login input {
-	width: 100%;
-	line-height: 30px;
-	outline: 0;
-	font-size: 22px;
-	text-align: 0;
-	padding-left:8px;
-	border:1px solid #f2f2f2;
-}
-
-form.register input[type='submit']{
-	font-size:23px !important;
-	width:auto;
-}
-
 form.register label {
 	color:#666;
 }
@@ -549,16 +534,6 @@ form.login {
 
 form.login ul.errorlist {
 	padding-left: 0;
-}
-
-form.login input, form.login input {
-	width: 100%;
-	line-height: 30px;
-	outline: 0;
-	font-size: 22px;
-	text-align: 0;
-	padding-left:8px;
-	border:1px solid #f2f2f2;
 }
 
 form.login input[type='submit']{

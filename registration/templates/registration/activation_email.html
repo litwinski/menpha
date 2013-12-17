@@ -1,6 +1,5 @@
 {% load i18n %}
 {% load static %}
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,7 +14,7 @@
 				<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
 					<tr>
 						<td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
-							<img src="images/h1.gif" alt="Creating Email Magic" width="300" height="230" style="display: block;" />
+							<img src="{% static "images/h1.gif" %}" alt="Menpha Project" width="300" height="50" style="display: block;" />
 						</td>
 					</tr>
 					<tr>
@@ -23,22 +22,18 @@
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
 									<td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
-										<b>{% trans "Password Reset Email from {{ site.name }}" %}</b>
+										<b>{% trans "Activate Your Account at Menpha Project" %}</b>
 									</td>
 								</tr>
 								<tr>
 									<td style="padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-										{% trans "Someone, probably you, requested for a Password Reset. If you truly initiated such a request, please follow instructions below to proceed" %}
-										<br/> <br/>
-										{% block reset_link %}
-										{{ protocol }}://{{ domain }}{% url 'auth_password_reset_confirm' uidb36=uid token=token %}
+										{% trans "Thank you for signing up with Menpha. If you are reading this, then it is your last step in activating your account at {{ site.name }}. Please follow the link below to activate your account instantly." %}<br/> <br/>
+										<a href="http://{{ site.domain }}{% url 'registration_activate' activation_key %}">{% trans "Activate your Account now!" %}</a> 
 										<br><br>
-										{% blocktrans %}
-										Please note that the link above is valid for {{ expiration_days }} days.
-										{% endblocktrans %}
+										{% blocktrans %}Please note that the link above is valid for {{ expiration_days }} days.{% endblocktrans %}
 										<br><br>
 										google.com/+Nkansahrexford <br/>
-										Developer, <a href="http://{{ site.domain }}">Menpha Project </a>				
+										Core Developer, Menpha Project			
 									</td>
 								</tr>
 								<tr>
@@ -49,7 +44,7 @@
 													<table border="0" cellpadding="0" cellspacing="0" width="100%">
 														<tr>
 															<td>
-																<img src="images/left.gif" alt="" width="100%" height="140" style="display: block;" />
+																<img src="{% static "images/left.gif" %}"alt="About Menpha" width="100%" height="50" style="display: block;" />
 															</td>
 														</tr>
 														<tr>
@@ -68,7 +63,7 @@
 													<table border="0" cellpadding="0" cellspacing="0" width="100%">
 														<tr>
 															<td>
-																<img src="images/right.gif" alt="" width="100%" height="140" style="display: block;" />
+																<img src="{% static "images/right.gif" %}" alt="Our Privacy" width="100%" height="50" style="display: block;" />
 															</td>
 														</tr>
 														<tr>
@@ -89,7 +84,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#ee4c50" style="padding: 30px 30px 30px 30px;">
+						<td bgcolor="#ee4c50" style="padding: 15px 30px 15px 30px;">
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
 									<td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;" width="75%">
@@ -100,14 +95,14 @@
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tr>
 												<td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-													<a href="http://www.twitter.com/" style="color: #ffffff;">
-														<img src="images/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
+													<a href="http://google.com/+Nkansahrexford" style="color: #ffffff;">
+														<img src="{% static "images/tw.gif" %}" alt="g+" width="38" height="38" style="display: block;" border="0" />
 													</a>
 												</td>
 												<td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
 												<td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
 													<a href="http://www.twitter.com/" style="color: #ffffff;">
-														<img src="images/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+														<img src="{% static "images/fb.gif" %}" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
 													</a>
 												</td>
 											</tr>

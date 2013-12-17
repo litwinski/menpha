@@ -39,7 +39,7 @@ def search(request):
 		results = []
 		
 	return render(request, "search.html", {
-		'results': results,
+		'mylist': results,
 		'query': query,
 		'user': request.user, # For checking permission in template
 	})
@@ -114,7 +114,7 @@ def imei_detail(request, slug):
 	""" Still used to display detail of object. Should be replaced with 
 	Class Based View DetailView class."""
 	s = get_object_or_404(Item, slug = slug)
-	return render(request, 'imei-detail.html', {'s':s, 'user':request.user})
+	return render(request, 'imei-detail.html', {'mylist':s, 'user':request.user})
 
 @login_required
 def notify(request, slug):

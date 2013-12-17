@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'menpha.html' %}
 {% load static %}
 {% load i18n %}
 
@@ -20,6 +20,10 @@
 			<h3>IMEI match found</h3> 
 			<p>
 				{{ mylist.slug }}
+			</p>
+			<h3> Owner </h3>
+			<p>
+				{{ mylist.created_by }}
 			</p>
 			<h3>Device</h3> 
 			<p>

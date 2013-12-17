@@ -1,10 +1,6 @@
-{% extends "base.html" %}
+{% extends 'menpha.html' %}
 {% load i18n %}
 {% block title %} Registeration Form {% endblock %}
-
-{% block notify %}
-	Complete form below to sign up on Menpha. Its free and instant!
-{% endblock %}
 
 {% block content %}
 <form method="post" action="." class="register"> {% csrf_token %}

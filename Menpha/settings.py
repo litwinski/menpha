@@ -196,7 +196,7 @@ LOGGING = {
 
 #LOGIN_REDIRECT_URL = '/app/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_ACTIVATION_DAYS = 2
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
