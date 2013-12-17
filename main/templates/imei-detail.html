@@ -2,11 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %} Detail page {% endblock %}
-
-{% block notify %}
-	{% trans "The details page of your requested IMEI." %}
-{% endblock %}
+{% block title %} {{ mylist.device }} detail page {% endblock %}
 
 {% block content %}
 	<div class="resultbox {% if mylist.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if mylist.photo %}}{{ mylist.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">

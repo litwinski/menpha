@@ -1,19 +1,19 @@
 {% extends 'menpha.html' %}
 {% block title %} Confirm box {% endblock %}
 
-{% block notify %}
-	Deletion successful
-{% endblock %}
-
 {% block content %}
 	<div class="confirmbox">
 		<p> 
+		{% blocktrans %}
 			Your message was successfully sent without any hitches. The receiver may choose to reply or not. Don't irritate the initial owner of this device. He or she might not even want it again.  
+		{% endblocktrans %}
 		</p>
 		<p>
+		{% blocktrans %}
 			Should the owner be interested in having the device back, you probably will receive a response to your email, and you can take it from there.
+		{% endblocktrans %}
 		</p>
-		<span><a href="{% url 'home' %}" class="bbtn blue large"> Home </a></span>
-		<span><a href="{% url 'myList' %}" class="bbtn blue large"> My List</a></span>
+		<span><a href="{% url 'home' %}" class="bbtn blue large"> {% trans "Home" %} </a></span>
+		<span><a href="{% url 'myList' %}" class="bbtn blue large"> {% trans "My List" %}</a></span>
 	</div>
 {% endblock %}
