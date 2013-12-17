@@ -1,5 +1,6 @@
 {% extends 'menpha.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %} Contact {% endblock %}
 
@@ -19,15 +20,17 @@
               Menpha Project
             </h1>
             <p class="project-organization">
+            {% blocktrans %}
               We strive to respond to many emails reaching us everyday. We are sorry if you do not get your response as immediately as possible. In addition, we do not guarentee you will always receive a response.
+            {% endblocktrans %}
             </p>
             <p class="project-content">
-            <h5>Physical Address</h5>
-              Menpha Project <br/>
-              G129/11, Densuano Street, <br>
-              Koforidua <br>
-              Eastern Region, 00233 <br/>
-              Ghana.
+            <h5>{% trans "Physical Address" %}</h5>
+                Menpha Project <br/>
+                G129/11, Densuano Street, <br>
+                Koforidua <br>
+                Eastern Region, 00233 <br/>
+                Ghana.
             </p>
             <h5> Online </h5>
               Email : menphaproject [-at-] gmail [-dot-] com <br>
@@ -38,8 +41,8 @@
             <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">+Menpha</a>
-                <a href="" target="_blank">Support</a>
+                <a href="" target="_blank">{% trans " +Menpha" %}</a>
+                <a href="" target="_blank">{% trans "Support" %}</a>
               </p>
             </div>
           </div>

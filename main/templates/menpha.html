@@ -1,8 +1,8 @@
+{% spaceless %}
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
 <html class="google-js" lang="en">
-
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -11,7 +11,7 @@
     <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." name="description">
     
     <title>
-      {% block title %} Tracking, Better Done by Humans {% endblock %}- Menpha
+      {% block title %} {% trans "Tracking, Better Done by Humans" %} {% endblock %}- Menpha
     </title>
 
     <link rel="stylesheet" type="text/css" href="{% static "css.css"%}">
@@ -40,22 +40,22 @@
       <div class="maia-aux">
         <ul>
           <li> 
-          <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'intro' %}">Overview</a>
+          <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'intro' %}">{% trans "Overview" %}</a>
           </li>
           <li>
-            <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">Story Behind</a>
+            <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">{% trans "Story Behind" %}</a>
           </li>
           <li>
-            <a data-g-label="For nonprofits" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'start' %}">Get Started</a>
+            <a data-g-label="For nonprofits" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'start' %}">{% trans "Get Started" %}</a>
           </li>
           <li>
             <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
           </li>
           <li>
-            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'registration_register' %}">Sign Up</a>
+            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'registration_register' %}">{% trans "Sign Up" %}</a>
           </li>  
           <li>
-            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_login' %}">Login</a>
+            <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_login' %}">{% trans "Login" %}</a>
           </li>
         </ul>
       </div>
@@ -71,7 +71,7 @@
         </div></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
       <div id="promo-content">
         <h1 class="maia-display">
-          Stolen item? No more
+          {% trans "Stolen item? No more" %}
        </h1>
         <div id="promo-intro">
           <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-secondary">
@@ -85,11 +85,13 @@
           </div>
           <div class="ot-promo-pagination-page ot-promo-pagination-active"><img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_cheetah.png" %}"></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
           <p class="ot-display">
+            {% blocktrans %}
             One step at a time, with your support, Menpha is building the world's most realiable way to track your item, no matter what it is, provided its uniquely identifiable. Menpha relies, not on computer-generated data, but rather, real information from humans.
+            {% endblocktrans %}
           </p>
           <div id="cta-container">
             <p>
-              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="" id="app-cta">Learn basics</a>
+              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="" id="app-cta">{% trans "Learn basics" %}</a>
             </p>
           </div>
         </div>
@@ -103,19 +105,19 @@
         <div class="maia-col-4">
           <img alt="Donate to what inspires you." src="{% static "home_how_donate.jpg" %}">
           <h3 class="ot-display">
-            Totally free, but for everyone.
+            {% trans "Totally free, but for everyone." %}
           </h3>
         </div>
         <div class="maia-col-4">
           <img alt="Learn about a different cause every day." src="{% static "home_how_causes.png" %}">
           <h3 class="ot-display">
-            Grab your lost item back. 
+            {% trans "Grab your lost item back." %}
           </h3>
         </div>
         <div class="maia-col-4">
           <img alt="Amplify your impact by matching your friends' donations." src="{% static "home_how_friends.png" %}">
           <h3 class="ot-display">
-            Don't buy that stolen item. Search and know!
+            {% trans "Don't buy that stolen item. Search and know!" %}
           </h3>
         </div>
       </div>
@@ -132,22 +134,22 @@
               <a href="http://google.com/+Nkansahrexford" target="_blank">+Menpha</a>
             </li>
             <li>
-              <a href="{% url 'about' %}">About Menpha</a>
+              <a href="{% url 'about' %}">{% trans "About Menpha" %}</a>
             </li>
             <li>
-              <a href="{% url 'privacy' %}">Privacy &amp; Terms</a>
+              <a href="{% url 'privacy' %}">{% trans "Privacy &amp; Terms" %}</a>
             </li>
             <li>
-              <a href="{% url 'donate' %}">Donate</a>
+              <a href="{% url 'donate' %}">{% trans "Donate" %}</a>
             </li>         
             <li>
-              <a href="{% url 'contact' %}">Contact</a>
+              <a href="{% url 'contact' %}">{% trans "Contact" %}</a>
             </li>   
             <li>
-              <a href="{% url 'developer' %}">Developer</a>
+              <a href="{% url 'developer' %}">{% trans "Developer" %}</a>
             </li> 
             <li>
-              <a href="{% url 'technology' %}">Technology</a>
+              <a href="{% url 'technology' %}">{% trans "Technology" %}</a>
             </li>   
           </ul>
         </div>
@@ -155,3 +157,4 @@
     </div>
     <script src="{% static "maia.js" %}"></script>
 </body></html>
+{% endspaceless %}

@@ -1,17 +1,13 @@
 {% extends 'menpha.html' %}
 {% block title %} Something's wrong {% endblock %}
 
-{% block notify %}
-	Page Not Found - 404
-{% endblock %}
-
 {% block content %}
 	<div class="confirmbox">
 		<p>
-			<strong>404</strong> That's a Page Not Found
+			<strong>404</strong> {% trans "That's a Page Not Found." %}
 		</p>
-		<p> The requested URL was not found on my system. <span style="color:#666;">That’s all I know.</span></p>
-		<a href="{% url 'home' %}" class="bbtn blue large">Homepage </a>
-		<a href="{% url 'index' %}" class="bbtn white">search</a>
+		<p> {% trans "The requested URL was not found on my system." %} <span style="color:#666;">{% trans "That’s all I know." %}</span></p>
+		<a href="{% url 'home' %}" class="bbtn blue large">{% trans "Homepage" %}</a>
+		<a href="{% url 'index' %}" class="bbtn white">{% trans "Search" %}</a>
 	</div>
 {% endblock %}
