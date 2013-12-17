@@ -78,16 +78,18 @@
               {% endblocktrans %}
 f            </p>
             <p class="project-content">
+              {% blocktrans %}
               Menpha gets more and more accurate with its growing user-base. Having the most of information about devices globally, we are poised to offer the details to users of our platform.
+              {% endblocktrans %}
             </p>
             <p class="project-impact-blurb">
-              Its everyone's job to help make the world a better and safer place.
+              {% trans "Its everyone's job to help make the world a better and safer place." %}
             </p>
             <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="{% url 'donate' %}" target="_blank">Donate</a>
-                <a href="" target="_blank">Contribute Code</a>
+                <a href="{% url 'donate' %}" target="_blank">{% trans "Donate" %}</a>
+                <a href="" target="_blank">{% trans "Contribute Code" %}</a>
               </p>
             </div>
           </div>
@@ -96,4 +98,3 @@ f            </p>
     </div>
     <script src="statics/view.js"></script> 
     {% endblock %}
-

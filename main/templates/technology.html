@@ -13,13 +13,15 @@
           </div>
           <div class="maia-col-8 hero-content">
             <p>
-              What we run backstage
+              {% trans "What we run backstage" %}
             </p>
             <h1 class="project-title">
-              Technology behind Menpha
+              {% trans "Technology behind Menpha" %}
             </h1>
             <p class="project-organization">
+            {% blocktrans %}
               Menpha Project, like many other websites, relies on a few technologies. At the core, is the Django Project Framework built on the Python Programming languagen. We list them below.
+            {% endblocktrans %}
             </p>
             <p class="project-content">
             <ul>
@@ -38,19 +40,19 @@
             </ul>
             </p>
             <p class="project-content">
-  Domain name is from <a href="http://godaddy.com" target="_blank"> GoDaddy</a> and app hosting provided by <a href="http://heroku.com" target="_blank">Heroku</a>.
+              Domain name is from <a href="http://godaddy.com" target="_blank"> GoDaddy</a> and app hosting provided by <a href="http://heroku.com" target="_blank">Heroku</a>.
             </p>
             <p class="project-impact-blurb">
-              Be a part of Menpha Project. Donate today!
+              {% trans "Be a part of Menpha Project. Donate today!" %}
             </p>
             <p class="project-impact-blurb">
-              Your donation is channeled to scaling up our bandwidth to cover up for the daily increase in traffic.
+              {% trans "Your donation is channeled to scaling up our bandwidth to cover up for the daily increase in traffic." %}
             </p>           
              <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">Donate</a>
-                <a href="" target="_blank">Developers</a>
+                <a href="" target="_blank">{% trans "Donate" %}</a>
+                <a href="" target="_blank">{% trans "Developers" %}</a>
               </p>
             </div>
           </div>

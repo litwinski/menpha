@@ -3,40 +3,36 @@
 
 {% block title %} Search Results for {{ query }} {% endblock %}
 
-{% block notify %}
-	Results for your searched query found below. No results? Learn why.
-{% endblock %}
-
 {% block content %}
 
 {% if query %}
 	{% if results %}
-		{% for result in results %}
+		{% for mylist in results %}
 			<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}">
-				<span class="datebox">Last modified: <br/>{{ result.pub_date|timesince }}</span>
+				<span class="datebox">Last modified: <br/>{{ mylist.pub_date|timesince }}</span>
 				<h3>IMEI match found</h3> 
 				<p>
 					{{ query }}
 				</p>
 				<h3>Device</h3> 
 				<p>
-					{{ result.device }}
+					{{ mylist.device }}
 				</p>
-				<h3>Device</h3> 
+				<h3>Of type</h3> 
 				<p>
-					{{ result.get_type_of_item_display }}
+					{{ mylist.get_type_of_item_display }}
 				</p>
 				<h3>Description</h3> 
 				<p>
-					{{ result.description }}
+					{{ mylist.description }}
 				</p>
 				<div class="resultoption"> 
-					{% if user == result.created_by %}
+					{% if user == mylist.created_by %}
 				<span> 
-					<a href="/app/delete/{{ result.slug }}" class="bbtn red" role="button">Delete</a>
+					<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
 				</span> 
 				<span> 
-					<a href="/app/edit/{{ result.slug }}" class="bbtn blue" role="button">Edit</a>
+					<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
 			{% else %}
 				<span>

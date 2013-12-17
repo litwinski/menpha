@@ -39,7 +39,7 @@ def search(request):
 		results = []
 		
 	return render(request, "search.html", {
-		'mylist': results,
+		'results': results,
 		'query': query,
 		'user': request.user, # For checking permission in template
 	})

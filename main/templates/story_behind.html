@@ -1,5 +1,6 @@
 {% extends 'menpha.html' %}
 {% load static %}
+{% block title %} The Story Behind {% endblock %}
 
     {% block content %}
     <div id="maia-main" role="main">
@@ -11,24 +12,28 @@
           </div>
           <div class="maia-col-8 hero-content">
             <p>
-              It begins from somewhere, always.
+              {% trans "It begins from somewhere, always." %}
             </p>
             <h1 class="project-title">
-              The Birth of Menpha
+              {% trans "The Birth of Menpha" %}
             </h1>
             <p class="project-organization">
-              as told by Felix N. - CCIE & Founder, Redmango Business, Ghana.
+              {% trans "as told by Felix N. - CCIE & Founder, Redmango Business, Ghana." %}
             </p>
             <p class="project-content">
+            {% blocktrans %}
               "I returned to my Hyundai Santefei from work. I was not just surprised at what I saw only, but was shocked at how much I have lost. My iPad and Macbook Pro - all gone in car burglary. "
+            {% endblocktrans %}
             </p>
             <p class="project-impact-blurb">
+            {% blocktrans %}
               Millions around the world are disturbed by the increase in theft and fall victim to similar situations and even worse. With each device made having a unique identify, humans like-minded can bring that to a steady traction and halt eventually (and hopefully).
+            {% endblocktrans %}
             </p>
             <div class="hero-footer">
               <img alt="Project logo" src="statics/hero-logo.png">
               <p class="hero-footer-link">
-                <a href="" target="_blank">Learn about the part you play</a>
+                <a href="" target="_blank">{% trans "Learn about the part you play" %}</a>
               </p>
             </div>
           </div>

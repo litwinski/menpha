@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html class="google-js" lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-    <script src="statics/ga.js" async="" type="text/javascript"></script><script>
-(function(H){H.className=H.className.replace(/\bgoogle\b/,'google-js')})(document.documentElement)
-    </script>
-    <meta charset="utf-8">
-    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
-    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." name="description">
-    <title>
-      Get Started – Menpha
-    </title>
-    <script src="statics/google.js"></script>
-
-    <link href="statics/css.css" rel="stylesheet">
-    <link href="statics/maia.css" rel="stylesheet">
-    <link href="statics/default.css" rel="stylesheet">
-    <link href="http://onetoday.google.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <meta content="One Today by Google" property="og:title">
-    <meta content="https://www.google.com/onetoday/images/share_icon.png" property="og:image">
-    <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." property="og:description">
-    <meta content="noindex" name="robots">
-  </head>
-  <body>
-    <div class="maia-header" id="maia-header" role="banner">
-      <div class="maia-aux">
-        <h1>
-          <a data-g-label="One Today by Google" data-g-action="Maia: Header" data-g-event="Maia: Header" href="http://www.google.com/onetoday/"><img alt="One Today by Google" src="statics/one_today_logo.png"></a>
-        </h1><a class="maia-teleport" href="#content">Skip to content</a>
-      </div>
-    </div>
-    <div class="maia-nav" id="maia-nav-x" role="navigation">
-      <div class="maia-aux">
-        <ul>
-          <li>
-            <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/">Overview</a>
-          </li>
-          <li>
-            <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/featured-projects.html">Featured projects</a>
-          </li>
-          <li>For nonprofits
-          </li>
-          <li>
-            <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="http://www.google.com/onetoday/faq.html">FAQ</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+{% extends 'menpha.html' %}
     <div id="maia-main" role="main">
       <div class="maia-teleport" id="content"></div>
       <div id="fnp-container">
@@ -56,16 +8,20 @@
           </div>
           <div class="maia-col-8">
             <h1 class="maia-display">
-              What is Menpha
+              Team Behind Menpha
             </h1>
             <p class="ot-display">
+            {% blocktrans %}
               Menpha is an open project developed to gather real information just about any uniquely-identifiable device in the world. With this information in hand, Menpha goes a step further to provide you with its core service of helping you find an item of yours should it get lost or stolen. Menpha does so by allowing any one within its vibrant global community to learn about your lost/stolen item, preventing the resale of it.
+            {% endblocktrans %}
             </p>
             <p>
+            {% blocktrans %}
               Registration is free and instant. Only the most important personal information about you is required by Menpha. The rest? Keep them in your private bedroom! <a href="">Learn about our privacy and terms</a>
+            {% endblocktrans %}
             </p>
             <p>
-              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Sign up here</a>
+              <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">{% trans "Sign up here" %}</a>
             </p>
           </div>
         </div>
@@ -161,25 +117,3 @@
         </p>
       </div>
     </div>
-    <div id="maia-signature"></div>
-    <div class="maia-footer" id="maia-footer">
-      <div id="maia-footer-global">
-        <div class="maia-aux">
-          <ul>
-            <li>
-              <a href="http://www.google.com/">Google</a>
-            </li>
-            <li>
-              <a href="http://www.google.com/intl/en/about/">About Google</a>
-            </li>
-            <li>
-              <a href="http://www.google.com/intl/en/policies/">Privacy &amp; Terms</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div><script src="statics/view.js">
-</script> <script src="statics/maia.js">
-</script>
-  
-</body></html>
