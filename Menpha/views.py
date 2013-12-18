@@ -1,35 +1,35 @@
-from django.shortcuts import render, render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 
 def about(request):
 	return render(request, 'about.html')
 
 def contact(request):
-	return render_to_response('contact.html')
+	return render(request, 'contact.html')
 
 def privacy(request):
-	return render_to_response('privacy.html')
+	return render(request, 'privacy.html')
 
 def team(request):
-	return render_to_response('team.html')
+	return render(request, 'team.html')
 
 def story(request):
-	return render_to_response('story_behind.html')
+	return render(request, 'story_behind.html')
 
 def start(request):
-	return render_to_response('get_started.html')
+	return render(request, 'get_started.html')
 
 def faq(request):
-	return render_to_response('faq.html')
+	return render(request, 'faq.html')
 
 def donate(request):
-	return render_to_response('donate.html')
+	return render(request, 'donate.html')
 
 def technology(request):
-	return render_to_response('technology.html')
+	return render(request, 'technology.html')
 
 def developer(request):
-	return render_to_response('developer.html')
+	return render(request, 'developer.html')
 
 
 def file_not_found_404(request):

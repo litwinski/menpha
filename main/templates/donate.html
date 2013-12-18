@@ -1,5 +1,6 @@
 {% extends 'menpha.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %} {% trans "Donate and Support" %} {% endblock %}
 
@@ -9,7 +10,7 @@
       <div class="project-hero">
         <div class="maia-cols">
           <div class="maia-col-4 hero-img">
-            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "donate.png" %}">
           </div>
           <div class="maia-col-8 hero-content">
             <p>
@@ -24,7 +25,7 @@
               {% endblocktrans %}
             </p>
             <p class="project-content">
-            {% trans "For an overview of the technologies Menpha runs at the backend <a href="{% url 'technology' %}">visit the technology page</a>" %}
+            {% trans "For an overview of the technologies Menpha runs at the backend" %} <a href="{% url 'technology' %}">visit the technology page</a>" %}
             </p>
             <p class="project-impact-blurb">
               {% trans "Be a part of Menpha Project. Donate today!" %}

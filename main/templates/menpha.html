@@ -1,4 +1,3 @@
-{% spaceless %}
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
@@ -32,7 +31,7 @@
     <div class="maia-header" id="maia-header" role="banner">
       <div class="maia-aux">
         <h1>
-          <a data-g-label="One Today by Google" data-g-action="Maia: Header" data-g-event="Maia: Header" href="http://www.google.com/onetoday/"><img alt="One Today by Google" src="{% static "one_today_logo.png" %}"></a>
+          <a data-g-label="One Today by Google" data-g-action="Maia: Header" data-g-event="Maia: Header" href="http://www.menpha.org"><img alt="One Today by Google" src="{% static "one_today_logo.png" %}"></a>
         </h1><a class="maia-teleport" href="#content">Skip to content</a>
       </div>
     </div>
@@ -80,15 +79,19 @@
     {% block content %}
     <div id="promo-container">
       <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-primary"><div class="ot-promo-pagination-expose"><div style="height: 455px;" class="ot-promo-pagination-scroll"><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
-          <img alt="Do a little. Change a lot." src="{% static "hero_bg_pencils.jpg" %}">
+          <img alt="Do a little. Change a lot." src="{% static "bg1.jpg" %}">
         </div></div><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
-          <img alt="Do a little. Change a lot." src="{% static "hero_bg_vegetables.jpg" %}">
+          <img alt="Do a little. Change a lot." src="{% static "bg2.jpg" %}">
         </div></div><div class="ot-promo-pagination-page ot-promo-pagination-active"><div class="ot-promo-pagination-content">
-          <img alt="Do a little. Change a lot." src="{% static "hero_bg_cheetah.jpg" %}">
+          <img alt="Do a little. Change a lot." src="{% static "bg3.jpg" %}">
         </div></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
       <div id="promo-content">
         <h1 class="maia-display">
+        {% if not user.is_authenticated %}
           {% trans "Stolen item? No more" %}
+        {% else %}
+          {% trans "Welcome back!" %}
+        {% endif %}
        </h1>
         <div id="promo-intro">
           <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-secondary">
@@ -102,13 +105,29 @@
           </div>
           <div class="ot-promo-pagination-page ot-promo-pagination-active"><img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_cheetah.png" %}"></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
           <p class="ot-display">
+          {% if not user.is_authenticated %}
             {% blocktrans %}
             One step at a time, with your support, Menpha is building the world's most realiable way to track your item, no matter what it is, provided its uniquely identifiable. Menpha relies, not on computer-generated data, but rather, real information from humans.
             {% endblocktrans %}
+          {% else %}
+            {% blocktrans %}
+            You are just a step closer to making this world a better place. No matter how big or small an item of yours is, as long as it is of a unique identity, proceed to list them in your account, and update their status accordingly. The world benefits from that action.
+            {% endblocktrans %}
+          {% endif %}
           </p>
           <div id="cta-container">
             <p>
-              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="" id="app-cta">{% trans "Learn basics" %}</a>
+            {% if not user.is_authenticated %}
+              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="{% url 'start' %}" id="app-cta">{% trans "Learn basics" %}</a>
+            {% else %}
+              <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="{% url 'add' %}" id="app-cta">{% trans "Add item" %}</a>
+
+                <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="{% url 'home' %}" id="app-cta">{% trans "Search" %}</a>
+
+                <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="{% url 'myList' %}" id="app-cta">{% trans "My list" %}</a>
+
+                <a data-g-label="Download on Android" data-g-action="Maia: Primary – (not set)" data-g-event="Maia: Button" class="maia-button" href="{% url 'start' %}" id="app-cta">{% trans "?" %}</a>
+              {% endif %}
             </p>
           </div>
         </div>
@@ -177,4 +196,3 @@
     </div>
     <script src="{% static "maia.js" %}"></script>
 </body></html>
-{% endspaceless %}

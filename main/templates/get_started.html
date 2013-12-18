@@ -1,4 +1,5 @@
 {% extends 'menpha.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %} Get Started {% endblock %}
 
@@ -8,7 +9,7 @@
       <div id="fnp-container">
         <div class="maia-cols">
           <div class="maia-col-4" id="top-bg">
-            <img alt="" src="{% static "fnp-bg-top.jpg" %}">
+            <img alt="" src="{% static "help.png" %}">
           </div>
           <div class="maia-col-8">
             <h1 class="maia-display">
@@ -50,7 +51,7 @@
                   </div>
                 </div>
                 <div style="width: 770px;" class="nf-slides">
-                  <img alt="" src="{% static "fornonprofit_why-3.png" %}">
+                  <img alt="" src="{% static "add-item.png" %}">
                   <div class="slide-box">
                     <p class="slide-content">
                       {% trans "Add your items' unique identifiers to Menpha and update them accordingly to help someone somewhere one day." %}
@@ -103,6 +104,9 @@
             </p>
             <p>
               <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Sign up now!</a>
+              {% if user.is_authenticated %}
+                <a class="maia-button" data-g-action="Maia: Primary – Content" data-g-event="Maia: Button" data-g-label="Register here" href="http://www.google.com/nonprofits/join/">Community</a>
+              {% endif %}
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@
       <div class="project-hero">
         <div class="maia-cols">
           <div class="maia-col-4 hero-img">
-            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "provide-hiv-test.jpg" %}">
+            <img alt="Provide One HIV Test, Save Two Lives" src="{% static "developer.png" %}">
           </div>
           <div class="maia-col-8 hero-content">
             <p>
@@ -24,8 +24,8 @@
             </p>
             <p class="project-content">
             {% blocktrans %}
-              To help grow Menpha to its highest peak, Menpha is made open-sourced. This is aimed at improving features as quickly as possible and make efficient the use of Menpha. Menpha currently depends on these <a href="{% url 'technology' %}">Open Technologies</a>.
-            {% endblocktrans %}
+              To help grow Menpha to its highest peak, Menpha is made open-sourced. This is aimed at improving features as quickly as possible and make efficient the use of Menpha. Menpha currently depends on these {% endblocktrans %} <a href="{% url 'technology' %}">Open Technologies</a>.
+            
             </p>
             <p class="project-content">
               {% trans "Our project code is hosted on Github and your contribution is most welcomed." %}

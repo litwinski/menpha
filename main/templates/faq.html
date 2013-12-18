@@ -1,4 +1,5 @@
 {% extends 'menpha.html' %}
+{% load i18n %}
 
 {% block title %} {% trans "Frequently Asked Questions" %} {% endblock %}
    
@@ -9,18 +10,16 @@
       <h1 class="maia-display">
         {% trans "Frequently Asked Questions" %}
       </h1>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-collapse" id="what-is-one-today"><a href="javascript:%20void%200">
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-collapse" id="what-is-one-today"><a href="javascript:void(0);">
         What is One Today?
       </a></h4>
       <div style="overflow: hidden;"><div style="opacity: 1; margin-top: 0px;">
         <p>
-          One Today is a mobile app available to Android users in the U.S. that lets people learn
-          about different nonprofits every day, donate to projects that inspire them, and amplify
-          their impact by matching their friends’ donations.
+          One Today is a mobile app available to Android users in the U.S. that lets people learn about different nonprofits every day, donate to projects that inspire them, and amplify their impact by matching their friends’ donations.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-is-google-doing-this"><a href="javascript:%20void%200">
-        Why is Google doing this?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-is-google-doing-this"><a href="javascript:void(0);">
+        Why is Menpha doing this?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
@@ -29,199 +28,173 @@
           users.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-get-one-today"><a href="javascript:%20void%200">
-        How do I get One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-get-one-today"><a href="javascript:void(0);">
+        How do use Menpha?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          Android users can download One Today straight from the Play Store.
+          Menpha is available for use via your web browser on any device (PC, tablet, or smartphone) capable of accessing the internet today.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-does-it-work"><a href="javascript:%20void%200">
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-does-it-work"><a href="javascript:void(0);">
         How does it work?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <ol>
-          <li>Learn about a different project from a nonprofit every day. The more you engage with
-          the app, the better we'll get at picking projects for you.
+          <li>Sign up and search for the unique identity on your device. It will show in your results if the item is not with the original owner.
           </li>
-          <li>Choose to donate to projects you like.
+          <li>Add items of unique identity of yours to your Item List. You can add as many items as you wish, as long us they have unique numbers. It does not matter the type of item.
           </li>
-          <li>Amplify your impact by matching donations and sharing your favorite projects with
-          your friends on social media.
+          <li>Spread the word when you learn the device of your friend is lost or missing. Who knows, you may be notified by a potential buyer of your device from the fake reseller.
           </li>
-          <li>Pay your balance. Donations are grouped together for easy payments through <a href="http://www.google.com/wallet/">Google Wallet</a>.
+          <li>Notify the right owner of any item you intend to purchase and realize it is no longer with the owner.
           </li>
-          <li>Do good daily! Engage with hundreds of nonprofit projects each year and help
-          contribute to their success.
-          </li>
+          <li>And even more...</li>
         </ol>
+        <a href="{% url 'start' %}" title="Getting Started" class="bbtn white">Learn more</a>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-you-find-the-nonprofits-featured-on-one-today"><a href="javascript:%20void%200">
-        How do you find the nonprofits featured on One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-you-find-the-nonprofits-featured-on-one-today"><a href="javascript:void(0);">
+        The Red or Green right border bars mean what?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          All the nonprofits on One Today are members of <a href="http://www.google.com/nonprofits/">Google for Nonprofits</a>.
+          <ul>
+            <li>The <span style="color:red;">Red</span> bar next to a search result or item detail indicates the state of the object in context as 'Stolen or Missing'</li>
+            <li>The <span style="color:green;">Green</span> means otherwise - object in context is 'With the owner'. You won't see items with their owners in search results, though.</li>
+          </ul>
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-select-the-causes-that-i-care-about"><a href="javascript:%20void%200">
-        Can I select the causes that I care about?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-select-the-causes-that-i-care-about"><a href="javascript:void(0);">
+        {% trans "Is Menpha reliable?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          You can not select the causes you care about but One Today will learn what types of
-          causes matter most to you based on the projects you have donated to in the past. The more
-          projects you give to on One Today, the better the app will become at presenting you with
-          projects that are tailored to your interests.
+        {% blocktrans %}
+          To some extent. Menpha in turn, relies solely on information provided by its users across the world. Thus, a wrong user input means a wrong output from Menpha. Though the site puts in some checks during adding contents plus our administrators are watching, we cannot guarentee a 100% perfection with information you find on Menpha. User discretion is adviced.
+        {% endblocktrans %}
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-donate-more-than-1"><a href="javascript:%20void%200">
-        Can I donate more than $1?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-donate-more-than-1"><a href="javascript:void(0);">
+        {% trans "How do you say I get my item back if I use Menpha?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          Individually, you can only donate $1 per project per day. However, if you want to donate
-          more, you can challenge your friends to match your donations.
+        {% blocktrans %}
+          Menpha does not guarentee on all occassions that your lost item will be returned to you. The possibility of getting your item back increases when a user comes into contact with your device, and notifies you of it. Proceed to discuss with him/her how to get your item back, and if found through a bad person who tried to resell, you may make arranges to inform local security authorities, and bring such one to book.
+        {% endblocktrans %}
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="if-a-nonprofit-is-on-one-today-does-that-mean-its-endorsed-by-google"><a href="javascript:%20void%200">
-        If a nonprofit is on One Today, does that mean it’s endorsed by Google?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="if-a-nonprofit-is-on-one-today-does-that-mean-its-endorsed-by-google"><a href="javascript:void(0);">
+        {% trans "I want to contribute code, where to?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          No. One Today is a new way to help all eligible nonprofits raise awareness and money
-          through micro-donations. Inclusion on the app is in no way an endorsement by Google.
+          {% trans "Contribution of code is also of importance to Menpha. If you are familiar with Github, then you can jump in right and there on our project repository and start contributing." %} <a href="" title="Link to Source code">Find code repo here</a>.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-change-how-often-i-receive-a-notification-from-one-today"><a href="javascript:%20void%200">
-        Can I change how often I receive a notification from One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="can-i-change-how-often-i-receive-a-notification-from-one-today"><a href="javascript:void(0);">
+        {% trans "I want to support by donating; where to?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          Yes, you can choose how frequently you receieve notifications in the settings menu on the
-          app.
+          Follow this <a href="" title="PayPal Donate">donate link</a>, or learn more on our <a href="{% url 'donate' %}">Donate page</a>
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-are-the-requirements-for-a-nonprofit-to-join-one-today"><a href="javascript:%20void%200">
-        What are the requirements for a nonprofit to join One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-are-the-requirements-for-a-nonprofit-to-join-one-today"><a href="javascript:void(0);">
+        {% trans "What future feature plans are available on Menpha?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          One Today is open to all nonprofits in the United States with valid 501(c)3 status that
-          are members of Google for Nonprofits. Eligibility criteria for Google for NonProfits are
-          detailed <a href="https://support.google.com/nonprofits/answer/3215869?hl=en">here</a>.
+        {% trans "Menpha is currently working at stabilizing the system and serving your best. Menpha developers are currently considering adding some features in the near future which will help improve the services rendered, but improve ease of use." %}
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-do-one-today-projects-come-from"><a href="javascript:%20void%200">
-        Where do One Today projects come from?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-do-one-today-projects-come-from"><a href="javascript:void(0);">
+        What systems are behind the scenes?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          Nonprofits create projects where $1 can make a meaningful impact.
+          {% trans "For a full list of technologies behind the scenes," %} <a href="{% url 'technology' %}">read more </a>
         </p>
         <p>
-          All projects must comply with <a href="http://play.google.com/about/developer-content-policy.html">Google Play Developer
-          Program Policies</a> and with the One Today project guidelines.
+        {% blocktrans %}
+          In a nutshell, Menpha was built using the Django Framework, which relies on the Python Programming Language. Database backend is Postgre, and all these services combined for use from Heroku.
+        {% endblocktrans %}
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="do-nonprofits-have-to-pay-to-use-one-today"><a href="javascript:%20void%200">
-        Do nonprofits have to pay to use One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="do-nonprofits-have-to-pay-to-use-one-today"><a href="javascript:void(0);">
+        Why are you using a Google-like theme?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          No, there is absolutely no fee for nonprofits to sign up with One Today.
+          {% trans "Google develops some of the simple, clean, easy-to-use and responsive websites. Building on that and using various of their website was a good choice for as." %}
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-sign-up-my-nonprofit-for-one-today"><a href="javascript:%20void%200">
-        How do I sign up my nonprofit for One Today?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-sign-up-my-nonprofit-for-one-today"><a href="javascript:void(0);">
+        {% trans "Who are developing Menpha behind the scenes?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          To sign up for One Today, simply <a href="https://google-for-nonprofits.appspot.com/home">sign in</a> to your Google For
-          Nonprofits account and enroll for One Today by clicking on the “Product enrollments”
-          button.<br>
-          If you are not yet a Google for Nonprofits member, you can register for free at
-          http://www.google.com/nonprofits/join/. Registration only takes a few minutes.
+          {% trans "Menpha is developed by one main website developer, currently living in Ghana." %} <a href="{% url 'developer' %}">Learn more</a>
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="when-i-donate-i-dont-need-to-provide-any-payment-information-how-come"><a href="javascript:%20void%200">
-        When I donate, I don't need to provide any payment information. How come?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="when-i-donate-i-dont-need-to-provide-any-payment-information-how-come"><a href="javascript:void(0);">
+        {% trans "Why the name Menpha? What does it mean?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          When you click the "give" button, the app will record that as a pledge rather than a
-          charge. Your balance reflects the aggregated dollar amount you have pledged and not paid
-          yet. Instead of charging you every time you donate, we'll add each of your donations to
-          your account's balance. The app will periodically total your unpaid balance and ask you
-          to approve a credit card transaction for that amount.
+         {% trans "Menpha, better spelled as 'Menfa', means, 'Don't Take' in the Akan language which happens to be the largest spoken language in Ghana." %} 
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-pay-my-balance"><a href="javascript:%20void%200">
-        How do I pay my balance?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-pay-my-balance"><a href="javascript:void(0);">
+        {% trans "Do you need support? If so in what areas?" %}
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          You can pay your balance at any time. We'll also remind you to pay whenever a deadline is
-          approaching. If you accept the balance, we'll charge your credit card through <a href="http://www.google.com/wallet/">Google Wallet</a>. You can pay your balance directly from
-          the app or have the app send you an invoice via email to let you pay from the Web.
+          We appreciate your will to support Menpha. Menpha is an <a href="{% url 'technology' %}">Open Source project</a>, {% trans "thus your code contribution and review is welcomed." %}
+        </p>
+        <p>
+          {% trans "You may also choose to support Menpha via your voluntary financial donations if you are not developer." %}
+        </p>
+        <p>
+          {% trans "If there are any other special ways you choose to support Menpha, we recommend you contact us directly via our" %}<a href="{% url 'contact' %}">Contact</a>.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="are-my-donations-tax-deductible"><a href="javascript:%20void%200">
-        Are my donations tax deductible?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="are-my-donations-tax-deductible"><a href="javascript:void(0);">
+        Am I secured when using Menpha?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          If you're in the U.S., your donations are tax deductible -- the confirmation email from
-          Google Wallet serves as your <a href="http://support.google.com/wallet/bin/answer.py?hl=en&amp;answer=105654">donation
-          receipt</a>, or for donations over $250, a tax deduction certificate will be emailed to
-          you at the end of the year by our payment processing partners so there is no need to keep
-          track of your payments.
+          Yes. You are secured when using Menpha. Menpha uses latest technology in securing its users. Play your part well, though, by using a not-easy-to-guess password for your account.
+        </p>
+        <p>
+          Should you notice any unusual activity in your account, we recommend you <a href="{% url 'password_reset' %}" title="Reset your password">reset your password immediately</a>.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-much-of-my-donation-will-reach-the-nonprofit"><a href="javascript:%20void%200">
-        How much of my donation will reach the nonprofit?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-much-of-my-donation-will-reach-the-nonprofit"><a href="javascript:void(0);">
+        Is my privacy respected on Menpha?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          The nonprofit will get all of your donation except the payment processing fee of 1.9%, so
-          for every $10 donated, the nonprofit receives $9.81. Unless mentioned otherwise, your
-          donation goes into unrestricted funds that will be used by the nonprofit at its
-          discretion.<br>
-          One Today partners with Network for Good, an industry leader in Donor Advised Funds, to
-          collect money from donors and disburse it to nonprofit recipients. For each transaction
-          that you approved, you will see a line item on your credit card receipt, with the label
-          GOOGLE *One Today NfG.
+          Yes. Menpha respects your privacy. We do not share any of your personal information with any third-party organization. Plus we only require the information we really need about you, leaving the rest for you to shelf in your bedroom.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-is-user-matching"><a href="javascript:%20void%200">
-        What is user matching?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-is-user-matching"><a href="javascript:void(0);">
+        Do you have an open community of users?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          You can challenge your friends to donate to a project by offering to match each of their
-          $1 donations, up to a certain limit that is capped by One Today. Simply select the total
-          dollar amount and then share your offer through your social networks. This amount will be
-          added to your donation balance, whether you choose to share or not.<br>
-          If your friends don't consume all of your matches or if you choose not to share your
-          match with particular people, the system will automatically show your match to other
-          people (from the One Today community) viewing the project until all the matches are
-          consumed. In the extremely rare case that the project ends before all of your matches can
-          be consumed, the nonprofit will receive your donation anyway.
+          Yes. We do have an open community using Google+ Communities. <a href="" title="Join Menpha Community">Its free and intant to join.</a>
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-do-you-limit-the-amount-i-can-match"><a href="javascript:%20void%200">
-        Why do you limit the amount I can match?
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="why-do-you-limit-the-amount-i-can-match"><a href="javascript:void(0);">
+        Can I trust emails from the 'Notify'?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          We automatically cap how much you can match based on your donation history on One Today
-          to account for cases when people forget to pay their balances. The more you give on One
-          Today, the higher the cap will be. You can think of it like a spending limit on a credit
-          card.
+          No. Do not trust them all. Neither should you dismiss them all. All in all, use your discretion at properly interpretating such emails as, perhaps, bad people may tend to lure unsuspecting people and victimize them. You are warned.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-information-is-shared-when-i-share-my-match"><a href="javascript:%20void%200">
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="what-information-is-shared-when-i-share-my-match"><a href="javascript:void(0);">
         What information is shared when I "share" my match?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
@@ -232,7 +205,7 @@
           offering to match other people's donations.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-send-feedback"><a href="javascript:%20void%200">
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="how-do-i-send-feedback"><a href="javascript:void(0);">
         How do I send feedback?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
@@ -241,12 +214,12 @@
           anytime by clicking "Send feedback" in the app's menu.
         </p>
       </div></div>
-      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-can-i-learn-more"><a href="javascript:%20void%200">
+      <h4 role="tab" tabindex="0" class="suez-zippy goog-zippy-header suez-zippy-expand" id="where-can-i-learn-more"><a href="javascript:void(0);">
         Where can I learn more?
       </a></h4>
       <div style="overflow: hidden; display: none;"><div style="opacity: 1;">
         <p>
-          To learn more about One Today, please visit our <a href="https://support.google.com/onetodayapp/">help center</a>.
+          To learn more about Menpha, please visit our <a href="{% url 'start' %}">getting started</a>.
         </p>
       </div></div>
     </div>

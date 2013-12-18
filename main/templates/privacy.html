@@ -1,4 +1,5 @@
 {% extends 'menpha.html' %}
+{% load i18n %}
 {% block title %} Privacy & Terms {% endblock %}
 
 {% load static %}
@@ -59,7 +60,7 @@
               <p class="project-content">
               {% blocktrans %}
               Cookies are used to remember preferences that are chosen by the user when using menpha.herokuapp.com. For example, the preferred language in which to view is stored in a cookie so that this language is selected when the user returns to the Web site. No personal information is collected by or stored in cookies.
-              {% endblock %}
+              {% endblocktrans %}
               </p>
               <h4>{% trans "Active Scripting or JavaScript" %}</h4>
               <p class="project-content">

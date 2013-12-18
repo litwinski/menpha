@@ -1,5 +1,6 @@
 {% extends 'menpha.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %} The Story Behind {% endblock %}
 
     {% block content %}
@@ -8,7 +9,7 @@
       <div class="project-hero">
         <div class="maia-cols">
           <div class="maia-col-4 hero-img">
-            <img alt="Provide One HIV Test, Save Two Lives" src="statics/provide-hiv-test.jpg">
+            <img alt="abstract" src="{% static "side.jpg" %}">
           </div>
           <div class="maia-col-8 hero-content">
             <p>
@@ -31,9 +32,9 @@
             {% endblocktrans %}
             </p>
             <div class="hero-footer">
-              <img alt="Project logo" src="statics/hero-logo.png">
+              <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">{% trans "Learn about the part you play" %}</a>
+                <a href="{% url 'start' %}" target="_blank">{% trans "Learn about the part you play" %}</a>
               </p>
             </div>
           </div>
