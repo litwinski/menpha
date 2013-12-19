@@ -1,0 +1,516 @@
+/* 
+|| Handwritten by Nkansah Rexford
+|| plus.google.com/+Nkansahrexford
+*/
+
+{% spaceless %}
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html {
+	font-family: "Roboto","Open Sans","Arial",sans-serif; /* Lovely google font */
+}
+
+/* Site-wide Navigation */
+nav {
+	width: 100%;
+	border-bottom:2px solid #f2f2f2;
+	float:left;
+	margin: 0px auto;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+nav ul {
+	float: right;
+	position: relative;
+	list-style: none;
+	margin:2px 10px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin:5px 10px 0px 10px;	
+}
+
+nav ul li a {
+	text-decoration: none;
+	float: left;
+	color: #666;
+	font-size:14px;
+}
+
+nav div.logo {
+	width:150;
+	height:28;
+	float:left;
+}
+
+.last {
+	margin-right:2px;
+}
+
+/* Notification */
+.notifycontent {
+	float:left;
+	position: relative;
+	margin:auto;
+	height: auto;
+	width: 100%;
+	border: 1px solid #f1f1f1;
+}
+
+.notify {
+	padding: 5px;
+	margin: 10px auto;
+	max-width: 700px;
+	border: 1px solid #f2f2f2;
+	height:auto;
+	text-align: center;
+}
+
+.closebutton {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+	font-size: 30px;
+	background-color: rgb(248, 248, 248);
+	padding: 2px 15px;
+	color: #ADADAD;
+}
+
+.closebutton:hover {
+	cursor: pointer;
+	background-color:rgb(236, 142, 142);
+	color:white;
+}
+
+/* Site-wide Content */
+.content {
+	float:left;
+	position: relative;
+	margin:25px auto;
+	margin-top:10px;
+	height: auto;
+	width: 100%;
+	border: 1px solid #f1f1f1;
+}
+
+/* IMEI Search form */
+form.search {
+	padding: 10px;
+	border:3px solid rgb(255, 255, 255)
+}
+
+.searchbox {
+	margin: 50px auto;
+	max-width: 600px;
+}
+
+.searchbox input[type='text']{
+	width: 96%;
+	line-height: 60px;
+	outline: 0;
+	border:1px solid rgb(221, 221, 221);
+	font-size: 50px;
+	padding-left:10px;
+}
+
+.decobox {
+	background-color: rgba(248, 248, 248, 1);
+	border-radius: 10;
+	padding: 8px;
+}
+
+/* Search Results */
+.resultbox {
+	margin: 50px auto;
+	width: 600px;
+	border:1px solid #f1f1f1;
+	padding:5px;
+}
+
+.resultbox h3 {
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+	font-size: 14px;
+	color:#666;
+	width: 100%;
+	border-bottom:2px solid #f2f2f2;
+}
+
+.resultbox p {
+	margin: 0 0 0 10px;
+	font-size: 25px;
+	margin-bottom:10px;
+}
+
+.resultbox span.datebox {
+	border: 1px solid #f1f1f1;
+	width: auto;
+	height: auto;
+	float:right;
+	background-color:rgba(255, 255, 255, 0.9);
+}
+
+.stolen {
+	border-right:5px solid red;
+}
+
+.not-stolen {
+	border-right:5px solid green;
+}
+
+.resultoption {
+	margin-top: 40px;
+	border-top:2px solid #f1f1f1;
+}
+
+.resultoption span {
+	margin: 0;
+}
+
+.resultoption span a {
+	color:#666;
+	padding: 10px 10px;
+	text-decoration: none;
+}
+
+/* Add IMEI Box */
+form.addbox {
+	padding: 10px;
+	border: 1px solid #f2f2f2;
+}
+
+.addbox {
+	margin: 50px auto;
+	width: 600px;
+}
+
+.addbox input[type='text'], .addbox input[type='file'], .addbox select {
+	width: 100%;
+	line-height: 30px;
+	outline: 0;
+	font-size: 22px;
+	text-align: 0;
+	padding-left:8px;
+	border:1px solid #f2f2f2;
+}
+
+
+.addbox input[type='text']:hover, .addbox input[type='text']:focus {
+	border: 1px solid black;
+}
+
+.addbox textarea {
+	width:100%;
+	font-size: 22px;
+	padding-left:8px;
+	border: 1px solid #f2f2f2;
+}
+
+.addbox textarea:hover, .addbox textarea:focus {
+	border: 1px solid black;
+}
+
+.addbox ul.errorlist {
+	padding-left: 0;
+}
+
+.addbox ul.errorlist li {
+	list-style: none;
+	padding: 2px;
+	margin-bottom: 1px;
+	border: 1px solid red;
+	color: #666;
+}
+/*
+
+.addbox form select#id_stolen {
+	width: 100%;
+	height: 38px;
+	border: 1px solid #f2f2f2;
+	font-size: 22px;
+}
+*/
+
+/* Generic Confirm (Delete/Deleted) */
+.confirmbox {
+	margin: 50px auto;
+	max-width: 600px;
+	border: 1px solid #f1f1f1;
+	height: auto;
+	text-align: center;
+	padding:5px;
+}
+
+.confirmbox span a {
+	text-decoration: none;
+}
+
+.colorgreen {
+	color:green;
+}
+
+.colorred {
+	color:red;
+}
+
+.confirmbox span.no {
+	font-size: 50px;
+	color:red;
+	padding:0px 20px;
+}
+
+/* Generic BoxShadow Variation */
+.boxshadow:hover {
+	box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.boxshadow {
+	0;
+}
+
+.boxshadowred:hover {
+	box-shadow: 0 4px 23px 5px rgba(255, 0, 0, 0.53), 0 2px 6px rgba(255, 0, 0, 0.15);
+}
+
+.boxshadowred {
+}
+
+/* Help Page */
+.help {
+	margin: 10px auto;
+	width: 700px;
+	border: 1px solid #f1f1f1;
+	display:-webkit-box;
+	display: box;
+}
+
+article {
+	width:auto;
+	display: block;
+}
+
+article section.header:hover {
+	box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0,0,0,0.15);
+}
+
+article section.header {
+	padding: 0px;
+	border: 1px solid #f1f1f1;
+	width:346px;
+	float:left;
+	position: relative;
+	margin:0px;
+}
+
+article section.header ul {
+	list-style: none;
+	margin-left: 5px;
+	padding:0px;
+}
+
+article section.header ul li {
+	background-color: #f1f1f1;
+	margin-bottom: 1px;
+	padding:1.5px;
+}
+
+article section.header ul li:hover {
+	background-color: white;
+}
+
+article section.header ul li a {
+	text-decoration: none;
+	color:rgb(90, 90, 90);
+}
+
+article section.header ul li a:hover{
+	color: #666;
+}
+
+
+article section div.content {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+article section div.content h3 {
+	margin:0;
+	color:#666;
+}
+
+.intro {
+	margin:10px auto;
+	border: 1px solid #f1f1f1;
+	max-width: 800px;
+	padding:3px;
+}
+
+.intro header{
+	width: 100%;
+	height:auto;
+	border: 1px solid #f1f1f1;
+	padding:2px;
+	text-align: center;
+}
+
+.intro header h2 {
+	margin:1px;
+	padding:2px;
+	font-size:35px;
+}
+
+.intro article {
+	border: 1px solid #f1f1f1;
+	padding: 3px;
+	margin-top: 10px;
+
+	display:-webkit-box;
+	display:box;
+	display:-moz-box;
+}
+
+.intro article section {
+	height:auto;
+	border: 1px solid #f1f1f1;
+	margin:2px;
+	padding:3px;
+
+	box-flex:1;
+	-webkit-box-flex: 1;
+	-moz-box-flex:1;
+}
+
+.intro article section h2 {
+	text-align: center;
+	margin:1px;
+	padding:2px;
+	background-color: whiteSmoke;
+	color: #666;
+}
+
+.intro #getstarted {
+	border: 1px solid #f1f1f1;
+	margin-top: 10px;
+}
+
+.intro #getstarted span {
+	max-width: 510px;
+	border: 1px solid #f1f1f1;
+	float: left;
+	margin-top: 4px;
+	margin-left:10px;
+	padding: 2px;
+	font-size: 31px;
+	text-align: center;
+}
+
+form.register {
+	margin:20px auto;
+	width:300px;
+}
+
+form.register label {
+	color:#666;
+}
+
+form.register ul.errorlist {
+	padding-left: 0;
+}
+
+form.register ul.errorlist li {
+	list-style: none;
+	padding: 2px;
+	margin-bottom: 1px;
+	border: 1px solid red;
+	color: #666;
+}
+
+form.login {
+	margin:20px auto;
+	width:300px;
+}
+
+form.login ul.errorlist {
+	padding-left: 0;
+}
+
+form.login input[type='submit']{
+	font-size:23px !important;
+	width:auto;
+}
+
+form.login label {
+	color:#666;
+}
+
+form.login ul.errorlist li {
+	list-style: none;
+	padding: 2px;
+	margin-bottom: 1px;
+	border: 1px solid red;
+	color: #666;
+}
+
+form.login div#reset {
+	color:#666;
+	display: box;
+	display: -webkit-box;
+	margin-top:10px;
+	padding:2px;
+	font-size:15px;
+}
+
+form.login div#reset p {
+	-webkit-box-flex:1;
+}
+
+aside {
+	background-color: white;
+	height:90px;
+	width:100%;
+	font-size: 100%;
+	z-index: 50;
+	display:none;
+	position: fixed;
+	bottom:0.1px;
+	border-top:10px solid #838383;
+}
+
+aside p {
+	padding:5px;
+	max-width:80%;
+	margin:10px auto;
+}
+
+.overlay {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.66);
+}
+
+/* Footer Generic Site-wide */
+footer {
+	text-align: center;
+	color: #666;
+	position: static;
+	bottom: 1px;
+}
+
+footer a {
+	color:#666;
+}
+
+#steps {
+	background-color: rgba(255, 255, 255, 0.57);padding-left: 4px;color: black;
+}
+
+.rowbox {
+	width:100%;
+	height:200px;
+	border: 1px solid grey;
+}
+
+{% endspaceless %}
