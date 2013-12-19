@@ -3,6 +3,7 @@
 || plus.google.com/+Nkansahrexford
 */
 
+{% spaceless %}
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 html {
@@ -511,3 +512,5 @@ footer a {
 	height:200px;
 	border: 1px solid grey;
 }
+
+{% endspaceless %}

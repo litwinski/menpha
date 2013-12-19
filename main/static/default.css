@@ -1,3 +1,4 @@
+{% spaceless %}
 {% load static %}
 
 /*@import url(//www.google.com/css/maia.experimental.css);*/
@@ -1037,3 +1038,4 @@ a.project-title-link:hover {
         opacity: 1 !important;
     }
 }
+{% endspaceless %}

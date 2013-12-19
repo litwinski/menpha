@@ -1,3 +1,4 @@
+{% spaceless %}
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
@@ -21,7 +22,7 @@
     <link href="{% static "css-google.css" %}" rel="stylesheet">
     <link href="{% static "maia.css" %}" rel="stylesheet">
     <link href="{% static "default.css" %}" rel="stylesheet">
-    <link href="http://onetoday.google.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "favicon.ico" %}" rel="shortcut icon" type="image/x-icon">
     <meta content="One Today by Google" property="og:title">
     <meta content="{% static "share_icon.png" %}" property="og:image">
     <meta content="One Today by Google is a mobile app that brings together people and nonprofits through the simple act of giving $1. The app is currently available through a limited pilot on Android." property="og:description">
@@ -196,3 +197,4 @@
     </div>
     <script src="{% static "maia.js" %}"></script>
 </body></html>
+{% endspaceless %}

@@ -1,3 +1,4 @@
+{% spaceless %}
 @media screen,projection,print {
     html,input,textarea {
         font-family: arial,sans-serif;
@@ -1941,3 +1942,4 @@
 *+html form .maia-form-error .maia-form-error-msg,*+html .maia-locales,*+html #maia-nav-root,*+html #maia-nav-root ul a,*+html #maia-nav-root li:hover a,*+html .maia-search-icon {
     background-image: none !important;
 }
+{% endspaceless %}
