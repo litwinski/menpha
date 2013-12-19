@@ -51,9 +51,9 @@
               <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'add' %}">{% trans "Add" %}</a>
               </li>
           {% endif %}
-          <li>
+          <!--<li>
             <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">{% trans "Story Behind" %}</a>
-          </li>
+          </li>-->
           <li>
             <a data-g-label="For nonprofits" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'start' %}">{% trans "Get Started" %}</a>
           </li>
@@ -100,12 +100,12 @@
           <div class="ot-promo-pagination-expose">
           <div style="height: 0px;" class="ot-promo-pagination-scroll">
           <div class="ot-promo-pagination-page">
-          <img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_pencils.png" %}">
+          <img alt="" class="ot-promo-pagination-content" src="{% static "never-before.png" %}">
           </div>
           <div class="ot-promo-pagination-page">
-          <img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_gardens.png" %}">
+          <img alt="" class="ot-promo-pagination-content" src="{% static "under-roof.png" %}">
           </div>
-          <div class="ot-promo-pagination-page ot-promo-pagination-active"><img alt="" class="ot-promo-pagination-content" src="{% static "hero_phone_cheetah.png" %}"></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
+          <div class="ot-promo-pagination-page ot-promo-pagination-active"><img alt="" class="ot-promo-pagination-content" src="{% static "all-in-one.png" %}"></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
           <p class="ot-display">
           {% if not user.is_authenticated %}
             {% blocktrans %}
