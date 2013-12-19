@@ -37,9 +37,13 @@ urlpatterns = patterns('',
     url(r'^developer/', views.developer, name='developer'),
 )
 
+# Registration Backend
 urlpatterns += patterns('',
 
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
-
+)
+# Robot.txt - Without, lots of emails as error cos of hits from google bot
+urlpatterns += patterns('',
+    (r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
 )
