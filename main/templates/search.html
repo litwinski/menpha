@@ -13,7 +13,7 @@
 				<p>
 					{{ query }}
 				</p>
-				<h3>Device</h3> 
+				<h3>Device name</h3> 
 				<p>
 					{{ mylist.device }}
 				</p>
@@ -38,7 +38,7 @@
 					<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
 				</span>
 				<span>
-					<a href="" class="bbtn blue" role="button"> Share </a>
+					<a onclick="javascript:document.getElementById('overlay').style.display='block';" href="javascript:void(0);" class="bbtn blue" role="button"> Share </a>
 				</span>
 			{% endif %}
 				<span>

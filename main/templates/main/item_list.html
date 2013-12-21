@@ -16,7 +16,7 @@
 			<p>
 				{{ mylist.created_by }}
 			</p>
-			<h3>Device</h3> 
+			<h3>Device name</h3> 
 			<p>
 				{{ mylist.device }}
 			</p>
@@ -36,9 +36,8 @@
 						<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 					</span> 
 					<span> 
-						<a href="" class="bbtn blue" role="button">Share</a>
+						<a onclick="javascript:document.getElementById('overlay').style.display='block';" href="javascript:void(0);" class="bbtn blue" role="button"> Share </a>
 					</span> 				
-
 					<span>
 						Modified {{ mylist.pub_date|timesince }} ago
 					</span>

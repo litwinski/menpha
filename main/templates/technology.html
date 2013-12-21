@@ -21,7 +21,7 @@
             </h1>
             <p class="project-organization">
             {% blocktrans %}
-              Menpha Project, like many other websites, relies on a few technologies. At the core, is the Django Project Framework built on the Python Programming languagen. We list them below.
+              Menpha Project, like many other websites, relies on some technologies. At the core, is the Django Project Framework built on top of the Python Programming languagen. We list more of them below.
             {% endblocktrans %}
             </p>
             <p class="project-content">
@@ -44,16 +44,12 @@
               Domain name is from <a href="http://godaddy.com" target="_blank"> GoDaddy</a> and app hosting provided by <a href="http://heroku.com" target="_blank">Heroku</a>.
             </p>
             <p class="project-impact-blurb">
-              {% trans "Be a part of Menpha Project. Donate today!" %}
-            </p>
-            <p class="project-impact-blurb">
-              {% trans "Your donation is channeled to scaling up our bandwidth to cover up for the daily increase in traffic." %}
-            </p>           
+              {% trans "Be a part of Menpha Project. Contribute code today!" %}
+            </p>   
              <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">{% trans "Donate" %}</a>
-                <a href="" target="_blank">{% trans "Developers" %}</a>
+                <a href="{% url 'developer' %}" target="_blank">{% trans "Developers" %}</a>
               </p>
             </div>
           </div>
