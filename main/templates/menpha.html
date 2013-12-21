@@ -44,12 +44,7 @@
           <a data-g-label="Overview" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'intro' %}">{% trans "Overview" %}</a>
           </li>
           {% if user.is_authenticated %}
-              <li> 
-              <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'home' %}">{% trans "Search" %}</a>
-              </li>
-              <li> 
-              <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'add' %}">{% trans "Add" %}</a>
-              </li>
+             
           {% endif %}
           <!--<li>
             <a data-g-label="Featured projects" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'story' %}">{% trans "Story Behind" %}</a>
@@ -60,13 +55,24 @@
           <li>
             <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
           </li>
+          <li> || </li>
+
           {% if user.is_authenticated %}
-              <li> 
+            <li> 
+              <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'home' %}">{% trans "Search" %}</a>
+            </li>
+            <li> 
+              <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'add' %}">{% trans "Add" %}</a>
+            </li>
+            <li> 
+              <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'myList' %}"> My List </a>
+            </li>
+            <li> 
               <a data-g-label="Search" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'myAccount' %}"> {{ user.username|capfirst }}</a>
-              </li>
-              <li> 
+            </li>
+            <li> 
               <a data-g-label="Add" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'auth_logout' %}">{% trans "Logout" %}</a>
-              </li>
+            </li>
           {% else %}
               <li>
                 <a data-g-label="Sign Up" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'registration_register' %}">{% trans "Sign Up" %}</a>

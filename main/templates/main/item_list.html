@@ -4,20 +4,11 @@
 
 {% block title %} My List {{ mylist.created_by }} {% endblock %}
 
-{% block notify %}
-{% if object_list %}
-	{% trans "Please find below your items added." %}
-{% else %}
-	{% trans "Ooooh! An empty list. Adding items to your list is instant and free." %}
-{% endif %}
-{% endblock %}
-
 {% block content %}
 {% if object_list %}
 	{% for mylist in object_list %}
 		<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if mylist.photo %}}{{ mylist.photo.url }}{% endif %}') no-repeat bottom right; background-size: 250px 250px;">
-			<span class="datebox">Last modified: {{ mylist.pub_date|timesince }} ago <br> Posted by: {{ mylist.created_by }}</span>
-			<h3>IMEI match found</h3> 
+			<h3>Details of</h3> 
 			<p>
 				{{ mylist.slug }}
 			</p>
@@ -44,12 +35,13 @@
 					<span> 
 						<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 					</span> 
+					<span> 
+						<a href="" class="bbtn blue" role="button">Share</a>
+					</span> 				
+
 					<span>
-						<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+						Modified {{ mylist.pub_date|timesince }} ago
 					</span>
-				<span>
-					Modified {{ mylist.pub_date|timesince }} ago
-				</span>
 				</div>
 		</div>
 		{% endfor %}

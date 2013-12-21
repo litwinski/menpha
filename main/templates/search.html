@@ -9,7 +9,7 @@
 	{% if results %}
 		{% for mylist in results %}
 			<div class="resultbox {% if s.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}">
-				<h3>IMEI match found</h3> 
+				<h3>Unique number match found</h3> 
 				<p>
 					{{ query }}
 				</p>
@@ -26,7 +26,7 @@
 					{{ mylist.description }}
 				</p>
 				<div class="resultoption"> 
-					{% if user == mylist.created_by %}
+				{% if user == mylist.created_by %}
 				<span> 
 					<a href="/app/delete/{{ mylist.slug }}" class="bbtn red" role="button">Delete</a>
 				</span> 
@@ -34,6 +34,9 @@
 					<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
 			{% else %}
+				<span>
+					<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
+				</span>
 				<span>
 					<a href="" class="bbtn blue" role="button"> Share </a>
 				</span>

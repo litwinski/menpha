@@ -6,8 +6,7 @@
 
 {% block content %}
 	<div class="resultbox {% if mylist.stolen == 'ns' %} not-stolen {% else %} stolen {% endif %}" style="background:url('{% if mylist.photo %}}{{ mylist.photo.url }} {% endif %}') no-repeat bottom right; background-size: 250px 250px;">
-		<span class="datebox">Last modified: {{ mylist.pub_date|timesince }} ago <br> Posted by: {{ mylist.created_by }}</span>
-		<h3>Unique identity match found</h3> 
+		<h3>Details of</h3> 
 		<p>
 			{{ mylist.slug }}
 		</p>
@@ -36,9 +35,14 @@
 					<a href="/app/edit/{{ mylist.slug }}" class="bbtn blue" role="button">Edit</a>
 				</span> 
 			{% endif %}
+			{% if not user == mylist.created_by %}
 				<span>
 					<a href="/app/notify/{{ mylist.slug }}" class="bbtn turquoise" role="button"> Notify Owner </a>
 				</span>
+			{% endif %}
+				<span>
+					<a href="" class="bbtn blue" role="button"> Share </a>
+				</span>				
 				<span>
 					Modified {{ mylist.pub_date|timesince }} ago
 				</span>			

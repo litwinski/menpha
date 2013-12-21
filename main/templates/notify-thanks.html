@@ -1,11 +1,12 @@
 {% extends 'menpha.html' %}
+{% load i18n %}
 {% block title %} Confirm box {% endblock %}
 
 {% block content %}
 	<div class="confirmbox">
 		<p> 
 		{% blocktrans %}
-			Your message was successfully sent without any hitches. The receiver may choose to reply or not. Don't irritate the initial owner of this device. He or she might not even want it again.  
+			<strong>Your message was successfully sent</strong> without any hitches. The receiver may choose to reply or not. Don't irritate the initial owner of this device. He or she might not even want it again.  
 		{% endblocktrans %}
 		</p>
 		<p>
