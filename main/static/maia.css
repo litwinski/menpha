@@ -765,12 +765,12 @@
 
     #maia-signature:after,[dir=rtl] #maia-signature:before {
         border-left: 34px solid #0089fa;
-        border-right: 35px solid #ff002b;
+        border-right: 35px solid #0089fa;
     }
 
     #maia-signature:before,[dir=rtl] #maia-signature:after {
-        border-left: 35px solid #ffa900;
-        border-right: 34px solid #00a753;
+        border-left: 35px solid #ff002b;
+        border-right: 34px solid #ff002b;
     }
 
     #maia-footer {
