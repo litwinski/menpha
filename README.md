@@ -1,10 +1,28 @@
 Menpha
 ======
 
-I'm not good at Licenses. MIT license should apply to this project. In addition, you may use this though:
+#Menpha Project
 
-You may use any part or all of the code to work on something unique from the idea of Menpha. You are free to use them. Attributing menpha as the inspiration for what you'll do isn't mandatory. Doing so actually doesn't put money in my pocket, unless you explicitly want that to happen. I'll be much appreciative then.
+*Tracking, better done by humans*
+----
 
-If you wish to use my code to create something same as the idea of Menpha, then I'll recommend you contribute code to this repository and help improve. If you have better idea of making this idea a success and wish to see the furtherance of it, kindly discuss with me at seanmavley [-at-] gmail [-dot-] com
+This is a django based website that help users in making college events and participating in them.
 
-Thank you.
+##Present Functionality:
+1. Sign in with username
+2. Add your items and indicate if stolen or not
+3. Search for unique numbers of items e.g, IMEI numbers, or Serial Numbers
+4. Notify owner of item if found somewhere or thief makes attempt to resell to you
+5. Share identity number on Google + with your friends.
+
+##Future Functionality:
+1. Sign Up or Login via Google+ (using django all-auth)
+2. My Item List page should be accordion
+3. Allow users to delete account
+4. Display number of Items I have in my list one My List page
+
+----
+Are you interested in helping out? Make a pull request or open an issue. If you have any ideas about website functionality, contact us at [idea@codesters.org](mailto:idea@codesters.org)
+
+*You may use the code for your purpose but cannot copy this idea entirely.*
+
