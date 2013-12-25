@@ -52,7 +52,7 @@
           <li>
             <a data-g-label="FAQ" data-g-action="Maia: Level 1" data-g-event="Maia: Site Nav" href="{% url 'faq' %}">FAQ</a>
           </li>
-          <li> || </li>
+          <li> | </li>
 
           {% if user.is_authenticated %}
             <li> 
@@ -86,9 +86,9 @@
       <div class="ot-promo-pagination ot-promo-pagination-fading ot-promo-pagination-ready" id="pagination-primary"><div class="ot-promo-pagination-expose"><div style="height: 455px;" class="ot-promo-pagination-scroll"><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
           <img alt="Do a little. Change a lot." src="{% static "bg1.jpg" %}">
         </div></div><div class="ot-promo-pagination-page"><div class="ot-promo-pagination-content">
-          <img alt="Do a little. Change a lot." src="{% static "bg2.jpg" %}">
+          <img alt="Do a little. Change a lot." src="{% static "bg1.jpg" %}">
         </div></div><div class="ot-promo-pagination-page ot-promo-pagination-active"><div class="ot-promo-pagination-content">
-          <img alt="Do a little. Change a lot." src="{% static "bg3.jpg" %}">
+          <img alt="Do a little. Change a lot." src="{% static "bg1.jpg" %}">
         </div></div></div></div><div class="ot-promo-pagination-nav"><ul style="-moz-user-select: none;"><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">1</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot">2</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-dot ot-promo-pagination-active">3</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-prev">←</span></li><li style="-moz-user-select: none;"><span style="-moz-user-select: none;" class="ot-promo-pagination-next">→</span></li></ul></div></div>
       <div id="promo-content">
         <h1 class="maia-display">
@@ -112,7 +112,7 @@
           <p class="ot-display">
           {% if not user.is_authenticated %}
             {% blocktrans %}
-            One step at a time, with your support, Menpha is building the world's most realiable way to track your item, no matter what it is, provided it is uniquely identifiable. Menpha relies not on computer-generated data, but rather real information from humans.
+            One step at a time, with your support, Menpha is building the world's most reliable way to track your item, no matter what it is, provided it is uniquely identifiable. Menpha relies not on computer-generated data, but rather real information from humans.
             {% endblocktrans %}
           {% else %}
             {% blocktrans %}
