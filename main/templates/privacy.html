@@ -20,7 +20,7 @@
               {% trans "Terms of Use and Privacy" %}
             </h1>
             <p class="project-organization">
-              {% trans "Menpha is an open project, conceptualized by Felix, and brought to fruition by Rexford N." %}
+              <a href="{% url 'start' %}">Learn more about Menpha Project </a>
             </p>
             <h4> {% trans "Terms of Use" %}</h4>
             <p class="project-content">
@@ -89,8 +89,7 @@ f            </p>
             <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="{% url 'donate' %}" target="_blank">{% trans "Donate" %}</a>
-                <a href="" target="_blank">{% trans "Contribute Code" %}</a>
+                <a href="{% url 'developer' %}" target="_blank">{% trans "Contribute Code" %}</a>
               </p>
             </div>
           </div>

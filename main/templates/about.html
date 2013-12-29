@@ -24,8 +24,8 @@
             </p>
             <p class="project-content">
             {% blocktrans %}
-              Menpha Project is a start-up platform developed to use the power of information, provided by humans in solving a real life problem. With our vast storage of details about uniquely-identifiable devices across the world, Menpha is able to give you the right insight should you want to purchase a second-hand item. <a href="">Learn about the Menpha steps</a>
-            {% endblocktrans %}
+              Menpha Project is a start-up platform developed to use the power of information, provided by humans in solving a real life problem. With our vast storage of details about uniquely-identifiable devices across the world, Menpha is able to give you the right insight should you want to purchase a second-hand item. {% endblocktrans %} <a href="{% url 'start' %}">Learn about the Menpha steps</a>
+            
             </p>
             <p class="project-content">
             {% blocktrans %}
@@ -43,8 +43,7 @@
             <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">{% trans "Donate" %}</a>
-                <a href="" target="_blank">{% trans "Contribute Code" %}</a>
+                <a href="{% url 'developer' %}">{% trans "Contribute Code" %}</a>
               </p>
             </div>
           </div>

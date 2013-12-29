@@ -35,14 +35,23 @@
             <h5> Online </h5>
               Email : menphaproject [-at-] gmail [-dot-] com <br>
               Call : (+233) (0) 266 811 165
+              <br/><br>
+            <h1 class="project-title">Contact Form</h1>
+             <div class="addbox">
+              <form action='.' method='post'>{% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="bbtn large blue" role="button" value="Send Notice">
+              </form>
+            </div>
+
             <p class="project-impact-blurb">
               Thank you for reaching out to us
             </p>
+
             <div class="hero-footer">
               <img alt="Project logo" src="{% static "hero-logo.png" %}">
               <p class="hero-footer-link">
-                <a href="" target="_blank">{% trans " +Menpha" %}</a>
-                <a href="" target="_blank">{% trans "Support" %}</a>
+                <a href="{% url 'donate' %}" target="_blank">{% trans "Support" %}</a>
               </p>
             </div>
           </div>

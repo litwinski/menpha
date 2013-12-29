@@ -1,0 +1,16 @@
+{% extends 'menpha.html' %}
+{% load i18n %}
+{% block title %} Confirm box {% endblock %}
+
+{% block content %}
+	<div class="confirmbox">
+		<p> 
+		{% blocktrans %}
+			<strong>Your message was successfully sent</strong> without any hitches. Thanks for reaching out to Menpha. We will get back to you soon.  
+		{% endblocktrans %}
+		</p>
+
+		<span><a href="{% url 'home' %}" class="bbtn blue large"> {% trans "Home" %} </a></span>
+		<span><a href="{% url 'myList' %}" class="bbtn blue large"> {% trans "My List" %}</a></span>
+	</div>
+{% endblock %}

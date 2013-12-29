@@ -15,10 +15,6 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 
-def base(request):
-	""" Old introductory page deprecated"""
-	return render(request, 'intro.html')
-
 def intro_page(request):
 	"""Current introductory page in use"""
 	return render(request, 'menpha.html')
@@ -51,6 +47,7 @@ class CreateImei(CreateView):
 	model = Item
 
 	def form_valid(self, form):
+		# save current user into "created_by" field in models.
 		form.instance.created_by = self.request.user
 		return super(CreateImei, self).form_valid(form)
 
@@ -66,7 +63,8 @@ class UpdateImei(UpdateView):
 
 	Useful for preventing one user from editing item added by another user. """
 	model = Item
-	fields = fields = ['device', 'slug', 'type_of_item', 'description', 'photo', 'stolen']
+	fields = ['device', 'slug', 'type_of_item', 'description', 'photo', 'stolen']
+	template_name = 'item_form.html'
 
 	@method_decorator(login_required)
 	def dispatch(self, request, *args, **kwargs):
@@ -90,17 +88,20 @@ class DeleteImei(DeleteView):
 	model = Item
 	context_object_name = 'to_delete'
 	success_url = reverse_lazy('myList')
+	template_name = 'item_confirm_delete.html'
 
 	@method_decorator(login_required)
 	def dispatch(self, request, *args, **kwargs):
-		pulled = Item.objects.get(slug=kwargs['slug'])
-		if pulled.created_by == request.user:
+		grab = Item.objects.get(slug=kwargs['slug'])
+		if grab.created_by == request.user:
 			return super(DeleteImei, self).dispatch(request, *args, **kwargs)
 		raise PermissionDenied
 
 class ListImei(ListView):
 	""" Lists all the items added by a user."""
 	model = Item
+	template_name = 'item_list.html'
+
 	def get_queryset(self):
 		qset = Q(created_by=self.request.user)
 		return Item.objects.filter(qset).distinct().order_by('-pub_date')
@@ -119,7 +120,7 @@ def imei_detail(request, slug):
 @login_required
 def notify(request, slug):
 	""" Send notification email to original owner of device who lost it """
-	pull = Item.objects.get(slug = slug)
+	grab = Item.objects.get(slug = slug)
 	if request.method == "POST": # If the form has been submitted...
 		form = NotifyForm(request.POST) # A form bound to the POST data
 		if form.is_valid(): # All validation rules pass
@@ -128,7 +129,7 @@ def notify(request, slug):
 			message = form.cleaned_data['message']
 			sender = request.user.email
 			cc_myself = form.cleaned_data['cc_myself']
-			recipients = [pull.created_by.email]
+			recipients = [grab.created_by.email]
 
 			if cc_myself:
 				recipients.append(sender)

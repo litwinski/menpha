@@ -23,6 +23,13 @@ class NotifyForm(forms.Form):
 	#sender = forms.EmailField()
 	cc_myself = forms.BooleanField(required=False)
 
+class ContactForm(forms.Form):
+	#name = forms.CharField(max_length=100)
+	subject = forms.CharField(max_length=300)
+	sender = forms.EmailField()
+	message = forms.CharField(widget=forms.Textarea)
+	cc_myself = forms.BooleanField(required=False)
+
 	#device = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Device name'}))
 	#imei = forms.CharField(max_length=15, 
 	#	widget=forms.TextInput(attrs={'placeholder':'IMEI '})
@@ -31,5 +38,5 @@ class NotifyForm(forms.Form):
 	#	attrs={'placeholder':'Describe device', 
 	#			'cols':50,
 	#			'rows':4,
-	#			'maxlength': 350,
+	#			'max_length': 350,
 	#	}))
