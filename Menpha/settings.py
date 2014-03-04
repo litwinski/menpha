@@ -197,7 +197,7 @@ LOGGING = {
 
 #LOGIN_REDIRECT_URL = '/app/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.email.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Needed by Registration App
 ACCOUNT_ACTIVATION_DAYS = 2
