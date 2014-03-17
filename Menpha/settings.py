@@ -4,7 +4,7 @@
 
 #import bpy
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -206,8 +206,8 @@ ACCOUNT_ACTIVATION_DAYS = 2
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'your@email.address'
-EMAIL_HOST_PASSWORD = 'yourpassword' # forgotten? Ask NSA
+EMAIL_HOST_USER = 'menphaproject@gmail.com'
+EMAIL_HOST_PASSWORD = '00113399' # forgotten? Ask NSA
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
